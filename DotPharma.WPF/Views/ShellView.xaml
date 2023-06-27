@@ -1,0 +1,176 @@
+﻿<hc:Window x:Class="DotPharma.WPF.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DotPharma.WPF"
+        xmlns:views="clr-namespace:DotPharma.WPF.Views.Registration"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:dockablz="http://dragablz.net/winfx/xaml/dockablz"
+        xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
+        Width="1280"
+        ShowTitle="False"
+        NonClientAreaBackground="#090f39"
+        CloseButtonForeground="#eaecf9"
+        OtherButtonForeground="#eaecf9"
+        ShowNonClientArea="True"
+        Height="800"
+        mc:Ignorable="d"
+        Background="#090f39"
+        Title="MainWindow">
+    <hc:Window.NonClientAreaContent>
+        <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock 
+                Margin="15,0"
+                DockPanel.Dock="Top"
+                Text="Alvarez"
+                Foreground="#eaecf9"
+                HorizontalAlignment="Left"
+                FontWeight="Thin"
+                FontSize="24" />
+            <hc:Gravatar
+                Background="#eaecf9"
+                    Height="40"
+                    Width="40"
+                    Id="Alvarez" />
+        </StackPanel>
+    </hc:Window.NonClientAreaContent>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Dragablz;component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type dragablz:HeaderedItemViewModel}">
+                <ContentControl Content="{Binding Content}" Margin="4 4 4 4" FontSize="14" />
+            </DataTemplate>
+            <dragablz:InterTabController x:Key="InterTabController" x:Shared="False" InterTabClient="{Binding InterTabClient}" Partition="2AE89D18-F236-4D20-9605-6C03319038E6" />
+
+            <dragablz:DragablzIcon Width="24" Height="24" Margin="0 -8 0 0"
+                                   x:Key="WindowIcon" x:Shared="False"
+                                   ToolTip="Added via the HeaderPrefixContent property"
+                                   />
+
+            <Style TargetType="{x:Type dragablz:TabablzControl}" x:Key="TabablzControlStyle">
+                <Setter Property="ClosingItemCallback" Value="{Binding ClosingTabItemHandler}" />
+                <Setter Property="ShowDefaultAddButton" Value="True" />
+                <Setter Property="ShowDefaultCloseButton" Value="True" />
+                <Setter Property="AdjacentHeaderItemOffset" Value="-10" />
+                <Setter Property="ItemContainerStyle" Value="{StaticResource TrapezoidDragableTabItemStyle}" />
+                <Setter Property="HeaderMemberPath" Value="Header" />
+                <Setter Property="InterTabController" Value="{StaticResource InterTabController}" />
+                <Setter Property="Margin" Value="0 8 0 0" />
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(dockablz:Layout.IsTopLeftItem)}" Value="True">
+                        <Setter Property="HeaderPrefixContent" Value="{StaticResource WindowIcon}" />
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <DockPanel>
+
+            <StackPanel DockPanel.Dock="Top" Margin="0,50,0,0">
+                <Button Height="47" 
+                    Width="47" 
+                    Style="{StaticResource ButtonIcon}" 
+                    Foreground="#eaecf9"
+                    hc:IconElement.Geometry="{StaticResource Dashboard}">
+                </Button>
+                <TextBlock 
+                    FontSize="13"
+                    FontWeight="Medium"
+                    Margin="0,-5,0,0"
+                    Text="Dashboard"
+                    Style="{StaticResource TextBlockSubTitle}"
+                    Foreground="#eaecf9" />
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Margin="0,10,0,0">
+                <Button 
+                    Height="47" 
+                    Width="47" 
+                    Style="{StaticResource ButtonIcon}" 
+                    Foreground="#eaecf9"
+                    hc:TitleElement.Title="teste"
+                    hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}">
+                </Button>
+                <TextBlock
+                    FontWeight="Medium"
+                    Text="Cadastros"
+                    Style="{StaticResource TextBlockDefault}"
+                    FontSize="13"
+                    Foreground="#eaecf9"
+                    Margin="0,-5,0,0"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Margin="0,10,0,0">
+                <Button 
+                    Height="48" 
+                    Width="48" 
+                    Style="{StaticResource ButtonIcon}" 
+                    Foreground="#eaecf9"
+                    hc:TitleElement.Title="teste"
+                    hc:IconElement.Geometry="{StaticResource PointOfSale}">
+                </Button>
+                <TextBlock
+                    FontWeight="Medium"
+                    Text="PDV"
+                    Style="{StaticResource TextBlockDefault}"
+                    FontSize="13"
+                    Foreground="#eaecf9"
+                    Margin="0,-5,0,0"/>
+            </StackPanel>
+        </DockPanel>
+
+
+        
+        <Border Grid.RowSpan="4" Grid.Column="2" CornerRadius="60,0,0,0" Background="#eaecf9">
+            <!--
+            <hc:TabControl Margin="50,0" Background="#eaecf9">
+                <hc:TabItem Header="Cadastro de Produto">
+                    <views:ProductRegisterView />
+                </hc:TabItem>
+                <hc:TabItem Header="Cadastro de Cliente">
+                    <views:CustomerRegisterView />
+                </hc:TabItem>
+            </hc:TabControl>
+            -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition MinWidth="300" MaxWidth="500" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Margin="30,15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock 
+                            Margin="10,0"
+                            DockPanel.Dock="Top"
+                            FontWeight="Medium"
+                            Text="Ponto de Venda"
+                            HorizontalAlignment="Left"
+                            FontSize="32"
+                            Style="{StaticResource TextBlockTitle}"/>
+                    </Grid>
+
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Effect="{StaticResource EffectShadow3}" Background="White">
+            
+                </StackPanel>
+
+            </Grid>
+                
+            
+        </Border>
+        
+
+            
+    </Grid>
+</hc:Window>

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapplo.Microsoft.Extensions.Hosting.Wpf" Version="1.0.14" />
+    <PackageReference Include="Dragablz" Version="0.0.3.234" />
+    <PackageReference Include="HandyControls" Version="3.4.5" />
+    <PackageReference Include="HandyControls.Lang.pt-BR" Version="3.4.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotPharma.Presentation\DotPharma.Presentation.csproj" />
+	<Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+		<Generator>MSBuild:Compile</Generator>
+		<SubType>Designer</SubType>
+		<ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+	</Page>
+  </ItemGroup>
+
+</Project>
