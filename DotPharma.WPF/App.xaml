@@ -11,6 +11,7 @@
                 <hc:ThemeResources/>
                 <hc:Theme/>
                 <ResourceDictionary Source="Styles/Icons.xaml"/>
+                <ResourceDictionary Source="Styles/Buttons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
