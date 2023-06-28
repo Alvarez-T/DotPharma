@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DotPharma.WPF.Views.Registration"
+             xmlns:tile="clr-namespace:DotPharma.WPF.Views.Registration.Tiles"
              xmlns:hc="https://handyorg.github.io/handycontrol"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="800"
@@ -23,136 +24,14 @@
                     Style="{StaticResource TextBlockTitle}"/>
             <hc:ScrollViewer IsInertiaEnabled="True">
                 <StackPanel>
+                    <!-- Dados Pessoais-->
                     <Expander Margin="0" Header="Dados Pessoais">
-                    <hc:Row>
-                        <hc:Col x:Name="spaceColumn" Span="3" Layout="0,3,3,3,3" />
-                        <hc:Col Span="21">
-                            <StackPanel>
-                                <hc:Row Gutter="10">
-                                    <hc:Col Span="4">
-                                        <TextBlock
-                                                TextAlignment="Right"
-                                                FontSize="18"
-                                                FontWeight="Thin"
-                                                Text="Nome completo" 
-                                                VerticalAlignment="Center">
-
-                                        </TextBlock>
-                                    </hc:Col>
-                                    <hc:Col Span="10">
-                                        <hc:TextBox 
-                                            hc:InfoElement.Placeholder="Primeiro nome"
-                                            Height="40"
-                                            Background="#f2f4fb"
-                                            FontSize="18"
-                                            Grid.Column="1"/>
-                                    </hc:Col>
-
-                                    <hc:Col Span="10">
-                                        <hc:TextBox 
-                                            hc:InfoElement.Placeholder="Sobrenome"
-                                            FontSize="18"
-                                            Grid.Column="2"
-                                            />
-                                    </hc:Col>
-                                </hc:Row>
-
-                                <hc:Row Margin="0,15,0,0" Gutter="10">
-                                    <hc:Col Span="4">
-                                        <TextBlock 
-                                            TextAlignment="Right"
-                                            FontSize="18"
-                                            FontWeight="Thin"
-                                            Text="Documentos" 
-                                            VerticalAlignment="Center"/>
-                                    </hc:Col>
-                                    <hc:Col Span="10">
-                                        <hc:TextBox 
-                                            hc:InfoElement.Placeholder="RG"
-                                            Height="40"
-                                            Background="#f2f4fb"
-                                            FontSize="18"
-                                            Grid.Column="1"/>
-                                    </hc:Col>
-
-                                    <hc:Col Span="10">
-                                        <hc:TextBox 
-                                            hc:InfoElement.Placeholder="CPF"
-                                            FontSize="18"
-                                            Grid.Column="2"/>
-                                    </hc:Col>
-                                </hc:Row>
-
-                                <hc:Row Margin="0,15,0,0" Gutter="10">
-                                    <hc:Col Span="4">
-                                        <TextBlock Text="Email" />
-                                    </hc:Col>
-                                    <hc:Col Span="20">
-                                        <hc:TextBox />
-                                    </hc:Col>
-                                </hc:Row>
-                                <hc:Row Margin="0,15,0,0" Gutter="10">
-                                    <hc:Col Span="4">
-                                        <TextBlock Text="Telefone"/>
-                                    </hc:Col>
-                                    <hc:Col Span="20">
-                                        <hc:TextBox hc:InfoElement.Placeholder="Ex: (99)99999-9999, (88)88888-8888" />
-                                    </hc:Col>
-                                </hc:Row>
-                            </StackPanel>
-                        </hc:Col>
-                    </hc:Row>
+                        <tile:PersonalInfoTile />
                     </Expander>
 
                     <!-- Endereço -->
                     <Expander Header="Endereço">
-                        <hc:Row>
-                            <hc:Col Span="3" Layout="0,3,3,3,3" />
-                            <hc:Col Span="21">
-                                <StackPanel>
-                                    <hc:Row Gutter="10">
-                                        <hc:Col Span="4">
-                                            <TextBlock Text="Endereço" />
-                                        </hc:Col>
-                                        <hc:Col Span="17">
-                                            <hc:TextBox />
-                                        </hc:Col>
-                                        <hc:Col Span="3">
-                                            <hc:TextBox hc:InfoElement.Placeholder="nº" />
-                                        </hc:Col>
-                                    </hc:Row>
-
-                                    <hc:Row Margin="0,15,0,0" Gutter="10">
-                                        <hc:Col Span="4">
-                                            <TextBlock Text="Bairro" />
-                                        </hc:Col>
-                                        <hc:Col Span="20">
-                                            <hc:TextBox />
-                                        </hc:Col>
-                                    </hc:Row>
-
-                                    <hc:Row Margin="0,15,0,0" Gutter="10">
-                                        <hc:Col Span="4">
-                                            <TextBlock Text="Complemento" />
-                                        </hc:Col>
-                                        <hc:Col Span="20">
-                                            <hc:TextBox />
-                                        </hc:Col>
-                                    </hc:Row>
-                                    <hc:Row Margin="0,15,0,0" Gutter="10">
-                                        <hc:Col Span="4">
-                                            <TextBlock Text="Cidade" />
-                                        </hc:Col>
-                                        <hc:Col Span="17">
-                                            <hc:TextBox />
-                                        </hc:Col>
-                                        <hc:Col Span="3">
-                                            <hc:TextBox hc:InfoElement.Placeholder="UF" />
-                                        </hc:Col>
-                                    </hc:Row>
-                                </StackPanel>
-                            </hc:Col>
-                        </hc:Row>
+                        <tile:AddressTile />
                     </Expander>
                 </StackPanel>
             </hc:ScrollViewer>

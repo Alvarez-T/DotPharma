@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="DotPharma.WPF.Views.Registration.Tiles.PricingTile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DotPharma.WPF.Views.Registration.Tiles"
+             mc:Ignorable="d" 
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             d:DesignHeight="450" d:DesignWidth="800">
+<StackPanel>
+                            <hc:Row Gutter="10">
+                                <hc:Col Span="12">
+                                    <hc:TextBox hc:TitleElement.Title="Preço de Custo" Height="67" />
+                                </hc:Col>
+                                <hc:Col Span="12">
+                                    <hc:TextBox hc:TitleElement.Title="Custo do estoque" Height="67" />
+                                </hc:Col>
+                            </hc:Row>
+                            <StackPanel>
+                                <hc:Row Gutter="10" Margin="0,15,0,0">
+                                    <hc:Col Span="12">
+                                        <hc:TextBox hc:TitleElement.Title="Preço de Venda" Height="67" />
+                                    </hc:Col>
+                                    <hc:Col Span="12">
+                                        <hc:TextBox hc:TitleElement.Title="Preço à vista" Height="67" />
+                                    </hc:Col>
+                                </hc:Row>
+                                <hc:Row Gutter="10" Margin="0,15,0,0">
+                                    <hc:Col Span="12">
+                                        <hc:TextBox hc:TitleElement.Title="Preço Convênio" Height="67" />
+                                    </hc:Col>
+                                    <hc:Col Span="12">
+                                        <hc:TextBox hc:TitleElement.Title="Preço Farmácia Popular" Height="67" />
+                                    </hc:Col>
+                                </hc:Row>
+                            </StackPanel>
+                        </StackPanel>
+</UserControl>

@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DotPharma.WPF.Views.Registration"
+             xmlns:tile="clr-namespace:DotPharma.WPF.Views.Registration.Tiles"
              xmlns:hc="https://handyorg.github.io/handycontrol"
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="900">
@@ -28,119 +29,17 @@
             <hc:ScrollViewer Margin="0,15" IsInertiaEnabled="True">
                 <StackPanel>
                     <Expander Margin="0" Header="Detalhes">
-                        <hc:Row >
-                            <hc:Col x:Name="spaceColumn" Span="3" Layout="0,3,3,3,3" />
-                            <hc:Col Span="21">
-                                <StackPanel>
-
-                                    <hc:Row Gutter="10">
-                                        <hc:Col Span="4">
-                                            <TextBlock Text="Laboratório" />
-                                        </hc:Col>
-                                        <hc:Col Span="20">
-                                            <hc:TextBox />
-                                        </hc:Col>
-                                    </hc:Row>
-                                    <hc:Row Margin="0,15,0,0" Gutter="10">
-                                        <hc:Col Span="4">
-                                            <TextBlock Text="Grupo" />
-                                        </hc:Col>
-                                        <hc:Col Span="20">
-                                            <hc:TextBox />
-                                        </hc:Col>
-                                    </hc:Row>
-
-                                    <hc:Row Margin="0,15,0,0" Gutter="10">
-                                        <hc:Col Span="4">
-                                            <TextBlock Text="Ean(s)" VerticalAlignment="Top"/>
-                                        </hc:Col>
-                                        <hc:Col Span="20">
-                                            <StackPanel>
-                                                <DataGrid
-                                                    hc:BorderElement.CornerRadius="5,5,0,0"
-                                                    BorderThickness="1,1,1,0"
-                                                    GridLinesVisibility="All"
-                                                    Background="#f2f4fb">
-                                                    <DataGrid.Columns>
-                                                        <DataGridCheckBoxColumn Header="Principal"/>
-                                                        <DataGridTextColumn Header="Código de Barras" />
-                                                    </DataGrid.Columns>
-                                                </DataGrid>
-                                                <Button 
-                                                    Height="40"
-                                                    FontWeight="Thin"
-                                                    FontSize="14"
-                                                    hc:BorderElement.CornerRadius="0,0,5,5"
-                                                    Background="#f2f4fb"
-                                                    BorderThickness="1,0,1,1"
-                                                    Content="Clique aqui para adicionar novo código de barras"
-                                                    HorizontalAlignment="Stretch" />
-                                            </StackPanel>
-
-                                        </hc:Col>
-                                    </hc:Row>
-                                </StackPanel>
-                            </hc:Col>
-                        </hc:Row>
+                        <tile:ProductDetailsRegisterTile />
                     </Expander>
 
+                    <!-- Medicamento Controlado -->
                     <Expander IsExpanded="False" Header="Medicamento Controlado">
-                        <hc:Row >
-                            <hc:Col Span="3" Layout="0,3,3,3,3" />
-                            <hc:Col Span="21">
-                                <StackPanel>
-                                    <hc:Row Gutter="10">
-                                        <hc:Col Span="9">
-                                            <TextBlock Text="Grupo Psicotrópico" />
-                                        </hc:Col>
-                                        <hc:Col Span="15">
-                                            <hc:TextBox />
-                                        </hc:Col>
-                                    </hc:Row>
-                                    <hc:Row Margin="0,15,0,0" Gutter="10">
-                                        <hc:Col Span="9">
-                                            <TextBlock Text="Receita" />
-                                        </hc:Col>
-                                        <hc:Col Span="15">
-                                            <hc:TextBox />
-                                        </hc:Col>
-                                    </hc:Row>
-                                </StackPanel>
-                            </hc:Col>
-                        </hc:Row>
+                        <tile:MedicationTile
                     </Expander>
-                    
-
+                        
                     <!-- Preço -->
                     <Expander Header="Precificar">
-                        <StackPanel>
-                            <hc:Row Gutter="10">
-                                <hc:Col Span="12">
-                                    <hc:TextBox hc:TitleElement.Title="Preço de Custo" Height="67" />
-                                </hc:Col>
-                                <hc:Col Span="12">
-                                    <hc:TextBox hc:TitleElement.Title="Custo do estoque" Height="67" />
-                                </hc:Col>
-                            </hc:Row>
-                            <StackPanel>
-                                <hc:Row Gutter="10" Margin="0,15,0,0">
-                                    <hc:Col Span="12">
-                                        <hc:TextBox hc:TitleElement.Title="Preço de Venda" Height="67" />
-                                    </hc:Col>
-                                    <hc:Col Span="12">
-                                        <hc:TextBox hc:TitleElement.Title="Preço à vista" Height="67" />
-                                    </hc:Col>
-                                </hc:Row>
-                                <hc:Row Gutter="10" Margin="0,15,0,0">
-                                    <hc:Col Span="12">
-                                        <hc:TextBox hc:TitleElement.Title="Preço Convênio" Height="67" />
-                                    </hc:Col>
-                                    <hc:Col Span="12">
-                                        <hc:TextBox hc:TitleElement.Title="Preço Farmácia Popular" Height="67" />
-                                    </hc:Col>
-                                </hc:Row>
-                            </StackPanel>
-                        </StackPanel>
+                        <tile:PricingTile />
                     </Expander>
                 </StackPanel>
             </hc:ScrollViewer>

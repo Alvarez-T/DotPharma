@@ -104,6 +104,7 @@
                 </hc:TabItem>
             </hc:TabControl>
             -->
+            
             <DockPanel>
                 <Label
                     DockPanel.Dock="Top"
@@ -164,7 +165,7 @@
                 </DataGrid>
             </DockPanel>
 
-
+     
 
         </Border>
         
