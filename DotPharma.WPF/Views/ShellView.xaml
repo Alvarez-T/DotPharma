@@ -80,6 +80,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <DockPanel>
@@ -88,20 +89,30 @@
                     <Setter Property="Margin" Value="2,5,2,0" />
                 </Style>
             </DockPanel.Resources>
-            <StackPanel DockPanel.Dock="Top" Margin="0,50,0,0">
-                <Button 
-                    hc:IconElement.Geometry="{StaticResource Dashboard}"
-                    Content="Dashboard" />
-                <Button
-                    hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}"
-                    Content="Cadastros"/>
-                <Button
-                    hc:IconElement.Geometry="{StaticResource ShoppingCart}"
-                    Content="Venda" />
-            </StackPanel>
-        </DockPanel>
+            <DockPanel>
+                <hc:ScrollViewer>
+                    <StackPanel DockPanel.Dock="Top" Margin="0,50,0,0">
+                        <ToggleButton
+                            hc:IconElement.Geometry="{StaticResource Dashboard}"
+                            Content="Dashboard" />
+                        <RadioButton Content="Cadastros"
+                                     hc:IconElement.Geometry="{StaticResource Dashboard}" 
+                                     Style="{StaticResource RadioButtonMenu}">
+                            
+                        </RadioButton>
+                        <Button
+                            hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}"
+                            Content="Cadastros"/>
+                        <Button
+                            hc:IconElement.Geometry="{StaticResource ShoppingCart}"
+                            Content="Venda" />
+                    </StackPanel>
+                </hc:ScrollViewer>
+            </DockPanel>
 
-        <Border Grid.RowSpan="4" Grid.Column="2" CornerRadius="60,0,0,0" Background="#eaecf9">
+        </DockPanel>
+        
+        <Border Grid.RowSpan="4" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="60,0,0,0" Background="#eaecf9">
             <!--
             <hc:TabControl Margin="50,0" Background="#eaecf9">
                 <hc:TabItem Header="Cadastro de Produto">

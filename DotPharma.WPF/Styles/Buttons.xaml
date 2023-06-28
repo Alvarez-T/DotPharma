@@ -9,6 +9,7 @@
         <Setter Property="hc:IconElement.Width" Value="30"/>
         <Setter Property="Padding" Value="2" />
         <Setter Property="Height" Value="70" />
+        <Setter Property="Width" Value="73" />
         <Setter Property="hc:BorderElement.CornerRadius" Value="5"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -32,4 +33,47 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="RadioButtonMenu" TargetType="RadioButton" BasedOn="{StaticResource ButtonBaseBaseStyle}">
+        <Setter Property="hc:IconElement.Height" Value="30"/>
+        <Setter Property="hc:IconElement.Width" Value="30"/>
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="Height" Value="70" />
+        <Setter Property="Width" Value="73" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border CornerRadius="{Binding Path=(hc:BorderElement.CornerRadius),RelativeSource={RelativeSource TemplatedParent}}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                        <ContentControl x:Name="ContentControlMain" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}">
+                                <Path x:Name="PathMain" Fill="{TemplateBinding Foreground}" Width="{TemplateBinding hc:IconElement.Width}" Height="{TemplateBinding hc:IconElement.Height}" Stretch="Uniform"  Data="{TemplateBinding hc:IconElement.Geometry}"/>
+                                <TextBlock
+                                    x:Name="MenuDescription"
+                                    FontWeight="Medium"
+                                    Text="{TemplateBinding Content}"
+                                    Style="{StaticResource TextBlockDefault}"
+                                    FontSize="13"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Margin="0,5,0,0"/>
+                            </StackPanel>
+
+                        </ContentControl>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Content" Value="{x:Null}">
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="MenuDescription" />
+                        </Trigger>
+                        <Trigger Property="hc:IconElement.Geometry" Value="{x:Null}">
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="PathMain" />
+                            <Setter Property="Margin" Value="0" TargetName="ContentControlMain" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="BorderBrush" Value="{Binding Path=(hc:VisualElement.HighlightBrush),RelativeSource={RelativeSource TemplatedParent}}" TargetName="BorderHighlight" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
