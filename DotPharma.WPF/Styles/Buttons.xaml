@@ -4,8 +4,12 @@
     <Style x:Key="ButtonIconMenu" BasedOn="{StaticResource ButtonBaseStyle}" TargetType="Button">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryTextBrush}"/>
-        <Setter Property="hc:BorderElement.CornerRadius" Value="0"/>
+        <Setter Property="Foreground" Value="#eaecf9"/>
+        <Setter Property="hc:IconElement.Height" Value="30"/>
+        <Setter Property="hc:IconElement.Width" Value="30"/>
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="Height" Value="70" />
+        <Setter Property="hc:BorderElement.CornerRadius" Value="5"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -18,7 +22,7 @@
                                     Text="{TemplateBinding Content}"
                                     Style="{StaticResource TextBlockDefault}"
                                     FontSize="13"
-                                    Foreground="#eaecf9"
+                                    Foreground="{TemplateBinding Foreground}"
                                     Margin="0,5,0,0"/>
                             </StackPanel>
 
