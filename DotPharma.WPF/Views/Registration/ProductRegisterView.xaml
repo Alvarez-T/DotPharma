@@ -34,7 +34,7 @@
 
                     <!-- Medicamento Controlado -->
                     <Expander IsExpanded="False" Header="Medicamento Controlado">
-                        <tile:MedicationTile
+                        <tile:MedicationTile />
                     </Expander>
                         
                     <!-- Preço -->
