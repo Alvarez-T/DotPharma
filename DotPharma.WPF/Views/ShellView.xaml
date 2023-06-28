@@ -30,9 +30,19 @@
                 FontSize="24" />
             <hc:Gravatar
                 Background="#eaecf9"
-                    Height="40"
-                    Width="40"
-                    Id="Alvarez" />
+                Height="40"
+                Width="40"
+                Id="Alvarez" />
+            <Button 
+                hc:BorderElement.CornerRadius="4"
+                Padding="6"
+                Margin="10,0,0,0"
+                Foreground="#eaecf9"
+                Background="#6d7bed"
+                Height="42"
+                Width="42"
+                hc:IconElement.Geometry="{StaticResource PointOfSale}"
+                Style="{StaticResource ButtonIcon}" />
         </StackPanel>
     </hc:Window.NonClientAreaContent>
     <Window.Resources>
@@ -86,7 +96,7 @@
                     hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}"
                     Content="Cadastros"/>
                 <Button
-                    hc:IconElement.Geometry="{StaticResource PointOfSale}"
+                    hc:IconElement.Geometry="{StaticResource ShoppingCart}"
                     Content="Venda" />
             </StackPanel>
         </DockPanel>
