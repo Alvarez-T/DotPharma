@@ -10,13 +10,13 @@
         xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
         Width="1280"
         ShowTitle="False"
-        NonClientAreaBackground="#090f39"
+        NonClientAreaBackground="#FF13094F"
         CloseButtonForeground="#eaecf9"
         OtherButtonForeground="#eaecf9"
         ShowNonClientArea="True"
         Height="800"
         mc:Ignorable="d"
-        Background="#090f39"
+        Background="#FF13094F"
         Title="MainWindow">
     <hc:Window.NonClientAreaContent>
         <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Right">
@@ -84,34 +84,35 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <DockPanel>
-            <DockPanel.Resources>
-                <Style TargetType="Button" BasedOn="{StaticResource ButtonIconMenu}">
-                    <Setter Property="Margin" Value="2,5,2,0" />
-                </Style>
-            </DockPanel.Resources>
             <DockPanel>
+                <DockPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF13094F"/>
+                        <GradientStop Color="#FF090F39" Offset="1"/>
+                    </LinearGradientBrush>
+                </DockPanel.Background>
                 <hc:ScrollViewer>
+                    <hc:ScrollViewer.Resources>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource RadioButtonMenu}">
+                            <Setter Property="Margin" Value="0,5,0,0" />
+                        </Style>
+                    </hc:ScrollViewer.Resources>
                     <StackPanel DockPanel.Dock="Top" Margin="0,50,0,0">
-                        <ToggleButton
-                            hc:IconElement.Geometry="{StaticResource Dashboard}"
-                            Content="Dashboard" />
+                        <RadioButton Content="Dashboard"
+                                     IsChecked="True"
+                                     hc:IconElement.Geometry="{StaticResource Dashboard}"/>
+
+
                         <RadioButton Content="Cadastros"
-                                     hc:IconElement.Geometry="{StaticResource Dashboard}" 
-                                     Style="{StaticResource RadioButtonMenu}">
-                            
-                        </RadioButton>
-                        <Button
-                            hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}"
-                            Content="Cadastros"/>
-                        <Button
-                            hc:IconElement.Geometry="{StaticResource ShoppingCart}"
-                            Content="Venda" />
+                                     hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}" />
+                        <RadioButton Content="Venda"
+                                     hc:IconElement.Geometry="{StaticResource ShoppingCart}" />
                     </StackPanel>
                 </hc:ScrollViewer>
             </DockPanel>
 
         </DockPanel>
-        
+
         <Border Grid.RowSpan="4" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="60,0,0,0" Background="#eaecf9">
             <!--
             <hc:TabControl Margin="50,0" Background="#eaecf9">
@@ -123,7 +124,7 @@
                 </hc:TabItem>
             </hc:TabControl>
             -->
-            
+
             <DockPanel>
                 <Label
                     DockPanel.Dock="Top"
@@ -159,7 +160,7 @@
                     </Border>
 
                 </Grid>
-                
+
                 <DataGrid
                     Background="#FBFBFF"
                     hc:BorderElement.CornerRadius="20"
@@ -184,11 +185,11 @@
                 </DataGrid>
             </DockPanel>
 
-     
+
 
         </Border>
-        
 
-            
+
+
     </Grid>
 </hc:Window>
