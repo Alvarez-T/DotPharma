@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DotPharma.WPF"
         xmlns:views="clr-namespace:DotPharma.WPF.Views.Registration"
+        xmlns:dotPharma="clr-namespace:DotPharma.WPF.Controls"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:dockablz="http://dragablz.net/winfx/xaml/dockablz"
         xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
@@ -93,7 +94,7 @@
                 </DockPanel.Background>
                 <hc:ScrollViewer>
                     <hc:ScrollViewer.Resources>
-                        <Style TargetType="RadioButton" BasedOn="{StaticResource RadioButtonMenu}">
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource MenuItem}">
                             <Setter Property="Margin" Value="0,5,0,0" />
                         </Style>
                     </hc:ScrollViewer.Resources>
@@ -101,12 +102,16 @@
                         <RadioButton Content="Dashboard"
                                      IsChecked="True"
                                      hc:IconElement.Geometry="{StaticResource Dashboard}"/>
-
-
                         <RadioButton Content="Cadastros"
                                      hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}" />
-                        <RadioButton Content="Venda"
-                                     hc:IconElement.Geometry="{StaticResource ShoppingCart}" />
+
+                        <dotPharma:DropDownMenu Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
+                            <RadioButton Content="Venda"
+                                         hc:IconElement.Geometry="{StaticResource ShoppingCart}" />
+                            <RadioButton Content="Estorno"
+                                         hc:IconElement.Geometry="{StaticResource Undo}" />
+                        </dotPharma:DropDownMenu>
+
                     </StackPanel>
                 </hc:ScrollViewer>
             </DockPanel>

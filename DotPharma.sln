@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.WPF", "DotPharma.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Presentation", "DotPharma.Presentation\DotPharma.Presentation.csproj", "{30A01ECC-6C0E-4B1C-8C9D-686D81445734}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DotControls.WPF", "DotControls.WPF\DotControls.WPF.shproj", "{EC9DE11F-342A-420F-AA47-F4BFCAA4E599}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,12 +41,8 @@ Global
 		{1A63569B-CA98-41E2-B280-C1A8D12CD1C0} = {A481A230-425A-4938-9942-BD86E9383C45}
 		{5A1B2688-549D-49D4-AEB7-6CC82120B8BE} = {A481A230-425A-4938-9942-BD86E9383C45}
 		{30A01ECC-6C0E-4B1C-8C9D-686D81445734} = {A481A230-425A-4938-9942-BD86E9383C45}
-		{EC9DE11F-342A-420F-AA47-F4BFCAA4E599} = {A481A230-425A-4938-9942-BD86E9383C45}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFD3CBA2-ABA2-4F49-B5C5-1EF356F088F4}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		DotControls.WPF\DotControls.WPF.projitems*{ec9de11f-342a-420f-aa47-f4bfcaa4e599}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
