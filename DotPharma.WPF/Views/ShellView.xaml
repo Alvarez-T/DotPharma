@@ -104,9 +104,14 @@
                         <RadioButton Content="Dashboard"
                                      IsChecked="True"
                                      hc:IconElement.Geometry="{StaticResource Dashboard}"/>
-                        <RadioButton Content="Cadastros"
-                                     hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}" />
-
+                        <dotPharma:DropDownMenu Header="Cadastros" GroupName="MenuGroup" hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}">
+                            <RadioButton Content="Produto"
+                                         hc:IconElement.Geometry="{StaticResource Medicine}" />
+                            <RadioButton Content="Cliente"
+                                         hc:IconElement.Geometry="{StaticResource PersonAdd}" />
+                            <RadioButton Content="Fornecedor"
+                                         hc:IconElement.Geometry="{StaticResource Supplier}" />
+                        </dotPharma:DropDownMenu>
                         <dotPharma:DropDownMenu GroupName="MenuGroup" Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
                             <RadioButton Content="Venda"
                                          hc:IconElement.Geometry="{StaticResource ShoppingCart}" />
