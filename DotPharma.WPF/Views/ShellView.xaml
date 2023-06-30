@@ -151,11 +151,37 @@
                     <Label.Content>
                         <Grid>
                             <TextBlock Text="Ponto de Venda" />
-                            <Button Padding="0" Height="44" Width="44" HorizontalAlignment="Right" Style="{StaticResource ButtonImageCircular}">
-                                <Button.Background>
-                                    <ImageBrush ImageSource="../Images/funcionalCard.png" />
-                                </Button.Background>
-                            </Button>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="40,0">
+                                <StackPanel.Resources>
+                                    <Style TargetType="Button" BasedOn="{StaticResource ButtonImageCircular}">
+                                        <Setter Property="Height" Value="44"/>
+                                        <Setter Property="Width" Value="44" />
+                                        <Setter Property="Padding" Value="0" />
+                                        <Setter Property="Margin" Value="5,0" />
+                                    </Style>
+                                </StackPanel.Resources>
+                                <Button>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="../Images/farmaciaPopular.png" Stretch="UniformToFill" />
+                                    </Button.Background>
+                                </Button>
+                                <Button>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="../Images/funcionalCard.png" Stretch="UniformToFill" />
+                                    </Button.Background>
+                                </Button>
+                                <Button>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="../Images/portalDrogaria.png" Stretch="UniformToFill" />
+                                    </Button.Background>
+                                </Button>
+                                <Button>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="../Images/epharma.png" Stretch="UniformToFill" />
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+
                         </Grid>
                     </Label.Content>
                 </Label>
