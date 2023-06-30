@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\funcionalCard.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapplo.Microsoft.Extensions.Hosting.Wpf" Version="1.0.14" />
     <PackageReference Include="Dragablz" Version="0.0.3.234" />
     <PackageReference Include="HandyControls" Version="3.4.5" />
@@ -21,6 +25,27 @@
 		<SubType>Designer</SubType>
 		<ContainsDesignTimeResources>true</ContainsDesignTimeResources>
 	</Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\funcionalCard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
