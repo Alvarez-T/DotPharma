@@ -95,8 +95,10 @@
                 <hc:ScrollViewer>
                     <hc:ScrollViewer.Resources>
                         <Style TargetType="RadioButton" BasedOn="{StaticResource MenuItem}">
+                            <Setter Property="GroupName" Value="MenuGroup" />
                             <Setter Property="Margin" Value="0,5,0,0" />
                         </Style>
+
                     </hc:ScrollViewer.Resources>
                     <StackPanel DockPanel.Dock="Top" Margin="0,50,0,0">
                         <RadioButton Content="Dashboard"
@@ -105,12 +107,13 @@
                         <RadioButton Content="Cadastros"
                                      hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}" />
 
-                        <dotPharma:DropDownMenu Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
+                        <dotPharma:DropDownMenu GroupName="MenuGroup" Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
                             <RadioButton Content="Venda"
                                          hc:IconElement.Geometry="{StaticResource ShoppingCart}" />
                             <RadioButton Content="Estorno"
                                          hc:IconElement.Geometry="{StaticResource Undo}" />
                         </dotPharma:DropDownMenu>
+
 
                     </StackPanel>
                 </hc:ScrollViewer>

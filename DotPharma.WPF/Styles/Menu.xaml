@@ -87,8 +87,14 @@
                                 <RowDefinition Height="auto" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <RadioButton x:Name="MainMenu" Margin="0" Style="{StaticResource SimpleMenuItem}" Content="{TemplateBinding Header}" hc:IconElement.Geometry="{TemplateBinding hc:IconElement.Geometry}" />
-                            <ItemsPresenter x:Name="MainPresenter" Grid.Row="1" Visibility="Collapsed" />
+                            <RadioButton x:Name="MainMenu" 
+                                         Margin="0" Style="{StaticResource SimpleMenuItem}"
+                                         Content="{TemplateBinding Header}"
+                                         hc:IconElement.Geometry="{TemplateBinding hc:IconElement.Geometry}"
+                                         GroupName="{TemplateBinding GroupName}"/>
+                            <ItemsPresenter x:Name="MainPresenter" Grid.Row="1" Visibility="Collapsed" >
+
+                            </ItemsPresenter>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -96,7 +102,15 @@
                             <Setter TargetName="MenuBorder" Property="Background" Value="#22274d" />
                             <Setter TargetName="MainPresenter" Property="Visibility" Value="Visible" />
                         </Trigger>
+                        <Trigger Property="HasItems" Value="False">
+                            <Setter TargetName="MainMenu" Property="Style" Value="{StaticResource MenuItem}" />
+                        </Trigger>
                     </ControlTemplate.Triggers>
+                    <ControlTemplate.Resources>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource MenuItem}" >
+                            <Setter Property="GroupName" Value="SubMenuGroup" />
+                        </Style>
+                    </ControlTemplate.Resources>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
