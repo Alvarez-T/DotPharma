@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:hc="https://handyorg.github.io/handycontrol"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Style x:Key="ButtonIconMenu" BasedOn="{StaticResource ButtonBaseStyle}" TargetType="Button">
+    <Style x:Key="ButtonIconTop" BasedOn="{StaticResource ButtonBaseStyle}" TargetType="Button">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Foreground" Value="#eaecf9"/>
@@ -21,10 +21,12 @@
                                 <TextBlock
                                     FontWeight="Medium"
                                     Text="{TemplateBinding Content}"
+                                    TextWrapping="Wrap"
+                                    TextAlignment="Center"
                                     Style="{StaticResource TextBlockDefault}"
                                     FontSize="13"
                                     Foreground="{TemplateBinding Foreground}"
-                                    Margin="0,5,0,0"/>
+                                    Margin="0,2,0,0"/>
                             </StackPanel>
 
                         </ContentControl>

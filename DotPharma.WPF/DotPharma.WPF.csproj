@@ -12,6 +12,7 @@
     <None Remove="Images\farmaciaPopular.png" />
     <None Remove="Images\funcionalCard.png" />
     <None Remove="Images\portalDrogaria.png" />
+    <None Remove="Images\vidalink.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,6 +42,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\portalDrogaria.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\vidalink.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

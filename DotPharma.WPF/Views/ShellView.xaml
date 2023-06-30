@@ -158,24 +158,30 @@
                                         <Setter Property="Width" Value="44" />
                                         <Setter Property="Padding" Value="0" />
                                         <Setter Property="Margin" Value="5,0" />
+                                        <Setter Property="Cursor" Value="Hand" />
                                     </Style>
                                 </StackPanel.Resources>
-                                <Button>
+                                <Button ToolTip="Farmácia Popular">
                                     <Button.Background>
                                         <ImageBrush ImageSource="../Images/farmaciaPopular.png" Stretch="UniformToFill" />
                                     </Button.Background>
                                 </Button>
-                                <Button>
+                                <Button ToolTip="Vidalink">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="../Images/vidalink.png" Stretch="UniformToFill" />
+                                    </Button.Background>
+                                </Button>
+                                <Button ToolTip="Funcional Card">
                                     <Button.Background>
                                         <ImageBrush ImageSource="../Images/funcionalCard.png" Stretch="UniformToFill" />
                                     </Button.Background>
                                 </Button>
-                                <Button>
+                                <Button ToolTip="Portal da Drogaria">
                                     <Button.Background>
                                         <ImageBrush ImageSource="../Images/portalDrogaria.png" Stretch="UniformToFill" />
                                     </Button.Background>
                                 </Button>
-                                <Button>
+                                <Button ToolTip="E-Pharma">
                                     <Button.Background>
                                         <ImageBrush ImageSource="../Images/epharma.png" Stretch="UniformToFill" />
                                     </Button.Background>
@@ -194,9 +200,36 @@
                         Margin="0,0,10,0"
                         Background="#FBFBFF"
                         CornerRadius="20">
-                        <StackPanel MinHeight="300">
+                        <Grid MinHeight="370">
+                            <Grid.Resources>
+                                <ResourceDictionary Source="../Styles/FormStyle.xaml"/>
+                            </Grid.Resources>
+                            <StackPanel Margin="10">
+                                <Grid>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock HorizontalAlignment="Left"
+                                               VerticalAlignment="Top"
+                                               FontSize="24"
+                                               Text="Dados do Cliente" />
+                                        <Path Fill="#0B1245" Data="{StaticResource PersonAdd}" />
+                                    </StackPanel>
 
-                        </StackPanel>
+                                    
+                                    <Button Style="{StaticResource ButtonIconTop}" 
+                                            hc:IconElement.Geometry="{StaticResource Prescription}"
+                                            Content="Informar Receita"
+                                            Height="80"
+                                            HorizontalAlignment="Right"
+                                            Foreground="#0B1245"/>
+                                </Grid>
+ 
+                                <hc:TextBox
+                                    hc:TitleElement.Title="Nome" />
+                                <hc:TextBox
+                                    hc:TitleElement.Title="CPF"/>
+
+                            </StackPanel>
+                        </Grid>
                     </Border>
                     <Border 
                         Grid.Column="1"

@@ -16,7 +16,7 @@
         <Setter Property="TextAlignment" Value="Right"/>
     </Style>
     <Style TargetType="hc:TextBox" BasedOn="{StaticResource TextBoxExtend}">
-        <Setter Property="Height" Value="40" />
+        <Setter Property="Height" Value="67" />
         <Setter Property="Background" Value="#f2f4fb" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="TextAlignment" Value="Left" />
