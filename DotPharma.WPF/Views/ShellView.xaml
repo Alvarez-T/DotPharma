@@ -160,6 +160,54 @@
                                             </Trigger>
                                         </Style.Triggers>    
                                     </Style>
+                                    <Style TargetType="ToggleButton">
+                                        <Setter Property="Foreground" Value="#cecfd7"/>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="BorderThickness" Value="0" />
+                                        <Setter Property="Width" Value="80" />
+                                        <Setter Property="Height" Value="75" />
+                                        <Setter Property="hc:BorderElement.CornerRadius" Value="5" />
+                                        <Setter Property="hc:IconElement.Height" Value="30" />
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="ToggleButton">
+                                                    <Border CornerRadius="{Binding Path=(hc:BorderElement.CornerRadius),RelativeSource={RelativeSource TemplatedParent}}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                                        <Border Name="BorderHighlight" BorderThickness="3,0,0,0" BorderBrush="Transparent">
+                                                            <StackPanel Orientation="Vertical" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}">
+                                                                <Path x:Name="PathMain" VerticalAlignment="Center" Height="{Binding Path=(hc:IconElement.Height),RelativeSource={RelativeSource TemplatedParent}}" Width="{Binding Path=(hc:IconElement.Width),RelativeSource={RelativeSource TemplatedParent}}" Fill="{TemplateBinding Foreground}" SnapsToDevicePixels="True" Stretch="Uniform" Data="{TemplateBinding hc:IconElement.Geometry}" />
+                                                                <TextBlock
+                                                                        TextAlignment="Center"
+                                                                        x:Name="MenuDescription"
+                                                                        FontWeight="Medium"
+                                                                        Text="{TemplateBinding Content}"
+                                                                        TextWrapping="Wrap"
+                                                                        Style="{StaticResource TextBlockDefault}"
+                                                                        Padding="0"
+                                                                        FontSize="13"
+                                                                        Foreground="{TemplateBinding Foreground}"
+                                                                        Margin="0,5,0,0"/>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="Content" Value="{x:Null}">
+                                                            <Setter Property="Visibility" Value="Collapsed" TargetName="MenuDescription" />
+                                                        </Trigger>
+                                                        <Trigger Property="hc:IconElement.Geometry" Value="{x:Null}">
+                                                            <Setter Property="Visibility" Value="Collapsed" TargetName="PathMain" />
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsChecked" Value="True">
+                                                <Setter Property="Foreground" Value="White"/>
+                                                <Setter Property="Background" Value="#c44d6f" />
+
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
                                 </StackPanel.Resources>
                                 <TextBlock Text="Ponto de Venda"
                                            VerticalAlignment="Center"/>
@@ -177,62 +225,64 @@
                                             Orientation="Vertical" 
                                             LineStroke="#eaecf9"
                                             LineStrokeThickness="3"/>
-                                <ToggleButton Height="78"
-                                              Margin="5,0"
+                                <ToggleButton Margin="5,0"
                                               Content="Entrega"
-                                              Foreground="#cecfd7"
-                                              Width="80"
-                                              BorderThickness="0"
-                                              hc:BorderElement.CornerRadius="5"
                                               hc:IconElement.Height="30"
-                                              hc:IconElement.Geometry="{StaticResource Motorcycle}">
-                                    <ToggleButton.Style>
-                                        <Style TargetType="ToggleButton">
-                                            <Setter Property="Foreground" Value="#cecfd7"/>
-                                            <Setter Property="Background" Value="Transparent"/>
+                                              hc:IconElement.Geometry="{StaticResource Motorcycle}" />
+                                <ToggleButton Content="Encomendar"
+                                              hc:IconElement.Height="30"
+                                              hc:IconElement.Geometry="{StaticResource Package}" />
+                                <hc:Divider Margin="5,0"
+                                            Orientation="Vertical" 
+                                            LineStroke="#eaecf9"
+                                            LineStrokeThickness="3"/>
+
+                                <hc:Badge Value="3" BadgeMargin="0,-1,-10,0">
+                                    <hc:Badge.Style>
+                                        <Style TargetType="hc:Badge" BasedOn="{StaticResource BadgeDanger}">
                                             <Setter Property="Template">
                                                 <Setter.Value>
-                                                    <ControlTemplate TargetType="ToggleButton">
-                                                        <Border CornerRadius="{Binding Path=(hc:BorderElement.CornerRadius),RelativeSource={RelativeSource TemplatedParent}}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
-                                                            <Border Name="BorderHighlight" BorderThickness="3,0,0,0" BorderBrush="Transparent">
-                                                                <StackPanel Orientation="Vertical" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}">
-                                                                    <Path x:Name="PathMain" VerticalAlignment="Center" Height="{Binding Path=(hc:IconElement.Height),RelativeSource={RelativeSource TemplatedParent}}" Width="{Binding Path=(hc:IconElement.Width),RelativeSource={RelativeSource TemplatedParent}}" Fill="{TemplateBinding Foreground}" SnapsToDevicePixels="True" Stretch="Uniform" Data="{TemplateBinding hc:IconElement.Geometry}" />
-                                                                    <TextBlock
-                                                                        TextAlignment="Center"
-                                                                        x:Name="MenuDescription"
-                                                                        FontWeight="Medium"
-                                                                        Text="{TemplateBinding Content}"
-                                                                        TextWrapping="Wrap"
-                                                                        Style="{StaticResource TextBlockDefault}"
-                                                                        Padding="0"
-                                                                        FontSize="13"
-                                                                        Foreground="{TemplateBinding Foreground}"
-                                                                        Margin="0,5,0,0"/>
-                                                                </StackPanel>
+                                                    <ControlTemplate TargetType="hc:Badge">
+                                                        <hc:SimplePanel>
+                                                            <ContentPresenter />
+                                                            <Border x:Name="Border"  Visibility="{TemplateBinding ShowBadge,Converter={StaticResource Boolean2VisibilityConverter}}" RenderTransformOrigin="0.5 0.5" Style="{StaticResource BorderCircular}" Margin="{TemplateBinding BadgeMargin}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                                                <Border.RenderTransform>
+                                                                    <ScaleTransform />
+                                                                </Border.RenderTransform>
+                                                                <ContentPresenter ContentSource="Text" Margin="{TemplateBinding Padding}"  >
+                                                                    <ContentPresenter.Resources>
+                                                                        <Style TargetType="TextBlock">
+                                                                            <Setter Property="FontSize" Value="14" />
+                                                                        </Style>
+                                                                    </ContentPresenter.Resources>
+                                                                </ContentPresenter>
                                                             </Border>
-                                                        </Border>
+                                                        </hc:SimplePanel>
                                                         <ControlTemplate.Triggers>
-                                                            <Trigger Property="Content" Value="{x:Null}">
-                                                                <Setter Property="Visibility" Value="Collapsed" TargetName="MenuDescription" />
-                                                            </Trigger>
-                                                            <Trigger Property="hc:IconElement.Geometry" Value="{x:Null}">
-                                                                <Setter Property="Visibility" Value="Collapsed" TargetName="PathMain" />
-                                                            </Trigger>
+                                                            <EventTrigger RoutedEvent="hc:Badge.ValueChanged">
+                                                                <BeginStoryboard>
+                                                                    <Storyboard AutoReverse="True">
+                                                                        <DoubleAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" BeginTime="0" Duration="0:0:.1" From="1" To="1.2" EasingFunction="{StaticResource SineEaseOut}" />
+                                                                        <DoubleAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" BeginTime="0" Duration="0:0:.1" From="1" To="1.2" EasingFunction="{StaticResource SineEaseOut}" />
+                                                                    </Storyboard>
+                                                                </BeginStoryboard>
+                                                            </EventTrigger>
                                                         </ControlTemplate.Triggers>
                                                     </ControlTemplate>
                                                 </Setter.Value>
                                             </Setter>
-                                            <Style.Triggers>
-                                                <Trigger Property="IsChecked" Value="True">
-                                                    <Setter Property="Foreground" Value="White"/>
-                                                    <Setter Property="Background" Value="#c44d6f" />
-
-                                                </Trigger>
-                                            </Style.Triggers>
                                         </Style>
-                                    </ToggleButton.Style>
+                                    </hc:Badge.Style>
+                                    <ToggleButton 
+                                        
+                                              BorderBrush="#eaecf9"
+                                              Height="70"
+                                              Content="Comandas"
+                                              hc:IconElement.Height="30"
+                                              hc:IconElement.Geometry="{StaticResource Receipt}" />
+                                </hc:Badge>
 
-                                </ToggleButton>
+
 
                             </StackPanel>
                             
