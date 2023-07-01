@@ -25,7 +25,9 @@
                                     x:Name="MenuDescription"
                                     FontWeight="Medium"
                                     Text="{TemplateBinding Content}"
+                                    TextWrapping="Wrap"
                                     Style="{StaticResource TextBlockDefault}"
+                                    Padding="0"
                                     FontSize="13"
                                     Foreground="{TemplateBinding Foreground}"
                                     Margin="0,5,0,0"/>
