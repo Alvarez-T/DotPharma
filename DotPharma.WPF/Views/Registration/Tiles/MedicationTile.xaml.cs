@@ -18,9 +18,9 @@ namespace DotPharma.WPF.Views.Registration.Tiles
     /// <summary>
     /// Interaction logic for MedicationTile.xaml
     /// </summary>
-    public partial class MedicationTile : UserControl
+    public partial class RegisterMedicationTile : UserControl
     {
-        public MedicationTile()
+        public RegisterMedicationTile()
         {
             InitializeComponent();
         }

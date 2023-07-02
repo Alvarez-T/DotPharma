@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DotPharma.WPF.Views.Registration.Tiles
+namespace DotPharma.WPF.Views
 {
     /// <summary>
-    /// Interaction logic for ProductDetailsRegisterTile.xaml
+    /// Interaction logic for PointOfSaleView.xaml
     /// </summary>
-    public partial class RegisterProductDetailsTile : UserControl
+    public partial class PointOfSaleView : UserControl
     {
-        public RegisterProductDetailsTile()
+        public PointOfSaleView()
         {
             InitializeComponent();
         }

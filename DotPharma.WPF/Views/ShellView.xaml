@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DotPharma.WPF"
         xmlns:views="clr-namespace:DotPharma.WPF.Views.Registration"
-        xmlns:dotPharma="clr-namespace:DotPharma.WPF.Controls"
+        xmlns:dotControl="clr-namespace:DotPharma.WPF.Controls"
+        xmlns:dotPharma="clr-namespace:DotPharma.WPF.Views"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:dockablz="http://dragablz.net/winfx/xaml/dockablz"
         xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
@@ -104,20 +105,20 @@
                         <RadioButton Content="Dashboard"
                                      IsChecked="True"
                                      hc:IconElement.Geometry="{StaticResource Dashboard}"/>
-                        <dotPharma:DropDownMenu Header="Cadastros" GroupName="MenuGroup" hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}">
+                        <dotControl:DropDownMenu Header="Cadastros" GroupName="MenuGroup" hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}">
                             <RadioButton Content="Produto"
                                          hc:IconElement.Geometry="{StaticResource Medicine}" />
                             <RadioButton Content="Cliente"
                                          hc:IconElement.Geometry="{StaticResource PersonAdd}" />
                             <RadioButton Content="Fornecedor"
                                          hc:IconElement.Geometry="{StaticResource Supplier}" />
-                        </dotPharma:DropDownMenu>
-                        <dotPharma:DropDownMenu GroupName="MenuGroup" Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
+                        </dotControl:DropDownMenu>
+                        <dotControl:DropDownMenu GroupName="MenuGroup" Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
                             <RadioButton Content="Venda"
                                          hc:IconElement.Geometry="{StaticResource ShoppingCart}" />
                             <RadioButton Content="Estorno"
                                          hc:IconElement.Geometry="{StaticResource Undo}" />
-                        </dotPharma:DropDownMenu>
+                        </dotControl:DropDownMenu>
 
 
                     </StackPanel>
@@ -137,284 +138,9 @@
                 </hc:TabItem>
             </hc:TabControl>
             -->
-
-            <DockPanel>
-                <Label
-                    DockPanel.Dock="Top"
-                    hc:BorderElement.CornerRadius="60,0,0,0"
-                    Height="75"
-                    HorizontalAlignment="Stretch"
-                    HorizontalContentAlignment="Stretch"
-                    FontWeight="Medium"
-                    Padding="50,0,0,0"
-                    FontSize="32">
-                    <Label.Content>
-                        <Grid>
-                            <StackPanel Orientation="Horizontal">
-                                <StackPanel.Resources>
-                                    <Style TargetType="RadioButton" BasedOn="{StaticResource SimpleMenuItem}">
-                                        <Setter Property="Padding" Value="0" />
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Foreground" Value="#bcc4fe" />
-                                            </Trigger>
-                                        </Style.Triggers>    
-                                    </Style>
-                                    <Style TargetType="ToggleButton">
-                                        <Setter Property="Foreground" Value="#cecfd7"/>
-                                        <Setter Property="Background" Value="Transparent"/>
-                                        <Setter Property="BorderThickness" Value="0" />
-                                        <Setter Property="Width" Value="80" />
-                                        <Setter Property="Height" Value="75" />
-                                        <Setter Property="hc:BorderElement.CornerRadius" Value="5" />
-                                        <Setter Property="hc:IconElement.Height" Value="30" />
-                                        <Setter Property="Template">
-                                            <Setter.Value>
-                                                <ControlTemplate TargetType="ToggleButton">
-                                                    <Border CornerRadius="{Binding Path=(hc:BorderElement.CornerRadius),RelativeSource={RelativeSource TemplatedParent}}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
-                                                        <Border Name="BorderHighlight" BorderThickness="3,0,0,0" BorderBrush="Transparent">
-                                                            <StackPanel Orientation="Vertical" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}">
-                                                                <Path x:Name="PathMain" VerticalAlignment="Center" Height="{Binding Path=(hc:IconElement.Height),RelativeSource={RelativeSource TemplatedParent}}" Width="{Binding Path=(hc:IconElement.Width),RelativeSource={RelativeSource TemplatedParent}}" Fill="{TemplateBinding Foreground}" SnapsToDevicePixels="True" Stretch="Uniform" Data="{TemplateBinding hc:IconElement.Geometry}" />
-                                                                <TextBlock
-                                                                        TextAlignment="Center"
-                                                                        x:Name="MenuDescription"
-                                                                        FontWeight="Medium"
-                                                                        Text="{TemplateBinding Content}"
-                                                                        TextWrapping="Wrap"
-                                                                        Style="{StaticResource TextBlockDefault}"
-                                                                        Padding="0"
-                                                                        FontSize="13"
-                                                                        Foreground="{TemplateBinding Foreground}"
-                                                                        Margin="0,5,0,0"/>
-                                                            </StackPanel>
-                                                        </Border>
-                                                    </Border>
-                                                    <ControlTemplate.Triggers>
-                                                        <Trigger Property="Content" Value="{x:Null}">
-                                                            <Setter Property="Visibility" Value="Collapsed" TargetName="MenuDescription" />
-                                                        </Trigger>
-                                                        <Trigger Property="hc:IconElement.Geometry" Value="{x:Null}">
-                                                            <Setter Property="Visibility" Value="Collapsed" TargetName="PathMain" />
-                                                        </Trigger>
-                                                    </ControlTemplate.Triggers>
-                                                </ControlTemplate>
-                                            </Setter.Value>
-                                        </Setter>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsChecked" Value="True">
-                                                <Setter Property="Foreground" Value="White"/>
-                                                <Setter Property="Background" Value="#c44d6f" />
-
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </StackPanel.Resources>
-                                <TextBlock Text="Ponto de Venda"
-                                           VerticalAlignment="Center"/>
-                                <hc:Divider Margin="30,0,0,0"
-                                            Orientation="Vertical" 
-                                            LineStroke="#eaecf9"
-                                            LineStrokeThickness="3"/>
-                                <RadioButton hc:IconElement.Geometry="{StaticResource Wallet}"
-                                             Content="Venda à vista"/>
-                                <RadioButton hc:IconElement.Geometry="{StaticResource CalendarEvent}"
-                                             Content="Venda à prazo"/>
-                                <RadioButton hc:IconElement.Geometry="{StaticResource Handshake}"
-                                             Content="Venda convênio"/>
-                                <hc:Divider Margin="0"
-                                            Orientation="Vertical" 
-                                            LineStroke="#eaecf9"
-                                            LineStrokeThickness="3"/>
-                                <ToggleButton Margin="5,0"
-                                              Content="Entrega"
-                                              hc:IconElement.Height="30"
-                                              hc:IconElement.Geometry="{StaticResource Motorcycle}" />
-                                <ToggleButton Content="Encomendar"
-                                              hc:IconElement.Height="30"
-                                              hc:IconElement.Geometry="{StaticResource Package}" />
-                                <hc:Divider Margin="5,0"
-                                            Orientation="Vertical" 
-                                            LineStroke="#eaecf9"
-                                            LineStrokeThickness="3"/>
-
-                                <hc:Badge Value="3" BadgeMargin="0,-1,-10,0">
-                                    <hc:Badge.Style>
-                                        <Style TargetType="hc:Badge" BasedOn="{StaticResource BadgeDanger}">
-                                            <Setter Property="Template">
-                                                <Setter.Value>
-                                                    <ControlTemplate TargetType="hc:Badge">
-                                                        <hc:SimplePanel>
-                                                            <ContentPresenter />
-                                                            <Border x:Name="Border"  Visibility="{TemplateBinding ShowBadge,Converter={StaticResource Boolean2VisibilityConverter}}" RenderTransformOrigin="0.5 0.5" Style="{StaticResource BorderCircular}" Margin="{TemplateBinding BadgeMargin}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-                                                                <Border.RenderTransform>
-                                                                    <ScaleTransform />
-                                                                </Border.RenderTransform>
-                                                                <ContentPresenter ContentSource="Text" Margin="{TemplateBinding Padding}"  >
-                                                                    <ContentPresenter.Resources>
-                                                                        <Style TargetType="TextBlock">
-                                                                            <Setter Property="FontSize" Value="14" />
-                                                                        </Style>
-                                                                    </ContentPresenter.Resources>
-                                                                </ContentPresenter>
-                                                            </Border>
-                                                        </hc:SimplePanel>
-                                                        <ControlTemplate.Triggers>
-                                                            <EventTrigger RoutedEvent="hc:Badge.ValueChanged">
-                                                                <BeginStoryboard>
-                                                                    <Storyboard AutoReverse="True">
-                                                                        <DoubleAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)" BeginTime="0" Duration="0:0:.1" From="1" To="1.2" EasingFunction="{StaticResource SineEaseOut}" />
-                                                                        <DoubleAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)" BeginTime="0" Duration="0:0:.1" From="1" To="1.2" EasingFunction="{StaticResource SineEaseOut}" />
-                                                                    </Storyboard>
-                                                                </BeginStoryboard>
-                                                            </EventTrigger>
-                                                        </ControlTemplate.Triggers>
-                                                    </ControlTemplate>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </Style>
-                                    </hc:Badge.Style>
-                                    <ToggleButton 
-                                        
-                                              BorderBrush="#eaecf9"
-                                              Height="70"
-                                              Content="Comandas"
-                                              hc:IconElement.Height="30"
-                                              hc:IconElement.Geometry="{StaticResource Receipt}" />
-                                </hc:Badge>
+            <dotPharma:PointOfSaleView />
 
 
-
-                            </StackPanel>
-                            
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="40,0">
-                                <StackPanel.Resources>
-                                    <Style TargetType="Button" BasedOn="{StaticResource ButtonImageCircular}">
-                                        <Setter Property="Height" Value="44"/>
-                                        <Setter Property="Width" Value="44" />
-                                        <Setter Property="Padding" Value="0" />
-                                        <Setter Property="Margin" Value="5,0" />
-                                        <Setter Property="Cursor" Value="Hand" />
-                                    </Style>
-                                </StackPanel.Resources>
-                                <Button ToolTip="Farmácia Popular">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="../Images/farmaciaPopular.png" Stretch="UniformToFill" />
-                                    </Button.Background>
-                                </Button>
-                                <Button ToolTip="Vidalink">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="../Images/vidalink.png" Stretch="UniformToFill" />
-                                    </Button.Background>
-                                </Button>
-                                <Button ToolTip="Funcional Card">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="../Images/funcionalCard.png" Stretch="UniformToFill" />
-                                    </Button.Background>
-                                </Button>
-                                <Button ToolTip="Portal da Drogaria">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="../Images/portalDrogaria.png" Stretch="UniformToFill" />
-                                    </Button.Background>
-                                </Button>
-                                <Button ToolTip="E-Pharma">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="../Images/epharma.png" Stretch="UniformToFill" />
-                                    </Button.Background>
-                                </Button>
-                            </StackPanel>
-
-                        </Grid>
-                    </Label.Content>
-                </Label>
-                <Grid DockPanel.Dock="Top" Margin="40,10,40,15">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*" />
-                        <ColumnDefinition Width="*" MinWidth="500" />
-                    </Grid.ColumnDefinitions>
-                    <Border 
-                        Margin="0,0,10,0"
-                        Background="#FBFBFF"
-                        CornerRadius="20">
-                        <Grid MinHeight="370">
-                            <Grid.Resources>
-                                <ResourceDictionary>
- 
-                                    <Style TargetType="hc:TextBox" BasedOn="{StaticResource TextBoxExtend}">
-                                        <Setter Property="hc:TitleElement.TitlePlacement" Value="Left" />
-                                        <Setter Property="hc:TitleElement.TitleWidth" Value="100" />
-                                        <Setter Property="Margin" Value="0,10,0,0" />
-                                        <Setter Property="Height" Value="50" />
-                                        <Setter Property="FontSize" Value="18" />
-                                    </Style>
-                                    <Style TargetType="TextBlock">
-                                        <Setter Property="FontSize" Value="18" />
-                                        <Setter Property="FontWeight" Value="Thin" />
-                                        <Setter Property="VerticalAlignment" Value="Center" />
-                                        <Setter Property="TextAlignment" Value="Right"/>
-                                    </Style>
-
-                                </ResourceDictionary>
-                            </Grid.Resources>
-                            <StackPanel Margin="15">
-                                <Grid>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock HorizontalAlignment="Left"
-                                               VerticalAlignment="Top"
-                                               FontSize="24"
-                                               Text="Dados do Cliente" />
-
-                                    </StackPanel>
-                                    <Button Style="{StaticResource ButtonIconTop}" 
-                                            hc:IconElement.Geometry="{StaticResource Prescription}"
-                                            Content="Informar Receita"
-                                            Height="80"
-                                            HorizontalAlignment="Right"
-                                            Foreground="#0B1245"/>
-                                </Grid>
-                                <hc:TextBox hc:TitleElement.Title="Nome" />
-                                <hc:TextBox hc:TitleElement.Title="CPF" />
-                                <hc:TextBox hc:TitleElement.Title="Email"/>
-
-                            </StackPanel>
-
-
-                        </Grid>
-                    </Border>
-                    <Border 
-                        Grid.Column="1"
-                        Margin="10,0,0,0"
-                        Background="#FBFBFF"
-                        CornerRadius="20">
-                        <StackPanel MinHeight="300">
-
-                        </StackPanel>
-                    </Border>
-
-                </Grid>
-
-                <DataGrid
-                    Background="#FBFBFF"
-                    hc:BorderElement.CornerRadius="20"
-                    Margin="40,0,40,40"
-                    DockPanel.Dock="Bottom">
-                    <DataGrid.Resources>
-                        <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DataGridColumnHeaderStyle}">
-                            <Setter Property="FontSize" Value="16" />
-                        </Style>
-                    </DataGrid.Resources>
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Código" />
-                        <DataGridTextColumn Header="Produto" Width="*" />
-                        <DataGridTextColumn Header="Preço Bruto" />
-                        <DataGridTextColumn Header="Preço Líquido" />
-                        <DataGridTextColumn Header="Desconto" />
-                        <DataGridTextColumn Header="Quantidade" />
-                        <DataGridTextColumn Header="Total" />
-                    </DataGrid.Columns>
-                    <DataGrid.Items>
-                    </DataGrid.Items>
-                </DataGrid>
-            </DockPanel>
 
 
 

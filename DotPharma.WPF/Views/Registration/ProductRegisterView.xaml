@@ -29,12 +29,12 @@
             <hc:ScrollViewer Margin="0,15" IsInertiaEnabled="True">
                 <StackPanel>
                     <Expander Margin="0" Header="Detalhes">
-                        <tile:ProductDetailsRegisterTile />
+                        <tile:RegisterProductDetailsTile />
                     </Expander>
 
                     <!-- Medicamento Controlado -->
                     <Expander IsExpanded="False" Header="Medicamento Controlado">
-                        <tile:MedicationTile />
+                        <tile:RegisterMedicationTile />
                     </Expander>
                         
                     <!-- Preço -->
