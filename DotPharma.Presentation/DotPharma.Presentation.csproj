@@ -11,7 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\NavigatR\NavigatR.MVVM\NavigatR.MVVM.csproj" />
+    <ProjectReference Include="..\..\NavigatR\NavigatR\NavigatR.csproj" />
   </ItemGroup>
 
 </Project>
