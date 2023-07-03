@@ -16,7 +16,7 @@
         CloseButtonForeground="#eaecf9"
         OtherButtonForeground="#eaecf9"
         ShowNonClientArea="True"
-        Height="800"
+           Height="1080"
         mc:Ignorable="d"
         Background="#FF13094F"
         Title="MainWindow">
