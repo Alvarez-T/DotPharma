@@ -1,4 +1,5 @@
 ﻿using DotPharma.Presentation.Models;
+using Microsoft.Windows.Themes;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -25,7 +27,6 @@ namespace DotPharma.WPF.Views
         public PointOfSaleView()
         {
             InitializeComponent();
-
             Products = new ObservableCollection<ProductModel> { new ProductModel() { Id = 1111, Description = "Dorflex teste" }, { new ProductModel() { Id = 114134, Description = "Losartana" } } };
             DataContext = this;
         }

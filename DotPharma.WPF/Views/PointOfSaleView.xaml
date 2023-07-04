@@ -11,6 +11,48 @@
              mc:Ignorable="d" 
              d:Background="#eaecf9"
              d:DesignHeight="1080" d:DesignWidth="1280">
+    <UserControl.Resources>
+        
+        <Style x:Key="DefaultDataGridColumnHeader" TargetType="{x:Type DataGridColumnHeader}" >
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="#b8c6e2" />
+            <Setter Property="Padding" Value="10,0" />
+            <Setter Property="BorderThickness" Value="0,0,0.6,0.6" />
+            <Setter Property="Margin" Value="0,0,0,5" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridColumnHeader">
+                        <hc:SimplePanel>
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"  Padding="{TemplateBinding Padding}">
+                                <Grid HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="Center" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                    <ToggleButton Grid.Column="1" VerticalAlignment="Center" Padding="4,0" Width="20" IsEnabled="False" Opacity="1" Foreground="{DynamicResource PrimaryBrush}" x:Name="ToggleButtonSortDirection" Style="{StaticResource ToggleButtonIconTransparent}" hc:IconSwitchElement.Geometry="{StaticResource DownGeometry}" hc:IconSwitchElement.GeometrySelected="{StaticResource UpGeometry}"/>
+                                </Grid>
+                            </Border>
+                            <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        </hc:SimplePanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="SortDirection" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Collapsed" TargetName="ToggleButtonSortDirection"/>
+                            </Trigger>
+                            <Trigger Property="SortDirection" Value="Ascending">
+                                <Setter Property="IsChecked" Value="True" TargetName="ToggleButtonSortDirection"/>
+                            </Trigger>
+                            <Trigger Property="SortDirection" Value="Descending">
+                                <Setter Property="IsChecked" Value="False" TargetName="ToggleButtonSortDirection"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <DockPanel>
         <Label
                     DockPanel.Dock="Top"
@@ -266,7 +308,7 @@
             <DockPanel>
                 <hc:SimpleStackPanel Orientation="Horizontal"/>
                 <DockPanel>
-                    <DataGrid BorderThickness="0"
+                    <DataGrid BorderThickness="1"
                               AutoGenerateColumns="False"
                               hc:BorderElement.CornerRadius="20"
                               DockPanel.Dock="Top"
@@ -288,46 +330,9 @@
                                 </Setter>
                             </Style>
 
-                            <Style TargetType="{x:Type DataGridColumnHeader}" BasedOn="{StaticResource DataGridColumnHeaderStyle}">
-                                <Setter Property="FontSize" Value="20" />
-                                <Setter Property="Foreground" Value="Black" />
-                                <Setter Property="BorderBrush" Value="#b8c6e2" />
-                                <Setter Property="Padding" Value="10,0" />
-                                <Setter Property="hc:BorderElement.CornerRadius" Value="5" />
-                                <Setter Property="BorderThickness" Value="0.6" />
-                                <Setter Property="Margin" Value="0,0,0,5" />
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="DataGridColumnHeader">
-                                            <hc:SimplePanel>
-                                                <Border BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="10,10,0,0" BorderThickness="{TemplateBinding BorderThickness}"  Padding="{TemplateBinding Padding}">
-                                                    <Grid HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
-                                                        <Grid.ColumnDefinitions>
-                                                            <ColumnDefinition/>
-                                                            <ColumnDefinition Width="Auto"/>
-                                                        </Grid.ColumnDefinitions>
-                                                        <ContentPresenter RecognizesAccessKey="True" VerticalAlignment="Center" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                                                        <ToggleButton Grid.Column="1" VerticalAlignment="Center" Padding="4,0" Width="20" IsEnabled="False" Opacity="1" Foreground="{DynamicResource PrimaryBrush}" x:Name="ToggleButtonSortDirection" Style="{StaticResource ToggleButtonIconTransparent}" hc:IconSwitchElement.Geometry="{StaticResource DownGeometry}" hc:IconSwitchElement.GeometrySelected="{StaticResource UpGeometry}"/>
-                                                    </Grid>
-                                                </Border>
-                                                <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
-                                                <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
-                                            </hc:SimplePanel>
-                                            <ControlTemplate.Triggers>
-                                                <Trigger Property="SortDirection" Value="{x:Null}">
-                                                    <Setter Property="Visibility" Value="Collapsed" TargetName="ToggleButtonSortDirection"/>
-                                                </Trigger>
-                                                <Trigger Property="SortDirection" Value="Ascending">
-                                                    <Setter Property="IsChecked" Value="True" TargetName="ToggleButtonSortDirection"/>
-                                                </Trigger>
-                                                <Trigger Property="SortDirection" Value="Descending">
-                                                    <Setter Property="IsChecked" Value="False" TargetName="ToggleButtonSortDirection"/>
-                                                </Trigger>
-                                            </ControlTemplate.Triggers>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
+                            <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DefaultDataGridColumnHeader}" />
+
+
                         </DataGrid.Resources>
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Código" Binding="{Binding Id}" />
@@ -336,7 +341,13 @@
                             <DataGridTextColumn Header="Preço Líquido" />
                             <DataGridTextColumn Header="Desconto" />
                             <DataGridTextColumn Header="Quantidade" />
-                            <DataGridTextColumn Header="Total" />
+                            <DataGridTextColumn Header="Total">
+                                <DataGridTextColumn.HeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DefaultDataGridColumnHeader}">
+                                        <Setter Property="BorderThickness" Value="0,0,0,0.6" />
+                                    </Style>
+                                </DataGridTextColumn.HeaderStyle>
+                            </DataGridTextColumn>
                         </DataGrid.Columns>
 
 
