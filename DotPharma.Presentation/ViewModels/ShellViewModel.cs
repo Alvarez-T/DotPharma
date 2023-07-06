@@ -1,4 +1,4 @@
-﻿using NavigatR.MVVM;
+﻿using NavigatR;
 
 namespace DotPharma.Presentation.ViewModels;
 

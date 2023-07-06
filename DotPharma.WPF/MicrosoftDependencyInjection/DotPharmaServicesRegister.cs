@@ -18,7 +18,14 @@ public static class DotPharmaServicesRegister
         {
             services.UseNavigatR(configuration =>
             {
-                configuration.UseWpfNavigationWrapper();
+                configuration
+                    .UseWpfNavigationWrapper()
+                    .ConfigureViewToViewModel<RegisterProductDetailsTile, RegisterProductDetailsViewModel>()
+                    .ConfigureViewToViewModel<RegisterMedicationTile, RegisterMedicationViewModel>()
+                    .ConfigureViewToViewModel<ProductRegisterView, ProductRegistrationViewModel>()
+                    .ConfigureViewToViewModel<CustomerRegisterView, CustomerRegisterViewModel>()
+                    .ConfigureViewToViewModel<PointOfSaleView, PointOfSaleViewModel>();
+
             });
         });
     }
@@ -30,19 +37,5 @@ public static class DotPharmaServicesRegister
             wpf.UseApplication<App>()
             .UseWindow<ShellView>();
         }).UseWpfLifetime();
-    }
-
-    public static IHostBuilder ConfigureMvvm(this IHostBuilder hostBuilder)
-    {
-        return hostBuilder.ConfigureServices(services =>
-        {
-            services
-                .ConfigureViewToViewModel<RegisterProductDetailsTile, RegisterProductDetailsViewModel>()
-                .ConfigureViewToViewModel<RegisterMedicationTile, RegisterMedicationViewModel>()
-                .ConfigureViewToViewModel<ProductRegisterView, ProductRegistrationViewModel>()
-                .ConfigureViewToViewModel<CustomerRegisterView, CustomerRegisterViewModel>()
-                .ConfigureViewToViewModel<PointOfSaleView, PointOfSaleViewModel>();
-
-        });
     }
 }

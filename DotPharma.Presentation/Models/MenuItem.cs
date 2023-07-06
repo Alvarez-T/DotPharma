@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace DotPharma.Presentation.Models;
+﻿namespace DotPharma.Presentation.Models;
 
 public partial class MenuItem
 {

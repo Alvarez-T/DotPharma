@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using DotPharma.Domain.Entities.Enums;
-using NavigatR.MVVM;
+using NavigatR;
 
 namespace DotPharma.Presentation.ViewModels.POS;
 
