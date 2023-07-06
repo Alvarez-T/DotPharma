@@ -82,50 +82,10 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
-            <ColumnDefinition Width="100" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <DockPanel>
-            <DockPanel>
-                <DockPanel.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF13094F"/>
-                        <GradientStop Color="#FF090F39" Offset="1"/>
-                    </LinearGradientBrush>
-                </DockPanel.Background>
-                <hc:ScrollViewer>
-                    <hc:ScrollViewer.Resources>
-                        <Style TargetType="RadioButton" BasedOn="{StaticResource MenuItem}">
-                            <Setter Property="GroupName" Value="MenuGroup" />
-                            <Setter Property="Margin" Value="0,5,0,0" />
-                        </Style>
 
-                    </hc:ScrollViewer.Resources>
-                    <StackPanel DockPanel.Dock="Top" Margin="0,50,0,0">
-                        <RadioButton Content="Dashboard"
-                                     IsChecked="True"
-                                     hc:IconElement.Geometry="{StaticResource Dashboard}"/>
-                        <dotControl:DropDownMenu Header="Cadastros" GroupName="MenuGroup" hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}">
-                            <RadioButton Content="Produto"
-                                         hc:IconElement.Geometry="{StaticResource Medicine}" />
-                            <RadioButton Content="Cliente"
-                                         hc:IconElement.Geometry="{StaticResource PersonAdd}" />
-                            <RadioButton Content="Fornecedor"
-                                         hc:IconElement.Geometry="{StaticResource Supplier}" />
-                        </dotControl:DropDownMenu>
-                        <dotControl:DropDownMenu GroupName="MenuGroup" Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
-                            <RadioButton Content="Venda"
-                                         hc:IconElement.Geometry="{StaticResource ShoppingCart}" />
-                            <RadioButton Content="Estorno"
-                                         hc:IconElement.Geometry="{StaticResource Undo}" />
-                        </dotControl:DropDownMenu>
-
-
-                    </StackPanel>
-                </hc:ScrollViewer>
-            </DockPanel>
-
-        </DockPanel>
+        <dotPharma:MainMenuView />
 
         <Border Grid.RowSpan="4" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="60,0,0,0" Background="#eaecf9">
             <!--

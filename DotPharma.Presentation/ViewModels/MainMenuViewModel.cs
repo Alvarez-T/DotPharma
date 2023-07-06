@@ -4,7 +4,7 @@ using NavigatR;
 
 namespace DotPharma.Presentation.ViewModels;
 
-public partial class MainMenuViewModel : ObservableRecipient
+public partial class MainMenuViewModel : ObservableRecipient, IViewModel
 {
     private readonly INavigator _navigator;
     public MainMenuViewModel(INavigator navigator)

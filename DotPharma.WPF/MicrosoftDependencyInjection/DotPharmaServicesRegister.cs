@@ -24,7 +24,8 @@ public static class DotPharmaServicesRegister
                     .ConfigureViewToViewModel<RegisterMedicationTile, RegisterMedicationViewModel>()
                     .ConfigureViewToViewModel<ProductRegisterView, ProductRegistrationViewModel>()
                     .ConfigureViewToViewModel<CustomerRegisterView, CustomerRegisterViewModel>()
-                    .ConfigureViewToViewModel<PointOfSaleView, PointOfSaleViewModel>();
+                    .ConfigureViewToViewModel<PointOfSaleView, PointOfSaleViewModel>()
+                    .ConfigureViewToViewModel<MainMenuView, MainMenuViewModel>();
 
             });
         });
