@@ -100,6 +100,95 @@
             -->
             <dotPharma:PointOfSaleView />
 
+                <!--
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <DockPanel Margin="15,0,0,0">
+                    <TextBlock
+                        DockPanel.Dock="Top"
+                        Margin="40,15,0,0"
+                        HorizontalAlignment="Right"
+                        Text="Resumo da Venda"
+                        FontWeight="Thin"
+                        FontSize="32"/>
+                    <Border 
+                        Height="50"
+                        DockPanel.Dock="Top"
+                        Background="White">
+                        <Grid Margin="10,0" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="3" FontSize="16" FontWeight="Medium" />
+                            <TextBlock Margin="10,0" Grid.Column="1" Text="X" VerticalAlignment="Bottom" />
+                            <TextBlock Grid.Column="2" FontSize="18" FontWeight="Thin" Text="Produto teste testado" />
+                            <TextBlock Grid.Column="3" HorizontalAlignment="Right" FontSize="18" FontWeight="Thin" Text="R$19,99" />
+                        </Grid>
+                    </Border>
+                    <Border 
+                        Height="50"
+                        DockPanel.Dock="Top"
+                        Background="White">
+                        <Grid Margin="10,0" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="3" FontSize="16" FontWeight="Medium" />
+                            <TextBlock Margin="10,0" Grid.Column="1" Text="X" VerticalAlignment="Bottom" />
+                            <TextBlock Grid.Column="2" FontSize="18" FontWeight="Thin" Text="Produto teste testado" />
+                            <TextBlock Grid.Column="3" HorizontalAlignment="Right" FontSize="18" FontWeight="Thin" Text="R$19,99" />
+                        </Grid>
+                    </Border>
+                    <Border 
+                        Height="50"
+                        DockPanel.Dock="Top"
+                        Background="White">
+                        <Grid Margin="10,0" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="3" FontSize="16" FontWeight="Medium" />
+                            <TextBlock Margin="10,0" Grid.Column="1" Text="X" VerticalAlignment="Bottom" />
+                            <TextBlock Grid.Column="2" FontSize="18" FontWeight="Thin" Text="Produto teste testado" />
+                            <TextBlock Grid.Column="3" HorizontalAlignment="Right" FontSize="18" FontWeight="Thin" Text="R$19,99" />
+                        </Grid>
+                    </Border>
+                    <Border 
+                        Height="50"
+                        DockPanel.Dock="Top"
+                        Background="White">
+                        <Grid Margin="10,0" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="3" FontSize="16" FontWeight="Medium" />
+                            <TextBlock Margin="10,0" Grid.Column="1" Text="X" VerticalAlignment="Bottom" />
+                            <TextBlock Grid.Column="2" FontSize="18" FontWeight="Thin" Text="Produto teste testado" />
+                            <TextBlock Grid.Column="3" HorizontalAlignment="Right" FontSize="18" FontWeight="Thin" Text="R$19,99" />
+                        </Grid>
+                    </Border>
+                    <StackPanel></StackPanel>
+                </DockPanel>
+                
+
+            </Grid>
+            
+                -->
 
 
 

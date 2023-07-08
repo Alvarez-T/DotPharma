@@ -12,31 +12,25 @@ namespace DotPharma.WPF.MicrosoftDependencyInjection;
 
 public static class DotPharmaServicesRegister
 {
-    public static IHostBuilder UseNavigatR(this IHostBuilder hostBuilder)
+    public static IHostBuilder UseNavigatR(this IHostBuilder hostBuilder) => hostBuilder.ConfigureServices(services =>
     {
-        return hostBuilder.ConfigureServices(services =>
+        services.UseNavigatR(configuration =>
         {
-            services.UseNavigatR(configuration =>
-            {
-                configuration
-                    .UseWpfNavigationWrapper()
-                    .ConfigureViewToViewModel<RegisterProductDetailsTile, RegisterProductDetailsViewModel>()
-                    .ConfigureViewToViewModel<RegisterMedicationTile, RegisterMedicationViewModel>()
-                    .ConfigureViewToViewModel<ProductRegisterView, ProductRegistrationViewModel>()
-                    .ConfigureViewToViewModel<CustomerRegisterView, CustomerRegisterViewModel>()
-                    .ConfigureViewToViewModel<PointOfSaleView, PointOfSaleViewModel>()
-                    .ConfigureViewToViewModel<MainMenuView, MainMenuViewModel>();
+            configuration
+                .UseWpfNavigationWrapper()
+                .ConfigureViewToViewModel<RegisterProductDetailsTile, RegisterProductDetailsViewModel>()
+                .ConfigureViewToViewModel<RegisterMedicationTile, RegisterMedicationViewModel>()
+                .ConfigureViewToViewModel<ProductRegisterView, ProductRegistrationViewModel>()
+                .ConfigureViewToViewModel<CustomerRegisterView, CustomerRegisterViewModel>()
+                .ConfigureViewToViewModel<PointOfSaleView, PointOfSaleViewModel>()
+                .ConfigureViewToViewModel<MainMenuView, MainMenuViewModel>();
 
-            });
         });
-    }
+    });
 
-    public static IHostBuilder UseDapploWpfHosting(this IHostBuilder hostBuilder)
+    public static IHostBuilder UseDapploWpfHosting(this IHostBuilder hostBuilder) => hostBuilder.ConfigureWpf(wpf =>
     {
-        return hostBuilder.ConfigureWpf(wpf =>
-        {
-            wpf.UseApplication<App>()
-            .UseWindow<ShellView>();
-        }).UseWpfLifetime();
-    }
+        wpf.UseApplication<App>()
+        .UseWindow<ShellView>();
+    }).UseWpfLifetime();
 }
