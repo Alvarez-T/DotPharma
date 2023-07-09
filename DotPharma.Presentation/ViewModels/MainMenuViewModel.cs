@@ -25,7 +25,7 @@ public partial class MainMenuViewModel : ObservableRecipient, IViewModel
         get => _navigateToDashboard;
         set => SetProperty(ref _navigateToDashboard, value);
     }
-
+     
     private bool _navigateToProductRegistration;
     public bool NavigateToProductRegistration
     {
