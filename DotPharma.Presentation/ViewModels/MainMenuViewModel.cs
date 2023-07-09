@@ -10,6 +10,7 @@ public partial class MainMenuViewModel : ObservableRecipient, IViewModel
     public MainMenuViewModel(INavigator navigator)
     {
         _navigator = navigator;
+        NavigateToCustomerRegistration = true;
     }
 
     private void ShouldNavigateTo<T>(bool shouldNavigate) where T : INavigable
@@ -29,14 +30,14 @@ public partial class MainMenuViewModel : ObservableRecipient, IViewModel
     public bool NavigateToProductRegistration
     {
         get => _navigateToProductRegistration;
-        set => SetProperty(_navigateToProductRegistration, value, callback: ShouldNavigateTo<ProductRegistrationViewModel>);
+        set => _navigateToProductRegistration = SetProperty(_navigateToProductRegistration, value, callback: ShouldNavigateTo<ProductRegistrationViewModel>);
     }
 
     private bool _navigateToCustomerRegistration;
     public bool NavigateToCustomerRegistration
     {
         get => _navigateToCustomerRegistration;
-        set => SetProperty(_navigateToCustomerRegistration, value, callback: ShouldNavigateTo<CustomerRegisterViewModel>);
+        set => _navigateToCustomerRegistration = SetProperty(_navigateToCustomerRegistration, value, callback: ShouldNavigateTo<CustomerRegisterViewModel>);
     }
 
     private bool _navigateToPointOfSale;

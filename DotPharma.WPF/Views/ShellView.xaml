@@ -7,6 +7,7 @@
         xmlns:views="clr-namespace:DotPharma.WPF.Views.Registration"
         xmlns:dotControl="clr-namespace:DotPharma.WPF.Controls"
         xmlns:dotPharma="clr-namespace:DotPharma.WPF.Views"
+        xmlns:navigtR="clr-namespace:NavigatR.WPF.Controls;assembly=NavigatR.WPF"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:dockablz="http://dragablz.net/winfx/xaml/dockablz"
         xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
@@ -98,7 +99,8 @@
                 </hc:TabItem>
             </hc:TabControl>
             -->
-            <dotPharma:PointOfSaleView />
+            <navigtR:NavigationContainer />
+            <!--<dotPharma:PointOfSaleView />-->
 
                 <!--
             <Grid>

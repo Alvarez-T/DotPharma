@@ -33,14 +33,14 @@
                                  IsChecked="{Binding NavigateToProductRegistration}"
                                  hc:IconElement.Geometry="{StaticResource Medicine}" />
                     <RadioButton Content="Cliente"
-                                 IsChecked="{Binding NavigateToCustomerRegistration}"
+                                 IsChecked="{Binding NavigateToCustomerRegistration, Mode=OneWayToSource}"
                                  hc:IconElement.Geometry="{StaticResource PersonAdd}" />
                     <RadioButton Content="Fornecedor"
                                  hc:IconElement.Geometry="{StaticResource Supplier}" />
                 </dotControl:DropDownMenu>
                 <dotControl:DropDownMenu GroupName="MenuGroup" Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
                     <RadioButton Content="Venda"
-                                 IsChecked="{Binding NavigateToPointOfSale}"
+                                 Style="{StaticResource MenuItem}"
                                  hc:IconElement.Geometry="{StaticResource ShoppingCart}" />
                     <RadioButton Content="Estorno"
                                  hc:IconElement.Geometry="{StaticResource Undo}" />

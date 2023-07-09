@@ -55,14 +55,14 @@
     </UserControl.Resources>
     <DockPanel>
         <Label
-                    DockPanel.Dock="Top"
-                    hc:BorderElement.CornerRadius="60,0,0,0"
-                    Height="75"
-                    HorizontalAlignment="Stretch"
-                    HorizontalContentAlignment="Stretch"
-                    FontWeight="Medium"
-                    Padding="50,0,0,0"
-                    FontSize="32">
+            DockPanel.Dock="Top"
+            hc:BorderElement.CornerRadius="60,0,0,0"
+            Height="75"
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            FontWeight="Medium"
+            Padding="50,0,0,0"
+            FontSize="32">
             <Grid>
                 <StackPanel Orientation="Horizontal">
                     <StackPanel.Resources>
@@ -90,16 +90,16 @@
                                                 <StackPanel Orientation="Vertical" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}">
                                                     <Path x:Name="PathMain" VerticalAlignment="Center" Height="{Binding (hc:IconElement.Height), RelativeSource={RelativeSource TemplatedParent}}" Width="{Binding (hc:IconElement.Width), RelativeSource={RelativeSource TemplatedParent}}" Fill="{TemplateBinding Foreground}" SnapsToDevicePixels="True" Stretch="Uniform" Data="{TemplateBinding hc:IconElement.Geometry}" />
                                                     <TextBlock
-                                                                        TextAlignment="Center"
-                                                                        x:Name="MenuDescription"
-                                                                        FontWeight="Medium"
-                                                                        Text="{TemplateBinding Content}"
-                                                                        TextWrapping="Wrap"
-                                                                        Style="{StaticResource TextBlockDefault}"
-                                                                        Padding="0"
-                                                                        FontSize="13"
-                                                                        Foreground="{TemplateBinding Foreground}"
-                                                                        Margin="0,5,0,0"/>
+                                                        TextAlignment="Center"
+                                                        x:Name="MenuDescription"
+                                                        FontWeight="Medium"
+                                                        Text="{TemplateBinding Content}"
+                                                        TextWrapping="Wrap"
+                                                        Style="{StaticResource TextBlockDefault}"
+                                                        Padding="0"
+                                                        FontSize="13"
+                                                        Foreground="{TemplateBinding Foreground}"
+                                                        Margin="0,5,0,0"/>
                                                 </StackPanel>
                                             </Border>
                                         </Border>
@@ -188,12 +188,11 @@
                             </Style>
                         </hc:Badge.Style>
                         <ToggleButton 
-                                        
-                                              BorderBrush="#eaecf9"
-                                              Height="70"
-                                              Content="Comandas"
-                                              hc:IconElement.Height="30"
-                                              hc:IconElement.Geometry="{StaticResource Receipt}" />
+                            BorderBrush="#eaecf9"
+                            Height="70"
+                            Content="Comandas"
+                            hc:IconElement.Height="30"
+                            hc:IconElement.Geometry="{StaticResource Receipt}" />
                     </hc:Badge>
 
 
