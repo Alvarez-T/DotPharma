@@ -86,7 +86,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <dotPharma:MainMenuView />
+        <!--<dotPharma:MainMenuView />-->
 
         <Border Grid.RowSpan="4" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="60,0,0,0" Background="#eaecf9">
             <!--
@@ -99,10 +99,159 @@
                 </hc:TabItem>
             </hc:TabControl>
             -->
-            <navigtR:NavigationContainer />
+            <!--<navigtR:NavigationContainer />-->
             <!--<dotPharma:PointOfSaleView />-->
 
-                <!--
+            <DockPanel>
+                <Border DockPanel.Dock="Top"
+                        Height="75"
+                        Background="White"
+                        BorderThickness="0"
+                        CornerRadius="60,0,0,0"
+                        Padding="50,0,0,0">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Cadastro selecionado"
+                                       FontWeight="Medium"
+                                       FontSize="24"
+                                       Foreground="{StaticResource SecondaryTextBrush}"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock Text="/ Thiago Cesar Alvarez"
+                                       Margin="10,0"
+                                       FontWeight="Medium"
+                                       FontSize="24"
+                                       Foreground="{StaticResource SecondaryTextBrush}"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+                </Border> 
+                <Border DockPanel.Dock="Top"
+                        MinHeight="200"
+                        Height="250"
+                        BorderThickness="0,2,0,1"
+                        Background="White">
+                    <UniformGrid Margin="50,10" Columns="4" >
+                        <UniformGrid.Resources>
+                            <Style x:Key="SubTitle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockDefaultSecLight}">
+                                <Setter Property="FontSize" Value="16" />
+                                <Setter Property="Margin" Value="0,0,0,2" />
+                                <Setter Property="HorizontalAlignment" Value="Left"/>
+                                <Setter Property="FontWeight" Value="Light" />
+                            </Style>
+                            <Style x:Key="CardContent" TargetType="TextBlock" BasedOn="{StaticResource TextBlockDefault}">
+                                <Setter Property="FontSize" Value="16" />
+                                <Setter Property="HorizontalAlignment" Value="Left"/>
+                                <Setter Property="FontWeight" Value="Medium" />
+                                <Setter Property="FontStretch" Value="Expanded" />
+                                <Setter Property="Margin" Value="0,0,10,0" />
+                            </Style>
+                        </UniformGrid.Resources>
+
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource SubTitle}" Text="Código: #6913" />
+                            <TextBlock Style="{StaticResource SubTitle}" Text="Data de Cadastro: 11/07/2023" />
+                            <TextBlock Style="{StaticResource SubTitle}" Text="Dados Pessoais" Margin="0,30,0,2" />
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Style="{StaticResource SubTitle}" Text="RG:" Margin="0,0,0,0" />
+                                <TextBlock Grid.Column="1" Style="{StaticResource CardContent}" Text="99.999.999-9" />
+                                <TextBlock Grid.Row="1" Style="{StaticResource SubTitle}" Text="CPF:" Margin="0,0,7,0" />
+                                <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource CardContent}" Text="999.999.999-99" />
+                            </Grid>
+                        </StackPanel>
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <StackPanel>
+                                <TextBlock Style="{StaticResource SubTitle}" Text="Endereço(s)"/>
+                                <TextBlock Style="{StaticResource CardContent}" Margin="0,0,100,0" TextWrapping="Wrap">
+                                    <Run Text="Rua João Donadel"/>
+                                    <Run Text="nº 416,"/>
+                                    <Run Text="Jardim Amália." />
+                                    <Run Text="CEP: 13610-350" />
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" >
+                                <TextBlock Style="{StaticResource SubTitle}" Text="Telefones(s)"/>
+                                <TextBlock Style="{StaticResource CardContent}" Text="(19)98804-3877" />
+                                <TextBlock Style="{StaticResource CardContent}" Text="(19)99872-8967" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" >
+                                <TextBlock Style="{StaticResource SubTitle}" Text="Email" />
+                                <TextBlock Style="{StaticResource CardContent}" Text="thiago.alvarez2012@gmail.com" />
+                                <TextBlock Style="{StaticResource CardContent}" Text="thiago.alvarez2012@gmail.com" />
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style="{StaticResource SubTitle}" Text="Crediário"/>
+                                    <CheckBox Margin="10,0" />
+                                </StackPanel>
+                                <TextBlock Style="{StaticResource CardContent}" Margin="0,0,0,0" Text="Débitos: R$ 10,59"/>
+                                <TextBlock Style="{StaticResource CardContent}" Text="Vecimento: 11/07/2023" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1">
+                                <TextBlock Style="{StaticResource SubTitle}" Text="Convênio(s)"/>
+                                <TextBlock Style="{StaticResource CardContent}" Text="CONVÊNIO EXEMPLO 1" />
+                                <TextBlock Style="{StaticResource CardContent}" Text="CONVÊNIO EXEMPLO 2" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="2">
+                                <TextBlock Style="{StaticResource SubTitle}" Text="Última Compra"/>
+                                <TextBlock Style="{StaticResource CardContent}" Text="Realizada em 11/07/2023" />
+                                <TextBlock Style="{StaticResource CardContent}" Text="C.I 463 Total R$ 10,59" />
+                            </StackPanel>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style="{StaticResource SubTitle}" Text="Crediário"/>
+                                    <CheckBox Margin="10,0" />
+                                </StackPanel>
+                                <TextBlock Style="{StaticResource CardContent}" Margin="0,0,0,0" Text="Débitos: R$ 10,59"/>
+                                <TextBlock Style="{StaticResource CardContent}" Text="Vecimento: 11/07/2023" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1">
+                                <TextBlock Style="{StaticResource SubTitle}" Text="Convênio(s)"/>
+                                <TextBlock Style="{StaticResource CardContent}" Text="CONVÊNIO EXEMPLO 1" />
+                                <TextBlock Style="{StaticResource CardContent}" Text="CONVÊNIO EXEMPLO 2" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="2">
+                                <TextBlock Style="{StaticResource SubTitle}" Text="Última Compra"/>
+                                <TextBlock Style="{StaticResource CardContent}" Text="Realizada em 11/07/2023" />
+                                <TextBlock Style="{StaticResource CardContent}" Text="C.I 463 Total R$ 10,59" />
+                            </StackPanel>
+                        </Grid>
+                    </UniformGrid>
+                </Border>
+                <ListView />
+            </DockPanel>
+            
+            
+                <!-- modelando ultima tela de venda
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="350" />
