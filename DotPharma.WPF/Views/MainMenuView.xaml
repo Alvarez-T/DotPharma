@@ -34,7 +34,7 @@
                                  hc:IconElement.Geometry="{StaticResource Medicine}" />
                     <RadioButton Content="Cliente"
                                  IsChecked="{Binding NavigateToCustomerRegistration, Mode=OneWayToSource}"
-                                 hc:IconElement.Geometry="{StaticResource PersonAdd}" />
+                                 hc:IconElement.Geometry="{StaticResource Person}" />
                     <RadioButton Content="Fornecedor"
                                  hc:IconElement.Geometry="{StaticResource Supplier}" />
                 </dotControl:DropDownMenu>

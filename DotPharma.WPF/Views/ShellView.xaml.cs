@@ -1,4 +1,5 @@
-﻿using HandyControl.Controls;
+﻿using DotPharma.Presentation.Models;
+using HandyControl.Controls;
 using System.Windows;
 
 namespace DotPharma.WPF.Views
