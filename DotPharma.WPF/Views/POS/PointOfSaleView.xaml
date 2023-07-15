@@ -7,7 +7,8 @@
              xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:DotPharma.WPF.Views"
              xmlns:native="clr-namespace:System;assembly=System.Runtime"
-             xmlns:System="clr-namespace:System;assembly=System.Runtime" xmlns:Models="clr-namespace:DotPharma.Presentation.Models;assembly=DotPharma.Presentation" x:Class="DotPharma.WPF.Views.PointOfSaleView"
+             xmlns:System="clr-namespace:System;assembly=System.Runtime" 
+             xmlns:Models="clr-namespace:DotPharma.Presentation.Models;assembly=DotPharma.Presentation" x:Class="DotPharma.WPF.Views.PointOfSaleView"
              mc:Ignorable="d" 
              d:Background="#eaecf9"
              d:DesignHeight="1080" d:DesignWidth="1280">
