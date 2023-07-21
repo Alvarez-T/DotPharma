@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavigatR.SourceGenerator", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Domain", "DotPharma.Domain\DotPharma.Domain.csproj", "{E2F6FBCB-58D6-43AE-B5CE-E267D91255EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotPharma.Server", "DotPharma.Server\DotPharma.Server.csproj", "{2375077B-3BBA-4141-85B0-3272D13A6156}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{E2F6FBCB-58D6-43AE-B5CE-E267D91255EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2F6FBCB-58D6-43AE-B5CE-E267D91255EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2F6FBCB-58D6-43AE-B5CE-E267D91255EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2375077B-3BBA-4141-85B0-3272D13A6156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2375077B-3BBA-4141-85B0-3272D13A6156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2375077B-3BBA-4141-85B0-3272D13A6156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2375077B-3BBA-4141-85B0-3272D13A6156}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{B6E0CD49-3FD0-42CD-8C4E-2C716E3FC3B9} = {A481A230-425A-4938-9942-BD86E9383C45}
 		{650D5153-1FD8-4C92-BA25-B72D8111D399} = {A481A230-425A-4938-9942-BD86E9383C45}
 		{19C1024E-DC4E-4610-85B9-BF7200AD1D23} = {A481A230-425A-4938-9942-BD86E9383C45}
+		{2375077B-3BBA-4141-85B0-3272D13A6156} = {155BD790-95C7-4037-85E1-E1A6082CB72B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFD3CBA2-ABA2-4F49-B5C5-1EF356F088F4}
