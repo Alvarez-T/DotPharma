@@ -1,4 +1,4 @@
-﻿namespace DotPharma.Domain.Entities;
+﻿namespace DotPharma.Location;
 
 public class City
 {

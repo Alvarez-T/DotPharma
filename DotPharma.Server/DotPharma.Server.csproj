@@ -8,6 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="Marten" Version="6.0.4" />
+    <PackageReference Include="WolverineFx" Version="1.2.0" />
+    <PackageReference Include="WolverineFx.Http" Version="1.2.0" />
+    <PackageReference Include="WolverineFx.Marten" Version="1.2.0" />
+    <PackageReference Include="WolverineFx.Postgresql" Version="1.2.0" />
   </ItemGroup>
 
 </Project>

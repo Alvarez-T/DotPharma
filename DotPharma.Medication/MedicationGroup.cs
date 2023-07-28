@@ -1,4 +1,4 @@
-﻿namespace DotPharma.Domain.Entities;
+﻿namespace DotPharma.Medication;
 
 public class MedicationGroup
 {
