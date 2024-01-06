@@ -87,7 +87,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!--<dotPharma:MainMenuView />-->
+        <dotPharma:MainMenuView />
 
         <Border Grid.RowSpan="4" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="60,0,0,0" Background="#eaecf9">
             <!--
@@ -100,13 +100,17 @@
                 </hc:TabItem>
             </hc:TabControl>
             -->
-            <!--<navigtR:NavigationContainer />-->
-            <!--<dotPharma:PointOfSaleView />-->
+            <navigtR:NavigationContainer>
+                <dotPharma:PointOfSaleView />
+            </navigtR:NavigationContainer>
+            
 
-            
-            
-            
-                 
+        </Border>
+
+
+
+
+        <!--
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="350" />
@@ -161,7 +165,7 @@
                             </x:Array>
                         </ListView.ItemsSource>
                     </ListView>
-                        <!--
+                        
                     <Border 
                         Height="50"
                         DockPanel.Dock="Top"
@@ -178,7 +182,7 @@
                             <TextBlock Grid.Column="2" FontSize="18" FontWeight="Thin" Text="Produto teste testado" />
                             <TextBlock Grid.Column="3" HorizontalAlignment="Right" FontSize="18" FontWeight="Thin" Text="R$19,99" />
                         </Grid>
-                    </Border> -->
+                    </Border> 
                     <StackPanel/>
                 </DockPanel>
                 <Border BorderThickness="2,0,0,0" Grid.Column="1" BorderBrush="#FF13094F">
@@ -188,13 +192,13 @@
 
 
             </Grid>
-            
-                
+            -->
 
 
 
 
-        </Border>
+
+
 
 
 
