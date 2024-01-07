@@ -69,7 +69,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstract", "Abstract", "{E9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Abstract", "DotPharma.Abstract\DotPharma.Abstract.csproj", "{888136BF-DAED-4017-A156-27E11964D1A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotPharma.Location.Contracts", "DotPharma.Location.Contracts\DotPharma.Location.Contracts.csproj", "{31EDAF99-1FAF-419A-B526-95F3FE88CD12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Location.Contracts", "DotPharma.Location.Contracts\DotPharma.Location.Contracts.csproj", "{31EDAF99-1FAF-419A-B526-95F3FE88CD12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Avalonia.Desktop", "DotPharma.Avalonia.Desktop\DotPharma.Avalonia.Desktop.csproj", "{93B70712-0A46-4F63-BE2E-CE5528686673}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alvz.Avalonia.Desktop", "..\Alvz-UI\Alvz.Avalonia.Desktop\Alvz.Avalonia.Desktop.csproj", "{313F9262-CD25-4658-87AF-FD170F88DFC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +155,14 @@ Global
 		{31EDAF99-1FAF-419A-B526-95F3FE88CD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31EDAF99-1FAF-419A-B526-95F3FE88CD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31EDAF99-1FAF-419A-B526-95F3FE88CD12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93B70712-0A46-4F63-BE2E-CE5528686673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B70712-0A46-4F63-BE2E-CE5528686673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B70712-0A46-4F63-BE2E-CE5528686673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B70712-0A46-4F63-BE2E-CE5528686673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{313F9262-CD25-4658-87AF-FD170F88DFC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{313F9262-CD25-4658-87AF-FD170F88DFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{313F9262-CD25-4658-87AF-FD170F88DFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{313F9262-CD25-4658-87AF-FD170F88DFC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -173,6 +185,8 @@ Global
 		{2D974123-64C2-4FA1-A25A-1914B8205229} = {34B30386-A771-48B7-A0D8-F3161AF5263E}
 		{888136BF-DAED-4017-A156-27E11964D1A4} = {E9D21361-43B2-496E-BC3F-B134B8432D49}
 		{31EDAF99-1FAF-419A-B526-95F3FE88CD12} = {B9928102-2CC4-4567-BE8B-F846FCCBB264}
+		{93B70712-0A46-4F63-BE2E-CE5528686673} = {A481A230-425A-4938-9942-BD86E9383C45}
+		{313F9262-CD25-4658-87AF-FD170F88DFC4} = {A481A230-425A-4938-9942-BD86E9383C45}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFD3CBA2-ABA2-4F49-B5C5-1EF356F088F4}
