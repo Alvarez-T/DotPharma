@@ -3,16 +3,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
-		xmlns:controls="using:Alvz.Avalonia.Desktop"
+		xmlns:controls="clr-namespace:Alvz.Avalonia.Desktop;assembly=Alvz.Avalonia.Desktop"
+		xmlns:local="clr-namespace:DotPharma.Avalonia.Desktop;assembly=DotPharma.Avalonia.Desktop"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DotPharma.Avalonia.Desktop.MainWindow"
         Title="DotPharma">
 
-	
-		<controls:SideMenuItem Header="Fornecedor" Icon="{controls:IconGeometry Basket} "/>
-		<controls:SideMenuItem Header="Fornecedor" Icon="{controls:IconGeometry Basket} "/>
-		<controls:SideMenuItem Header="Fornecedor" Icon="{controls:IconGeometry Basket} "/>
-	
+	<Grid>
+		<controls:SideMenu>
+			<controls:SideMenuItem Header="Medicine" Icon="{controls:IconGeometry Medicine} "/>
+			<controls:SideMenuItem Header="Venda" Icon="{controls:IconGeometry Basket} "/>
+			<controls:SideMenuItem Header="Fornecedor" Icon="{controls:IconGeometry Basket} "/>
+		</controls:SideMenu>
+	</Grid>
+
+
 	<!--
 	<SplitView DisplayMode="CompactInline"
 			   CompactPaneLength="70"

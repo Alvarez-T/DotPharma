@@ -99,6 +99,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Avalonia.Desktop"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alvz.Avalonia.Desktop", "..\Alvz-UI\Alvz.Avalonia.Desktop\Alvz.Avalonia.Desktop.csproj", "{313F9262-CD25-4658-87AF-FD170F88DFC4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SukiUI", "..\..\..\Projects ThirdyParty\Avalonia\SukiUI\SukiUI\SukiUI.csproj", "{9E09C3EE-0A66-478B-B117-E11C2248D166}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -227,6 +229,10 @@ Global
 		{313F9262-CD25-4658-87AF-FD170F88DFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{313F9262-CD25-4658-87AF-FD170F88DFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{313F9262-CD25-4658-87AF-FD170F88DFC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E09C3EE-0A66-478B-B117-E11C2248D166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E09C3EE-0A66-478B-B117-E11C2248D166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E09C3EE-0A66-478B-B117-E11C2248D166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E09C3EE-0A66-478B-B117-E11C2248D166}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -262,6 +268,7 @@ Global
 		{BCB6FD80-FFD4-47BD-BE29-59B0869C2088} = {155BD790-95C7-4037-85E1-E1A6082CB72B}
 		{C34A3169-7795-4E56-AC64-A826872EE8CC} = {79565A0A-6306-442D-B898-A190CFA4CF38}
 		{BAFDA152-4156-4F0D-B6DD-A6EE3800306F} = {79565A0A-6306-442D-B898-A190CFA4CF38}
+		{9E09C3EE-0A66-478B-B117-E11C2248D166} = {A481A230-425A-4938-9942-BD86E9383C45}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFD3CBA2-ABA2-4F49-B5C5-1EF356F088F4}
