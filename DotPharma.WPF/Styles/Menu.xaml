@@ -90,7 +90,8 @@
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
                             <RadioButton x:Name="MainMenu" 
-                                         Margin="0" Style="{StaticResource SimpleMenuItem}"
+                                         Margin="0" 
+                                         Style="{StaticResource SimpleMenuItem}"
                                          Content="{TemplateBinding Header}"
                                          hc:IconElement.Geometry="{TemplateBinding hc:IconElement.Geometry}"
                                          GroupName="{TemplateBinding GroupName}"/>

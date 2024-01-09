@@ -2,11 +2,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="DotPharma.Avalonia.Desktop.App"
 			 xmlns:sukiUi="clr-namespace:SukiUI;assembly=SukiUI"
-             RequestedThemeVariant="Light">
+			 xmlns:alvz="clr-namespace:Alvz.Avalonia.Desktop;assembly=Alvz.Avalonia.Desktop"
+             RequestedThemeVariant="Dark">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
         <FluentTheme />
 		<sukiUi:SukiTheme ThemeColor="Blue" />
+		<alvz:AlvzControls />
     </Application.Styles>
 </Application>
