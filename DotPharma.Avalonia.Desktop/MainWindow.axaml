@@ -3,18 +3,70 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+		xmlns:sukiUi="clr-namespace:SukiUI;assembly=SukiUI"
 		xmlns:controls="clr-namespace:Alvz.Avalonia.Desktop;assembly=Alvz.Avalonia.Desktop"
 		xmlns:local="clr-namespace:DotPharma.Avalonia.Desktop;assembly=DotPharma.Avalonia.Desktop"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1366" d:DesignHeight="768"
         x:Class="DotPharma.Avalonia.Desktop.MainWindow"
         Title="DotPharma">
 
 	<Grid>
+		
 		<controls:SideMenu>
-			<controls:SideMenuItem Header="Medicine" Icon="{controls:IconGeometry Medicine} "/>
+			<controls:SideMenuItem IsSelected="True" Header="Medicine" Icon="{controls:IconGeometry Medicine}">
+				<controls:SideMenuItem.PageContent>
+					<DockPanel Margin="40,20">
+						<suki:GlassCard DockPanel.Dock="Top">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Classes="h2"
+								   VerticalAlignment="Bottom"	
+								   Text="Ponto De Venda"
+								   Margin="0,0,20,0"/>
+								<PathIcon Width="27" Height="27" Data="{controls:IconGeometry Wallet}" />
+								<PathIcon Width="27" Height="27" Data="{controls:IconGeometry Calendar}" />
+								<PathIcon Width="27" Height="27" Data="{controls:IconGeometry Handshake}" />
+								<controls:ToggleButtonIcon Content="teste2" />
+								<controls:ToggleButtonIcon Content="À vista" 
+														   x:DataType="controls:ToggleButtonIcon"
+														   MaxWidth="66"
+														   Icon="{controls:IconGeometry Wallet}"/>
+								<ToggleButton>
+									<Grid>
+										<DockPanel Name="PART_NormalDisplay" LastChildFill="True">
+											<TextBlock Name="PART_Header"
+													   VerticalAlignment="Center"
+													   HorizontalAlignment="Center"
+													   Text="fuck"
+													   DockPanel.Dock="Bottom"/>
+											<PathIcon Name="PART_Icon"
+													  Width="30"
+													  Height="30"
+													  Data="{controls:IconGeometry Wallet}"
+													  DockPanel.Dock="Top">
+											</PathIcon>
+										</DockPanel>
+									</Grid>
+								</ToggleButton>
+								<RadioButton Content="Testeee" />
+								<RadioButton Content="Testeee2" />
+							</StackPanel>
+						</suki:GlassCard>
+						<Border Height="1"
+								DockPanel.Dock="Top"
+								Margin="20"
+								Background="{DynamicResource SukiControlBorderBrush}" />
+						<DockPanel>
+							<ToggleButton Content="test3" />
+						</DockPanel>
+					</DockPanel>
+
+				</controls:SideMenuItem.PageContent>
+			</controls:SideMenuItem>
 			<controls:SideMenuItem Header="Venda" Icon="{controls:IconGeometry Basket} "/>
 			<controls:SideMenuItem Header="Fornecedor" Icon="{controls:IconGeometry Basket} "/>
 		</controls:SideMenu>
+		
+
 	</Grid>
 
 

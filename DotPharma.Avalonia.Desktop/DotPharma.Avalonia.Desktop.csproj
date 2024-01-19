@@ -24,20 +24,18 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Projects ThirdyParty\Avalonia\SukiUI\SukiUI\SukiUI.csproj" />
     <ProjectReference Include="..\..\Alvz-UI\Alvz.Avalonia.Desktop\Alvz.Avalonia.Desktop.csproj" />
   </ItemGroup>
-
-
-  <ItemGroup>
-    <Reference Include="SukiUI">
-      <HintPath>..\..\..\..\ThirdyParty Packages\SukiUI\SukiUI.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 
   <ItemGroup>
     <Page Include="Styles\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Views\" />
   </ItemGroup>
 </Project>

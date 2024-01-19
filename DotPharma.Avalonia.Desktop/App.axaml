@@ -7,8 +7,9 @@
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
-        <FluentTheme />
-		<sukiUi:SukiTheme ThemeColor="Blue" />
+		<FluentTheme />
+		<StyleInclude Source="avares://Avalonia.Controls.ColorPicker/Themes/Fluent/Fluent.xaml" />
+		<sukiUi:SukiTheme ThemeColor="Red" />
 		<alvz:AlvzControls />
     </Application.Styles>
 </Application>
