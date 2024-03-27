@@ -1,6 +1,6 @@
 ﻿namespace DotPharma.Customer.Contracts;
 
-public delegate ValueTask<CustomerModel?> GetCustomerQuery(int customerId);
+public delegate ValueTask<Customer?> GetCustomerQuery(int customerId);
 
-public delegate Task<List<CustomerModel>> GetAllCustomersQuery();
+public delegate Task<List<Customer>> GetAllCustomersQuery();
 

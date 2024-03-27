@@ -2,9 +2,8 @@
 
 namespace DotPharma.Customer.Contracts;
 
-public class CustomerModel
+public class Customer
 {
-    public int Id { get; set; }
     public string Name { get; set; }
     public CPF CPF { get; set; }
     public RG RG { get; set; }

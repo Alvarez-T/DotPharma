@@ -6,7 +6,7 @@ public static class RegisterCustomerHandler
 {
     public static void Handle(RegisterCustomer command, CustomerDbContext customerDbContext)
     {
-        var customer = new CustomerModel
+        var customer = new Contracts.Customer
         {
             Name = command.Name,
             CPF = command.CPF,

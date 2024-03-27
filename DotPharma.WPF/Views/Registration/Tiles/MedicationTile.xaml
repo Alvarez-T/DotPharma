@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:DotPharma.WPF.Views.Registration.Tiles"
              xmlns:hc="https://handyorg.github.io/handycontrol"
              mc:Ignorable="d" 
+             d:Background="White"
              d:DesignHeight="450" d:DesignWidth="800">
     <hc:Row >
         <hc:Col Span="3" Layout="0,3,3,3,3" />

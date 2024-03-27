@@ -1,33 +1,9 @@
-using JasperFx.Core;
-using Wolverine;
-using Marten;
-using Wolverine.Http;
+using DotPharma.Server;
 
-var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMarten(options =>
-{
-});
+var builder = Host.CreateApplicationBuilder(args);
+builder.Services.AddHostedService<Worker>();
 
-builder.Host.UseWolverine(opts =>
-{
-    opts.Discovery.IncludeAssembly(typeof(Program).Assembly);
-});
+var host = builder.Build();
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-
-var app = builder.Build();
-
-app.MapWolverineEndpoints();
-
-// Configure the HTTP request pipeline.
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
+host.Run();
