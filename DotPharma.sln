@@ -77,7 +77,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Pricing", "DotPha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Server", "DotPharma.Server\DotPharma.Server.csproj", "{AD0BA6A8-9409-4FBE-B0ED-423377B93E65}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3765D68E-79AC-4E82-A315-832ECE88A99C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotPharma.Catalog.Contracts", "..\DotPharma.Catalog.Contracts\DotPharma.Catalog.Contracts.csproj", "{C054CF7C-5099-4AAF-9806-00080F13118A}"
 EndProject

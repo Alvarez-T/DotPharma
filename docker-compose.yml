@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  dotpharma.server:
-    image: ${DOCKER_REGISTRY-}dotpharmaserver
-    build:
-      context: .
-      dockerfile: DotPharma.Server/Dockerfile
