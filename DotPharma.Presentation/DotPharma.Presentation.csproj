@@ -17,7 +17,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\NavigatR\NavigatR.SourceGenerator\NavigatR.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <ProjectReference Include="..\..\NavigatR\NavigatR\NavigatR.csproj" />
-    <ProjectReference Include="..\DotPharma.Domain\DotPharma.Domain.csproj" />
   </ItemGroup>
 
 </Project>

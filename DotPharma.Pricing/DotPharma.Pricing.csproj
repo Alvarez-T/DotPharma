@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Marten" Version="7.5.0" />
+    <PackageReference Include="WolverineFx" Version="2.1.2" />
+    <PackageReference Include="WolverineFx.Marten" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DotPharma.Abstract\DotPharma.Abstract.csproj" />
+    <ProjectReference Include="..\DotPharma.Pricing.Contracts\DotPharma.Pricing.Contracts.csproj" />
+    <ProjectReference Include="..\DotPharma.User.Contract\DotPharma.User.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

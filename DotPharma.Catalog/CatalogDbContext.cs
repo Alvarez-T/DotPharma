@@ -1,6 +1,8 @@
-﻿namespace DotPharma.Catalog;
+﻿using Microsoft.EntityFrameworkCore;
 
-internal sealed class CatalogDbContext
+namespace DotPharma.Catalog;
+
+internal sealed class CatalogDbContext : DbContext
 {
-    public DbSet<>
+   
 }

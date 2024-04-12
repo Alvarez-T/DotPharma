@@ -2,4 +2,5 @@
 
 public readonly struct Sku
 {
+
 }
