@@ -1,0 +1,17 @@
+Index: .idea/.idea.DotPharma/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"VcsDirectoryMappings\">\n    <mapping directory=\"\" vcs=\"Git\" />\n    <mapping directory=\"$PROJECT_DIR$/../NavigatR\" vcs=\"Git\" />\n    <mapping directory=\"$PROJECT_DIR$/../SukiUI\" vcs=\"Git\" />\n  </component>\n</project>
+===================================================================
+diff --git a/.idea/.idea.DotPharma/.idea/vcs.xml b/.idea/.idea.DotPharma/.idea/vcs.xml
+--- a/.idea/.idea.DotPharma/.idea/vcs.xml	
++++ b/.idea/.idea.DotPharma/.idea/vcs.xml	
+@@ -2,7 +2,5 @@
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+     <mapping directory="" vcs="Git" />
+-    <mapping directory="$PROJECT_DIR$/../NavigatR" vcs="Git" />
+-    <mapping directory="$PROJECT_DIR$/../SukiUI" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
