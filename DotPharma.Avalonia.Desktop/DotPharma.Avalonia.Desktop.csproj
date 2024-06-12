@@ -24,7 +24,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Projects ThirdyParty\Avalonia\SukiUI\SukiUI\SukiUI.csproj" />
+    <ProjectReference Include="..\..\SukiUI\SukiUI\SukiUI.csproj" />
     <ProjectReference Include="..\..\Alvz-UI\Alvz.Avalonia.Desktop\Alvz.Avalonia.Desktop.csproj" />
   </ItemGroup>
 
