@@ -32,7 +32,15 @@
       <change beforePath="$PROJECT_DIR$/DotPharma.Abstract/Sku.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DotPharma.Catalog/CatalogDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DotPharma.Catalog/CatalogDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DotPharma.Catalog/DotPharma.Catalog.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DotPharma.Catalog/DotPharma.Catalog.csproj" afterDir="false" />
+    <list default="true" id="5e5024b9-35c1-4c70-9b57-87fe9700cad6" name="Changes" comment="Starting to use Avalonia in this project">
+      <change beforePath="$PROJECT_DIR$/DotPharma.Avalonia.Desktop/DotPharma.Avalonia.Desktop.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DotPharma.Avalonia.Desktop/DotPharma.Avalonia.Desktop.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DotPharma.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DotPharma.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI.Demo/SukiUI.Demo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI.Demo/SukiUI.Demo.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/SideMenu.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/SideMenu.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/SideMenuItem.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/SideMenuItem.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/ToggleButtonIcon.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/ToggleButtonIcon.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/Extensions/IconGeometryExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/Extensions/IconGeometryExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/SukiUI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/SukiUI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,6 +260,7 @@
       <workItem from="1718231086850" duration="15944000" />
       <workItem from="1718419581718" duration="387000" />
       <workItem from="1718450645122" duration="3760000" />
+      <workItem from="1718231086850" duration="1401000" />
     </task>
     <task id="LOCAL-00001" summary="Starting to use Avalonia in this project">
       <option name="closed" value="true" />
@@ -310,10 +319,18 @@
             <State>
               <option name="FILTERS">
                 <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
                   <entry key="roots">
                     <value>
                       <list>
                         <option value="$PROJECT_DIR$" />
+                        <option value="$PROJECT_DIR$/../SukiUI" />
                       </list>
                     </value>
                   </entry>
@@ -330,5 +347,6 @@
     <MESSAGE value="Starting to use Avalonia in this project" />
     <MESSAGE value="Created new project for PDV." />
     <option name="LAST_COMMIT_MESSAGE" value="Created new project for PDV." />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting to use Avalonia in this project" />
   </component>
 </project>
