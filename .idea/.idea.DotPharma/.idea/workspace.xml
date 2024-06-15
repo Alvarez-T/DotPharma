@@ -17,15 +17,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e5024b9-35c1-4c70-9b57-87fe9700cad6" name="Changes" comment="Starting to use Avalonia in this project">
-      <change beforePath="$PROJECT_DIR$/DotPharma.Avalonia.Desktop/DotPharma.Avalonia.Desktop.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DotPharma.Avalonia.Desktop/DotPharma.Avalonia.Desktop.csproj" afterDir="false" />
+    <list default="true" id="5e5024b9-35c1-4c70-9b57-87fe9700cad6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DotPharma.Catalog.Contracts/Commands.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DotPharma.Catalog.Contracts/DotPharma.Catalog.Contracts.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DotPharma.Catalog.Contracts/Models.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DotPharma.Catalog.Contracts/Sku.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DotPharma.Catalog/Handlers/GroupCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DotPharma.Catalog/Handlers/ProductCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DotPharma.Catalog/Handlers/SubGroupCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DotPharma.Catalog/Mappers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DotPharma.Catalog/ProductEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DotPharma/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotPharma/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DotPharma/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DotPharma/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DotPharma.Abstract/Sku.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DotPharma.Catalog/CatalogDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DotPharma.Catalog/CatalogDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DotPharma.Catalog/DotPharma.Catalog.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DotPharma.Catalog/DotPharma.Catalog.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DotPharma.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DotPharma.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI.Demo/SukiUI.Demo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI.Demo/SukiUI.Demo.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/SideMenu.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/SideMenu.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/SideMenuItem.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/SideMenuItem.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/ToggleButtonIcon.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/Controls/ToggleButtonIcon.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/Extensions/IconGeometryExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/Extensions/IconGeometryExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SukiUI/SukiUI/SukiUI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../SukiUI/SukiUI/SukiUI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +47,11 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dd71da798df8459dbad50ec9c8082c3fc2d000/72/59ec0daa/ArgumentOutOfRangeException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dd71da798df8459dbad50ec9c8082c3fc2d000/7d/c00e6b4e/INumberBase`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -237,8 +249,27 @@
       <workItem from="1718066813827" duration="100000" />
       <workItem from="1718159689812" duration="732000" />
       <workItem from="1718160542046" duration="769000" />
-      <workItem from="1718231086850" duration="1401000" />
+      <workItem from="1718231086850" duration="15944000" />
+      <workItem from="1718419581718" duration="387000" />
+      <workItem from="1718450645122" duration="3760000" />
     </task>
+    <task id="LOCAL-00001" summary="Starting to use Avalonia in this project">
+      <option name="closed" value="true" />
+      <created>1718233250902</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718233250902</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created new project for PDV.">
+      <option name="closed" value="true" />
+      <created>1718233298211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718233298211</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,17 +310,10 @@
             <State>
               <option name="FILTERS">
                 <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
                   <entry key="roots">
                     <value>
                       <list>
-                        <option value="$PROJECT_DIR$/../SukiUI" />
+                        <option value="$PROJECT_DIR$" />
                       </list>
                     </value>
                   </entry>
@@ -304,6 +328,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Starting to use Avalonia in this project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting to use Avalonia in this project" />
+    <MESSAGE value="Created new project for PDV." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new project for PDV." />
   </component>
 </project>

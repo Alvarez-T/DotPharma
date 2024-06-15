@@ -69,13 +69,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Avalonia.Desktop", "DotPharma.Avalonia.Desktop\DotPharma.Avalonia.Desktop.csproj", "{93B70712-0A46-4F63-BE2E-CE5528686673}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SukiUI", "..\SukiUI\SukiUI\SukiUI.csproj", "{9E09C3EE-0A66-478B-B117-E11C2248D166}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SukiUI", "..\SukiUI\SukiUI\SukiUI.csproj", "{B4CEFD0A-3A56-400F-87D9-DEB7E029F544}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Pricing", "DotPharma.Pricing\DotPharma.Pricing.csproj", "{871E8384-1A5A-4C4C-8F91-3163DF1D61E2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Server", "DotPharma.Server\DotPharma.Server.csproj", "{AD0BA6A8-9409-4FBE-B0ED-423377B93E65}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Catalog.Contracts", "..\DotPharma.Catalog.Contracts\DotPharma.Catalog.Contracts.csproj", "{C054CF7C-5099-4AAF-9806-00080F13118A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C331677B-00B8-48D8-B458-D342550750A8}"
 EndProject
@@ -94,6 +93,7 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Pricing.Contracts", "DotPharma.Pricing.Contracts\DotPharma.Pricing.Contracts.csproj", "{C34A3169-7795-4E56-AC64-A826872EE8CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotPharma.Pricing.Tests", "DotPharma.Pricing.Tests\DotPharma.Pricing.Tests.csproj", "{BAFDA152-4156-4F0D-B6DD-A6EE3800306F}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Location.Contracts", "DotPharma.Location.Contracts\DotPharma.Location.Contracts.csproj", "{31EDAF99-1FAF-419A-B526-95F3FE88CD12}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotPharma.Avalonia.Desktop", "DotPharma.Avalonia.Desktop\DotPharma.Avalonia.Desktop.csproj", "{93B70712-0A46-4F63-BE2E-CE5528686673}"
@@ -101,6 +101,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alvz.Avalonia.Desktop", "..\Alvz-UI\Alvz.Avalonia.Desktop\Alvz.Avalonia.Desktop.csproj", "{313F9262-CD25-4658-87AF-FD170F88DFC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotPharma.Avalonia.PDV", "DotPharma.Avalonia.PDV\DotPharma.Avalonia.PDV.csproj", "{514B2353-20D2-4FB4-9843-F024D1B7C1A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotPharma.Catalog.Contracts", "DotPharma.Catalog.Contracts\DotPharma.Catalog.Contracts.csproj", "{50620F22-E094-4103-9D0E-45516AB39006}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -190,10 +192,6 @@ Global
 		{AD0BA6A8-9409-4FBE-B0ED-423377B93E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD0BA6A8-9409-4FBE-B0ED-423377B93E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD0BA6A8-9409-4FBE-B0ED-423377B93E65}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C054CF7C-5099-4AAF-9806-00080F13118A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C054CF7C-5099-4AAF-9806-00080F13118A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C054CF7C-5099-4AAF-9806-00080F13118A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C054CF7C-5099-4AAF-9806-00080F13118A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A88D56FD-C01E-4370-A242-D3EC0A650336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A88D56FD-C01E-4370-A242-D3EC0A650336}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A88D56FD-C01E-4370-A242-D3EC0A650336}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -238,6 +236,10 @@ Global
 		{514B2353-20D2-4FB4-9843-F024D1B7C1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{514B2353-20D2-4FB4-9843-F024D1B7C1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{514B2353-20D2-4FB4-9843-F024D1B7C1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50620F22-E094-4103-9D0E-45516AB39006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50620F22-E094-4103-9D0E-45516AB39006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50620F22-E094-4103-9D0E-45516AB39006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50620F22-E094-4103-9D0E-45516AB39006}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -265,7 +267,6 @@ Global
 		{B4CEFD0A-3A56-400F-87D9-DEB7E029F544} = {A481A230-425A-4938-9942-BD86E9383C45}
 		{871E8384-1A5A-4C4C-8F91-3163DF1D61E2} = {79565A0A-6306-442D-B898-A190CFA4CF38}
 		{AD0BA6A8-9409-4FBE-B0ED-423377B93E65} = {155BD790-95C7-4037-85E1-E1A6082CB72B}
-		{C054CF7C-5099-4AAF-9806-00080F13118A} = {3B43FB11-B802-41DE-8A6D-AC2C5369EFB1}
 		{A88D56FD-C01E-4370-A242-D3EC0A650336} = {5AC8252A-CE92-49A5-AC81-6ED865FB14A7}
 		{E26410DE-7D7B-4CCE-B3E3-45107354EF2E} = {5AC8252A-CE92-49A5-AC81-6ED865FB14A7}
 		{432F3D17-1450-4BBF-9E28-F1FD617E96D8} = {155BD790-95C7-4037-85E1-E1A6082CB72B}
@@ -275,6 +276,7 @@ Global
 		{BAFDA152-4156-4F0D-B6DD-A6EE3800306F} = {79565A0A-6306-442D-B898-A190CFA4CF38}
 		{9E09C3EE-0A66-478B-B117-E11C2248D166} = {A481A230-425A-4938-9942-BD86E9383C45}
 		{514B2353-20D2-4FB4-9843-F024D1B7C1A8} = {A481A230-425A-4938-9942-BD86E9383C45}
+		{50620F22-E094-4103-9D0E-45516AB39006} = {3B43FB11-B802-41DE-8A6D-AC2C5369EFB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFD3CBA2-ABA2-4F49-B5C5-1EF356F088F4}
