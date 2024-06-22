@@ -1,0 +1,90 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
+        xmlns:i="https://github.com/projektanker/icons.avalonia"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DotPharma.Avalonia.PDV.Views.RootWindow"
+        Background="Azure"
+        Title="DotPharma.Avalonia.PDV"
+        MinWidth="800" MinHeight="600"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+
+        <actipro:ChromedTitleBar DockPanel.Dock="Top" Background="#ecf7ff">
+            <actipro:ChromedTitleBar.Resources>
+                <actipro:ComparisonConverter x:Key="RightContentMarginConverter">
+                    <actipro:ComparisonConverter.TrueResult>
+                        <Thickness>0,0,20,0</Thickness>
+                    </actipro:ComparisonConverter.TrueResult>
+                    <actipro:ComparisonConverter.FalseResult>
+                        <Thickness>0,0,0,0</Thickness>
+                    </actipro:ComparisonConverter.FalseResult>
+                </actipro:ComparisonConverter>
+                <actipro:ControlTheme x:Key="TitleBarButtonTheme" />
+            </actipro:ChromedTitleBar.Resources>
+            <actipro:ChromedTitleBar.Styles>
+                <Style Selector="Button">
+                    <Setter Property="Theme" Value="{actipro:ControlTheme TitleBarButton}" />
+                    <Setter Property="FontSize" Value="19" />
+                </Style>
+            </actipro:ChromedTitleBar.Styles>
+            <actipro:ChromedTitleBar.LeftContent>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Margin="10,7,0,7" VerticalAlignment="Center" IsHitTestVisible="False">
+                        <TextBlock Text="Versão 0.0.1" 
+                                   FontSize="12" 
+                                   TextTrimming="CharacterEllipsis" 
+                                   Opacity="0.85" 
+                                   TextAlignment="Right"/>
+                        <TextBlock Margin="0,-2,0,0"
+                                   Text="DotPharma" FontSize="18" 
+                                   FontWeight="SemiBold" 
+                                   TextTrimming="CharacterEllipsis" />
+                    </StackPanel>
+                </StackPanel>
+            </actipro:ChromedTitleBar.LeftContent>
+            <actipro:ChromedTitleBar.RightContent>
+                <StackPanel Orientation="Horizontal">
+                    <Button i:Attached.Icon="fa-solid fa-bell"></Button>
+                    <Button i:Attached.Icon="fa-solid fa-print"></Button>
+                    <Button i:Attached.Icon="fa-solid fa-gear"
+                            ToolTip.Tip="Parâmetros">
+                        <Button.Flyout>
+                            <MenuFlyout Placement="Bottom" >
+                                <MenuItem Classes="theme-menuitem-heading" Header="Opções menu" i:MenuItem.Icon="fa-solid fa-circle-info" />
+                                <MenuItem Header="Testes 1"  />
+                                <MenuItem Header="Testes 2"  />
+                                <Separator />
+                            </MenuFlyout>
+                        </Button.Flyout>
+                    </Button>
+                    
+				</StackPanel>
+
+
+
+			</actipro:ChromedTitleBar.RightContent>
+        </actipro:ChromedTitleBar>
+        <SplitView
+            DockPanel.Dock="Bottom"
+            x:Name="splitViewSample"
+            BorderBrush="{actipro:ThemeResource Container2BorderBrush}" BorderThickness="1"
+            CompactPaneLength="73"
+            DisplayMode="CompactInline"
+            PaneBackground="{actipro:ThemeResource ControlBackgroundBrushSoftAccent}"
+            >
+            <SplitView.Pane>
+                <TextBlock Margin="5" Text="Pane Content" TextAlignment="Center" TextWrapping="Wrap" Foreground="{actipro:ThemeResource ControlForegroundBrushSoftAccent}" />
+            </SplitView.Pane>
+            <SplitView.Content>
+              
+                
+			</SplitView.Content>
+
+		</SplitView>
+    </DockPanel>
+
+    
+</Window>

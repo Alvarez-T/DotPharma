@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="DotPharma.Avalonia.Desktop/App.axaml" value="DotPharma.Avalonia.Desktop/DotPharma.Avalonia.Desktop.csproj" />
+        <entry key="DotPharma.Avalonia.PDV/App.axaml" value="DotPharma.Avalonia.PDV/DotPharma.Avalonia.PDV.csproj" />
+        <entry key="DotPharma.Avalonia.PDV/MainWindow.axaml" value="DotPharma.Avalonia.PDV/DotPharma.Avalonia.PDV.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
