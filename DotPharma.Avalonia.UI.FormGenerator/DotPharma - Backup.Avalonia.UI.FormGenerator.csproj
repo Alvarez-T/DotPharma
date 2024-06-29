@@ -11,11 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Controls\NavigationMenu.axaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DotPharma.Location\DotPharma.Location.csproj" />
+    <Folder Include="Engine\Form\" />
+    <Folder Include="Engine\Group\" />
+    <Folder Include="Engine\NewFolder\" />
   </ItemGroup>
 
 </Project>

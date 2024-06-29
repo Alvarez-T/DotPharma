@@ -1,0 +1,27 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:DotPharma.Avalonia.UI.FormGenerator.Controls">
+  <Design.PreviewWith>
+    <controls:Form />
+  </Design.PreviewWith>
+
+  <Style Selector="controls|Form">
+	  <Setter Property="Grid.IsSharedSizeScope" Value="False" />
+      <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Template">
+      <ControlTemplate>
+		  <DataValidationErrors>
+              <ItemsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" />
+          </DataValidationErrors>
+      </ControlTemplate>
+    </Setter>
+      
+    <Style Selector="^:fixed-width">
+        <Setter Property="Grid.IsSharedSizeScope" Value="True" />
+    </Style>
+  </Style>
+
+	
+
+	
+</Styles>

@@ -4,26 +4,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
         xmlns:i="https://github.com/projektanker/icons.avalonia"
+        xmlns:dotPharma="https://github.com/Alvarez-T/DotPharma"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DotPharma.Avalonia.PDV.Views.RootWindow"
-        Background="Azure"
         Title="DotPharma.Avalonia.PDV"
-        MinWidth="800" MinHeight="600"
-        WindowStartupLocation="CenterScreen">
+        MinWidth="1024" MinHeight="768"
+        WindowStartupLocation="CenterScreen"
+        Background="#d4dee5">
     <DockPanel>
 
+
         <actipro:ChromedTitleBar DockPanel.Dock="Top" Background="#ecf7ff">
-            <actipro:ChromedTitleBar.Resources>
-                <actipro:ComparisonConverter x:Key="RightContentMarginConverter">
-                    <actipro:ComparisonConverter.TrueResult>
-                        <Thickness>0,0,20,0</Thickness>
-                    </actipro:ComparisonConverter.TrueResult>
-                    <actipro:ComparisonConverter.FalseResult>
-                        <Thickness>0,0,0,0</Thickness>
-                    </actipro:ComparisonConverter.FalseResult>
-                </actipro:ComparisonConverter>
-                <actipro:ControlTheme x:Key="TitleBarButtonTheme" />
-            </actipro:ChromedTitleBar.Resources>
             <actipro:ChromedTitleBar.Styles>
                 <Style Selector="Button">
                     <Setter Property="Theme" Value="{actipro:ControlTheme TitleBarButton}" />
@@ -32,16 +23,21 @@
             </actipro:ChromedTitleBar.Styles>
             <actipro:ChromedTitleBar.LeftContent>
                 <StackPanel Orientation="Horizontal">
-                    <StackPanel Margin="10,7,0,7" VerticalAlignment="Center" IsHitTestVisible="False">
-                        <TextBlock Text="Versão 0.0.1" 
-                                   FontSize="12" 
-                                   TextTrimming="CharacterEllipsis" 
-                                   Opacity="0.85" 
-                                   TextAlignment="Right"/>
-                        <TextBlock Margin="0,-2,0,0"
-                                   Text="DotPharma" FontSize="18" 
-                                   FontWeight="SemiBold" 
-                                   TextTrimming="CharacterEllipsis" />
+                    <StackPanel Orientation="Horizontal" Margin="10,7,0,7" VerticalAlignment="Center" IsHitTestVisible="False">
+                        <Image Source="avares://DotPharma.Avalonia.PDV/Assets/logo.png" Height="50" Width="50"  />
+                        <StackPanel>
+                            <TextBlock Text="DotPharma" 
+                                       FontFamily="Quartet BC"
+                                       FontSize="18"
+                                       FontWeight="SemiBold"
+                                       />
+                            <TextBlock Text="PDV"
+                                       FontSize="14"
+                                       TextTrimming="CharacterEllipsis"
+                                       Opacity="0.85"
+                                       TextAlignment="Left"/>
+                            
+                        </StackPanel>
                     </StackPanel>
                 </StackPanel>
             </actipro:ChromedTitleBar.LeftContent>
@@ -60,31 +56,127 @@
                             </MenuFlyout>
                         </Button.Flyout>
                     </Button>
-                    
 				</StackPanel>
-
-
-
 			</actipro:ChromedTitleBar.RightContent>
         </actipro:ChromedTitleBar>
-        <SplitView
+		<DockPanel>
+            <actipro:ShadowChrome DockPanel.Dock="Top" Background="#c8e1e2" Elevation="5"  ShadowColor="Black" ShadowOpacity="0,1">
+                    <StackPanel Margin="20,0" Orientation="Horizontal">
+						<dotPharma:IconButton
+                            Margin="2,5"
+                            Background="#ecf5f5"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Content="À vista"
+                            Width="64"
+                            Height="58"
+                            Padding="2"
+                            CornerRadius="5"
+                            TextBlock.TextWrapping="WrapWithOverflow"
+                            TextBlock.TextAlignment="Center"
+                            IconPlacement="Top">
+                            <dotPharma:IconButton.Icon>
+                                <i:Icon Value="fa-solid fa-money-bill" FontSize="30"></i:Icon>
+                            </dotPharma:IconButton.Icon>
+                        </dotPharma:IconButton>
+                        <dotPharma:IconButton
+                            Margin="2,5"
+                            Background="#ecf5f5"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Content="À prazo"
+                            Width="64"
+                            Height="58"
+                            Padding="2"
+                            CornerRadius="5"
+                            TextBlock.TextWrapping="WrapWithOverflow"
+                            TextBlock.TextAlignment="Center"
+                            IconPlacement="Top">
+                            <dotPharma:IconButton.Icon>
+                                <i:Icon Value="fa-solid fa-credit-card" FontSize="30"></i:Icon>
+                            </dotPharma:IconButton.Icon>
+                        </dotPharma:IconButton>
+                        <dotPharma:IconButton
+                            Margin="2,5"
+                            Background="#ecf5f5"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Content="Convênio"
+                            Width="64"
+                            Height="58"
+                            Padding="2"
+                            CornerRadius="5"
+                            TextBlock.TextWrapping="WrapWithOverflow"
+                            TextBlock.TextAlignment="Center"
+                            IconPlacement="Top">
+                            <dotPharma:IconButton.Icon>
+                                <i:Icon Value="fa-solid fa-hand-holding-medical" FontSize="30"></i:Icon>
+                            </dotPharma:IconButton.Icon>
+                        </dotPharma:IconButton>
+                        <Separator ></Separator>
+                    </StackPanel>
+              
+			</actipro:ShadowChrome>
+			<Grid Margin="20"
+                  ColumnDefinitions="1.6*, 1*"
+                  RowDefinitions="1.5*, *">
+				<Border 
+                        CornerRadius="10"
+                        Grid.ColumnSpan="2"
+                        Background="#f2f5f7"
+                        Margin="0,0,0,5">
+					<Grid>
+
+					</Grid>
+				</Border>
+				<Border Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="0,10,15,0"
+                        CornerRadius="10"
+                        Background="#f2f5f7">    
+				</Border>
+                <Border Grid.Column="1" Grid.Row="1"
+                        Margin="0,10,0,0"
+                        CornerRadius="10"
+                        Background="#f2f5f7">
+                </Border>
+			</Grid>
+
+		</DockPanel>
+        
+		<!--
+		<SplitView
             DockPanel.Dock="Bottom"
             x:Name="splitViewSample"
             BorderBrush="{actipro:ThemeResource Container2BorderBrush}" BorderThickness="1"
             CompactPaneLength="73"
             DisplayMode="CompactInline"
-            PaneBackground="{actipro:ThemeResource ControlBackgroundBrushSoftAccent}"
-            >
-            <SplitView.Pane>
-                <TextBlock Margin="5" Text="Pane Content" TextAlignment="Center" TextWrapping="Wrap" Foreground="{actipro:ThemeResource ControlForegroundBrushSoftAccent}" />
+            PaneBackground="#ecf7ff">
+
+			<SplitView.Pane>
+                <DockPanel>
+                    <StackPanel>
+
+                    </StackPanel>
+                </DockPanel>
             </SplitView.Pane>
-            <SplitView.Content>
-              
-                
+			<SplitView.Content>
+                <Grid>
+					<dotPharma:IconButton HorizontalAlignment="Center" VerticalAlignment="Center" Content="TESTE 123 TESTE">
+                        <dotPharma:IconButton.Icon>
+                            <PathIcon
+                                Width="14"
+                                Height="14"
+                                Data="{StaticResource iconGlyph}" />
+                        </dotPharma:IconButton.Icon>
+                    </dotPharma:IconButton>
+				</Grid>
+
 			</SplitView.Content>
 
-		</SplitView>
-    </DockPanel>
+		</SplitView> 
+		-->
+    </DockPanel> 
 
     
 </Window>
