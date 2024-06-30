@@ -30,6 +30,13 @@ public class Test
                     .CreateGroupFor(contentBuilder =>
                     {
                         contentBuilder
+                            .CreateTextBox(creator =>
+                            {
+                                creator.SetProperty(m => m.Name);
+
+                                var t = creator.SetHeader("teste")
+
+                            })
                             .CreateTextBoxFor(m => m.Name, "Nome:")
                             .CreateTextBoxFor(m => m.Description, "Descrição:");
                     }).WithHeader("Informações Gerais")
@@ -41,14 +48,12 @@ public class Test
                             .CreateCheckBoxFor(m => m.IsActive, "Está ativo?")
                             .CreateComboBox(comboBoxBuilder =>
                             {
-                                comboBoxBuilder
-                                    .SetProperty(m => m.Children)
-                                    .SetHeader("Children")
-                                    .SetDisplayMemberPath(m => m.Children, c => c.Name);
+                                comboBoxBuilder.SetProperty(c => c.Children);
+                                comboBoxBuilder.SetDisplayMemberPath(m => m.)
                             });
                     }).WithHeader("Complementares");
             }).WithSettings(settings =>
-            {
+            { 
                 settings.LabelPosition = LabelPosition.Left;
             });
     }

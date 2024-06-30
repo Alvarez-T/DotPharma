@@ -9,32 +9,37 @@ using DotPharma.Avalonia.UI.FormGenerator.Exceptions;
 
 namespace DotPharma.Avalonia.UI.FormGenerator;
 
+
 public class FormComponentBuilder<T>(IComponentScriptRegister componentRegister)
     where T : class
 {
-    public FormComponentBuilder<T> CreateComboBox(Action<CollectionComponentCreator<T>> comboBoxCreator)
-        => RegisterComponentAndSelfReturn<IComponentScript>(comboBoxCreator)
+    public FormComponentBuilder<T> CreateComboBox(Action<IComponentCreator<T, IComboBoxScript>> comboBoxCreator)
+        => RegisterComponentAndSelfReturn(comboBoxCreator);
 
-    public FormComponentBuilder<T> CreateTextBox(Action<IComponentCreator<T>> textBoxCreator)
-        => RegisterComponentAndSelfReturn<ITextBoxScript>(textBoxCreator);
+    public FormComponentBuilder<T> CreateTextBox(Action<IComponentCreator<T, ITextBoxScript>> textBoxCreator)
+    {
+        object obj = null;
+        return   RegisterComponentAndSelfReturn(textBoxCreator);
+    }
 
-    public FormComponentBuilder<T> CreateNumericBox(Action<FormComponentCreator<T>> numericBoxCreator)
-        => RegisterComponentAndSelfReturn<INumericBoxScript>(numericBoxCreator);
+    public FormComponentBuilder<T> CreateNumericBox(Action<IComponentCreator<T, INumericBoxScript>> numericBoxCreator)
+        => RegisterComponentAndSelfReturn(numericBoxCreator);
 
-    public FormComponentBuilder<T> CreateCheckBox(Action<FormComponentCreator<T>> checkBoxCreator)
-        => RegisterComponentAndSelfReturn<ICheckBoxScript>(checkBoxCreator);
+    public FormComponentBuilder<T> CreateCheckBox(Action<IComponentCreator<T, ICheckBoxScript>> checkBoxCreator)
+        => RegisterComponentAndSelfReturn(checkBoxCreator);
 
-    public FormComponentBuilder<T> CreateDateSelection(Action<FormComponentCreator<T>> dateSelectionCreator)
-        => RegisterComponentAndSelfReturn<IDateScript>(dateSelectionCreator);
+    public FormComponentBuilder<T> CreateDateSelection(Action<IComponentCreator<T, IDateScript>> dateSelectionCreator)
+        => RegisterComponentAndSelfReturn(dateSelectionCreator);
 
     private FormComponentBuilder<T> RegisterComponentAndSelfReturn<TComponent>(
-        Action<FormComponentCreator<T>> componentCreator) where TComponent : class, IComponentScript
+        Action<IComponentCreator<T, TComponent>> componentCreator) where TComponent : class, IComponentScript
     {
         var componentProxy = componentRegister.GenerateComponentScriptOf<TComponent>();
         componentRegister.RegisterComponent(componentProxy);
         componentRegister.RegisterComponent(componentProxy);
         return this;
     }
+
 
 
 }

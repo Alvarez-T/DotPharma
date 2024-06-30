@@ -2,7 +2,7 @@
 
 namespace DotPharma.Avalonia.UI.FormGenerator.Engine.Components;
 
-public interface ICheckBoxScript : IComponentScript
+public interface ICheckBoxScript : IHeaderComponentScript
 {
 
 }

@@ -2,7 +2,7 @@
 
 namespace DotPharma.Avalonia.UI.FormGenerator.Engine.Components.Scripts;
 
-public interface IBindingComponentScript : IComponentScript
+public interface IBindingComponentScript
 {
     public MemberExpression MemberToBinding { get; set; }
 }
