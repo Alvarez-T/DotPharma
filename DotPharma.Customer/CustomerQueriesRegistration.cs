@@ -1,5 +1,4 @@
 ﻿using DotPharma.Customer.Contracts;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 

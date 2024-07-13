@@ -2,10 +2,9 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DotPharma.WPF.Views"
-             xmlns:dotControl="clr-namespace:DotPharma.WPF.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns:controls="clr-namespace:DotPharma.WPF.Controls"
              Loaded="MainMenu_Loaded"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="100">
@@ -28,7 +27,7 @@
                 <RadioButton Content="Dashboard"
                              IsChecked="True"
                              hc:IconElement.Geometry="{StaticResource Dashboard}"/>
-                <dotControl:DropDownMenu Header="Cadastros" GroupName="MenuGroup" hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}">
+                <controls:DropDownMenu Header="Cadastros" GroupName="MenuGroup" hc:IconElement.Geometry="{StaticResource PlusBoxMultiple}">
                     <RadioButton Content="Produto"
                                  IsChecked="{Binding NavigateToProductRegistration}"
                                  hc:IconElement.Geometry="{StaticResource Medicine}" />
@@ -37,14 +36,14 @@
                                  hc:IconElement.Geometry="{StaticResource Person}" />
                     <RadioButton Content="Fornecedor"
                                  hc:IconElement.Geometry="{StaticResource Supplier}" />
-                </dotControl:DropDownMenu>
-                <dotControl:DropDownMenu GroupName="MenuGroup" Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
+                </controls:DropDownMenu>
+                <controls:DropDownMenu GroupName="MenuGroup" Header="Saídas" hc:IconElement.Geometry="{StaticResource Store}">
                     <RadioButton Content="Venda"
                                  Style="{StaticResource MenuItem}"
                                  hc:IconElement.Geometry="{StaticResource ShoppingCart}" />
                     <RadioButton Content="Estorno"
                                  hc:IconElement.Geometry="{StaticResource Undo}" />
-                </dotControl:DropDownMenu>
+                </controls:DropDownMenu>
 
 
             </StackPanel>

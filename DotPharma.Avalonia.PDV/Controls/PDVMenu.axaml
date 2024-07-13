@@ -1,0 +1,77 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800"
+             xmlns:dotfy="https://github.com/Alvarez-T/Dotfy"
+             xmlns:i="https://github.com/projektanker/icons.avalonia"
+             x:Class="DotPharma.Avalonia.PDV.Controls.PDVMenu">
+	<UserControl.Styles>
+        <Style Selector="dotfy|IconButton">
+            <Setter Property="Margin" Value="2,5" />
+            <Setter Property="Background" Value="#ecf5f5"/>
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Width" Value="72" />
+            <Setter Property="Height" Value="58" />
+            <Setter Property="Padding" Value="2" />
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="IconPlacement" Value="Top" />
+        </Style>
+    </UserControl.Styles>
+	<StackPanel Height="70" Margin="20,0" Orientation="Horizontal">
+        <Button Width="200" HorizontalContentAlignment="Stretch" Margin="0,0,5,0">
+			<StackPanel Orientation="Horizontal" >
+                <StackPanel Margin="0,10" >
+                    <TextBlock Text="Thiago A."
+                               FontFamily="Quartet BC"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="Vendedor"
+                               FontSize="14"
+                               TextTrimming="CharacterEllipsis"
+                               Opacity="0.85"
+                               TextAlignment="Left"/>
+                </StackPanel>
+            </StackPanel>
+        </Button>
+        <dotfy:IconButton
+			Content="À vista">
+			<dotfy:IconButton.Icon>
+				<i:Icon Value="fa-solid fa-money-bill" FontSize="30"></i:Icon>
+			</dotfy:IconButton.Icon>
+		</dotfy:IconButton>
+		<dotfy:IconButton
+			Content="À prazo">
+			<dotfy:IconButton.Icon>
+				<i:Icon Value="fa-solid fa-credit-card" FontSize="30"></i:Icon>
+			</dotfy:IconButton.Icon>
+		</dotfy:IconButton>
+		<dotfy:IconButton
+			Content="Convênio">
+			<dotfy:IconButton.Icon>
+				<i:Icon Value="fa-solid fa-hand-holding-medical" FontSize="30"></i:Icon>
+			</dotfy:IconButton.Icon>
+		</dotfy:IconButton>
+		<dotfy:Divider Margin="5,0" Orientation="Vertical" Height="35"/>
+		<dotfy:IconButton
+            Content="Entrega">
+			<dotfy:IconButton.Icon>
+				<i:Icon Value="fa-solid fa-motorcycle" FontSize="40"></i:Icon>
+			</dotfy:IconButton.Icon>
+		</dotfy:IconButton>
+        <dotfy:IconButton
+            Content="Encomenda">
+            <dotfy:IconButton.Icon>
+                <i:Icon Value="fa-solid fa-cube" FontSize="30"></i:Icon>
+            </dotfy:IconButton.Icon>
+        </dotfy:IconButton>
+        <dotfy:Divider Margin="5,0" Orientation="Vertical" Height="35" />
+		<dotfy:IconButton
+            Content="Pedidos">
+			<dotfy:IconButton.Icon>
+				<i:Icon Value="fa-solid fa-bell-concierge" FontSize="30"></i:Icon>
+			</dotfy:IconButton.Icon>
+		</dotfy:IconButton>
+	</StackPanel>
+</UserControl>

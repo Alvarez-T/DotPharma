@@ -1,6 +1,4 @@
-﻿using DotPharma.Avalonia.UI.FormGenerator.Controls;
-
-namespace DotPharma.Avalonia.UI.FormGenerator;
+﻿namespace DotPharma.Avalonia.UI.FormGenerator;
 
 public class FormCreator<T>
 {

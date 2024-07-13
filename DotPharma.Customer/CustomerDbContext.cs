@@ -1,9 +1,4 @@
-﻿using DotPharma.Customer.Contracts;
-using JasperFx.Core;
-using JasperFx.Core.Reflection;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace DotPharma.Customer;
 

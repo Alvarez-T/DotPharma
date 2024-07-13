@@ -1,8 +1,4 @@
-﻿using DotPharma.Presentation.Models;
-using HandyControl.Controls;
-using System.Windows;
-
-namespace DotPharma.WPF.Views
+﻿namespace DotPharma.WPF.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

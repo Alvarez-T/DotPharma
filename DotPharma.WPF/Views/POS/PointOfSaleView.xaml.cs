@@ -1,23 +1,8 @@
-﻿using DotPharma.Presentation.Models;
-using Microsoft.Windows.Themes;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using DotPharma.Presentation.Models;
 
-namespace DotPharma.WPF.Views
+namespace DotPharma.WPF.Views.POS
 {
     /// <summary>
     /// Interaction logic for PointOfSaleView.xaml

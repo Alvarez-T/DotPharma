@@ -1,7 +1,4 @@
-
-using DotPharma.Abstract;
 using DotPharma.Catalog.Contracts;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace DotPharma.Catalog;
 

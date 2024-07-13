@@ -1,41 +1,31 @@
 ﻿using System.Linq.Expressions;
-using DotPharma.Avalonia.UI.FormGenerator.Components;
-using DotPharma.Avalonia.UI.FormGenerator.Engine.Components;
 using DotPharma.Avalonia.UI.FormGenerator.Engine.Components.Scripts;
 using DotPharma.Avalonia.UI.FormGenerator.Helpers;
 
 namespace DotPharma.Avalonia.UI.FormGenerator;
 
-public abstract class FluentComponentCreator<TSelf, T>(IComponentScript componentScript) : IComponentCreator<T>
-    where TSelf : FluentComponentCreator<TSelf, T>
-    where T : class
+public class FluentComponentCreator<T, TComponent, TSelf>
+    where TComponent : IComponentScript
+    where TSelf : FluentComponentCreator<T, TComponent, TSelf>
+
+public class ComponentCreator<T, TComponent> : IComponentCreator<T, TComponent>
+    where TComponent : IComponentScript
 {
-    protected readonly IComponentScript ComponentScript = componentScript;
+    protected readonly IComponentScript ComponentScript;
 
-    public TSelf SetProperty<TProperty>(Expression<Func<T, TProperty>> accessExpression)
+    public ComponentCreator(TComponent componentScript)
     {
-        ExpressionsHelpers.EnsureAccessPropertyExpression(accessExpression);
-        ComponentScript.MemberToBinding = (accessExpression.Body as MemberExpression)!;
-
-        return Self();
+        ComponentScript = componentScript;
     }
 
-    public TSelf SetHeader(string header)
+    public TComponent Component { get; }
+
+    public ComponentCreator<T, TComponent> SetBinding<TProperty>(
+        Expression<Func<T, TProperty>> memberAccessExpression)
     {
-        ComponentScript.Header = header;
+        ExpressionsHelpers.EnsureAccessPropertyExpression(memberAccessExpression);
+        Component.MemberToBinding = (memberAccessExpression.Body as MemberExpression)!;
 
-        return Self();
+        return creator;
     }
-
-    public TSelf RegisterAdditionalSetting<TSetting>() where TSetting : class, IComponentSetting
-    {
-        ComponentScript.Settings.Add(new ComponentSettingHolder<TSetting>());
-
-        return Self();
-    }
-
-    protected TSelf Self() => (TSelf)this;
 }
-
-public class FormComponentCreator<T>(IComponentScript componentScript)
-    : FluentComponentCreator<FormComponentCreator<T>, T>(componentScript) where T : class;

@@ -1,4 +1,4 @@
-﻿namespace DotPharma.Storage.Maven
+﻿namespace DotPharma.Storage.Marten
 {
     public class Class1
     {

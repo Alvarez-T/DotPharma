@@ -1,5 +1,4 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using NavigatR;
 
 namespace DotPharma.Presentation.ViewModels.Tiles;
 

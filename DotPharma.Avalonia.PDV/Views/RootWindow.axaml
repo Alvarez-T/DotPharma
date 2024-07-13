@@ -4,16 +4,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
         xmlns:i="https://github.com/projektanker/icons.avalonia"
-        xmlns:dotPharma="https://github.com/Alvarez-T/DotPharma"
+        xmlns:dotfy="https://github.com/Alvarez-T/Dotfy"
+        xmlns:controls="clr-namespace:DotPharma.Avalonia.PDV.Controls"
+        xmlns:design="clr-namespace:DotPharma.Avalonia.PDV.FakeData"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:CompileBindings="True"
         x:Class="DotPharma.Avalonia.PDV.Views.RootWindow"
+        x:DataType="design:DesignTimeProductsProvider"
         Title="DotPharma.Avalonia.PDV"
-        MinWidth="1024" MinHeight="768"
+        MinWidth="1280" MinHeight="768"
         WindowStartupLocation="CenterScreen"
         Background="#d4dee5">
+    <Design.DataContext>
+        <design:DesignTimeProductsProvider />
+    </Design.DataContext>
+    <Window.DataContext>
+        <design:DesignTimeProductsProvider />
+    </Window.DataContext>
     <DockPanel>
-
-
         <actipro:ChromedTitleBar DockPanel.Dock="Top" Background="#ecf7ff">
             <actipro:ChromedTitleBar.Styles>
                 <Style Selector="Button">
@@ -25,7 +33,7 @@
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Orientation="Horizontal" Margin="10,7,0,7" VerticalAlignment="Center" IsHitTestVisible="False">
                         <Image Source="avares://DotPharma.Avalonia.PDV/Assets/logo.png" Height="50" Width="50"  />
-                        <StackPanel>
+                        <StackPanel Margin="8,0">
                             <TextBlock Text="DotPharma" 
                                        FontFamily="Quartet BC"
                                        FontSize="18"
@@ -61,73 +69,33 @@
         </actipro:ChromedTitleBar>
 		<DockPanel>
             <actipro:ShadowChrome DockPanel.Dock="Top" Background="#c8e1e2" Elevation="5"  ShadowColor="Black" ShadowOpacity="0,1">
-                    <StackPanel Margin="20,0" Orientation="Horizontal">
-						<dotPharma:IconButton
-                            Margin="2,5"
-                            Background="#ecf5f5"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Content="À vista"
-                            Width="64"
-                            Height="58"
-                            Padding="2"
-                            CornerRadius="5"
-                            TextBlock.TextWrapping="WrapWithOverflow"
-                            TextBlock.TextAlignment="Center"
-                            IconPlacement="Top">
-                            <dotPharma:IconButton.Icon>
-                                <i:Icon Value="fa-solid fa-money-bill" FontSize="30"></i:Icon>
-                            </dotPharma:IconButton.Icon>
-                        </dotPharma:IconButton>
-                        <dotPharma:IconButton
-                            Margin="2,5"
-                            Background="#ecf5f5"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Content="À prazo"
-                            Width="64"
-                            Height="58"
-                            Padding="2"
-                            CornerRadius="5"
-                            TextBlock.TextWrapping="WrapWithOverflow"
-                            TextBlock.TextAlignment="Center"
-                            IconPlacement="Top">
-                            <dotPharma:IconButton.Icon>
-                                <i:Icon Value="fa-solid fa-credit-card" FontSize="30"></i:Icon>
-                            </dotPharma:IconButton.Icon>
-                        </dotPharma:IconButton>
-                        <dotPharma:IconButton
-                            Margin="2,5"
-                            Background="#ecf5f5"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Content="Convênio"
-                            Width="64"
-                            Height="58"
-                            Padding="2"
-                            CornerRadius="5"
-                            TextBlock.TextWrapping="WrapWithOverflow"
-                            TextBlock.TextAlignment="Center"
-                            IconPlacement="Top">
-                            <dotPharma:IconButton.Icon>
-                                <i:Icon Value="fa-solid fa-hand-holding-medical" FontSize="30"></i:Icon>
-                            </dotPharma:IconButton.Icon>
-                        </dotPharma:IconButton>
-                        <Separator ></Separator>
-                    </StackPanel>
-              
-			</actipro:ShadowChrome>
-			<Grid Margin="20"
+                <controls:PDVMenu />
+            </actipro:ShadowChrome>
+			<Grid Margin="20,10, 20, 20"
                   ColumnDefinitions="1.6*, 1*"
                   RowDefinitions="1.5*, *">
-				<Border 
+				<Border
                         CornerRadius="10"
                         Grid.ColumnSpan="2"
                         Background="#f2f5f7"
                         Margin="0,0,0,5">
-					<Grid>
+	
+						<DataGrid DataContext="{x:Static design:DesignTime.ProductsProvider}" 
+                                  AutoGenerateColumns="False" 
+                                  ItemsSource="{Binding Products}">
+							<DataGrid.Columns>
+								<DataGridTextColumn Header="Código" Binding="{Binding Codigo}" />
+								<DataGridTextColumn Header="Produto" Width="*" Binding="{Binding Produto}"  />
+								<DataGridTextColumn Header="Preço B" Binding="{Binding PrecoB}"  />
+								<DataGridTextColumn Header="Preço L" Binding="{Binding PrecoL}"  />
+								<DataGridTextColumn Header="Desconto" Binding="{Binding Desconto}"  />
+								<DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"  />
+								<DataGridTextColumn Header="Total" Binding="{Binding Total} "/>
+							</DataGrid.Columns>
+						</DataGrid>
 
-					</Grid>
+					
+
 				</Border>
 				<Border Grid.Column="0"
                         Grid.Row="1"
@@ -177,6 +145,4 @@
 		</SplitView> 
 		-->
     </DockPanel> 
-
-    
 </Window>

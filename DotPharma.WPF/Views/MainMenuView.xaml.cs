@@ -1,7 +1,6 @@
-﻿using DotPharma.Presentation.ViewModels;
-using NavigatR;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
+using DotPharma.Presentation.ViewModels;
 
 namespace DotPharma.WPF.Views
 {

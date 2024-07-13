@@ -1,6 +1,4 @@
-﻿using NavigatR;
-
-namespace DotPharma.Presentation.ViewModels;
+﻿namespace DotPharma.Presentation.ViewModels;
 
 public partial class ShellViewModel : IViewModel
 {

@@ -5,7 +5,6 @@
 		xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
 		xmlns:sukiUi="clr-namespace:SukiUI;assembly=SukiUI"
 		xmlns:controls="clr-namespace:Alvz.Avalonia.Desktop;assembly=Alvz.Avalonia.Desktop"
-		xmlns:local="clr-namespace:DotPharma.Avalonia.Desktop;assembly=DotPharma.Avalonia.Desktop"
         mc:Ignorable="d" d:DesignWidth="1366" d:DesignHeight="768"
         x:Class="DotPharma.Avalonia.Desktop.MainWindow"
         Title="DotPharma">

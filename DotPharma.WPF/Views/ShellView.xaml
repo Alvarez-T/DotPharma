@@ -3,15 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DotPharma.WPF"
-        xmlns:views="clr-namespace:DotPharma.WPF.Views.Registration"
-        xmlns:dotControl="clr-namespace:DotPharma.WPF.Controls"
-        xmlns:dotPharma="clr-namespace:DotPharma.WPF.Views"
         xmlns:navigtR="clr-namespace:NavigatR.WPF.Controls;assembly=NavigatR.WPF"
-        xmlns:models="clr-namespace:DotPharma.Presentation.Models;assembly=DotPharma.Presentation" 
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:dockablz="http://dragablz.net/winfx/xaml/dockablz"
         xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
+        xmlns:views="clr-namespace:DotPharma.WPF.Views"
+        xmlns:pos="clr-namespace:DotPharma.WPF.Views.POS"
         Width="1280"
         ShowTitle="False"
         NonClientAreaBackground="#FF13094F"
@@ -87,7 +84,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <dotPharma:MainMenuView />
+        <views:MainMenuView />
 
         <Border Grid.RowSpan="4" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="60,0,0,0" Background="#eaecf9">
             <!--
@@ -101,7 +98,7 @@
             </hc:TabControl>
             -->
             <navigtR:NavigationContainer>
-                <dotPharma:PointOfSaleView />
+                <pos:PointOfSaleView />
             </navigtR:NavigationContainer>
             
 

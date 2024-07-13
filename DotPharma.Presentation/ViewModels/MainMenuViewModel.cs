@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using DotPharma.Presentation.ViewModels.POS;
-using NavigatR;
 
 namespace DotPharma.Presentation.ViewModels;
 

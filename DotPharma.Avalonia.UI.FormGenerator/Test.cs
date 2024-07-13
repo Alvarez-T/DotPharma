@@ -1,6 +1,4 @@
-﻿using Avalonia.Layout;
-using DotPharma.Avalonia.UI.FormGenerator.Common;
-using DotPharma.Avalonia.UI.FormGenerator.Components;
+﻿using DotPharma.Avalonia.UI.FormGenerator.Common;
 using DotPharma.Avalonia.UI.FormGenerator.Engine.Components.Extensions;
 using DotPharma.Avalonia.UI.FormGenerator.Engine.Components.Scripts;
 
@@ -29,7 +27,13 @@ public class Test
                 groupBuilder
                     .CreateGroupFor(contentBuilder =>
                     {
+                        var teste = contentBuilder.CreateTextBox();
+                        teste.SetBinding<Model>(m => m)
+                        var teste2 = teste.SetBinding(m => m.Name)
+
                         contentBuilder
+                            .CreateTextBox().SetBinding(m => m.)
+
                             .CreateTextBox(creator =>
                             {
                                 creator.SetProperty(m => m.Name);
@@ -49,7 +53,7 @@ public class Test
                             .CreateComboBox(comboBoxBuilder =>
                             {
                                 comboBoxBuilder.SetProperty(c => c.Children);
-                                comboBoxBuilder.SetDisplayMemberPath(m => m.)
+                                comboBoxBuilder.SetDisplayMemberPath(m => m.Children, c => c.Name);
                             });
                     }).WithHeader("Complementares");
             }).WithSettings(settings =>
