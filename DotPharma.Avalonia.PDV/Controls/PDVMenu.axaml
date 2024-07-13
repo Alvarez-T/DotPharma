@@ -18,7 +18,25 @@
             <Setter Property="CornerRadius" Value="5"/>
             <Setter Property="IconPlacement" Value="Top" />
         </Style>
-    </UserControl.Styles>
+		<Style Selector="dotfy|IconRadioButton">
+            <Setter Property="Margin" Value="2,5" />
+            <Setter Property="Background" Value="#ecf5f5"/>
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Width" Value="72" />
+            <Setter Property="Height" Value="58" />
+			<Setter Property="IconPlacement" Value="Top"/>
+        </Style>
+		<Style Selector="dotfy|IconToggleButton">
+			<Setter Property="Margin" Value="2,5" />
+            <Setter Property="Background" Value="#ecf5f5"/>
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Width" Value="72" />
+            <Setter Property="Height" Value="58" />
+            <Setter Property="IconPlacement" Value="Top"/>
+        </Style>
+	</UserControl.Styles>
 	<StackPanel Height="70" Margin="20,0" Orientation="Horizontal">
         <Button Width="200" HorizontalContentAlignment="Stretch" Margin="0,0,5,0">
 			<StackPanel Orientation="Horizontal" >
@@ -35,37 +53,37 @@
                 </StackPanel>
             </StackPanel>
         </Button>
-        <dotfy:IconButton
+        <dotfy:IconRadioButton
 			Content="À vista">
-			<dotfy:IconButton.Icon>
+			<dotfy:IconRadioButton.Icon>
 				<i:Icon Value="fa-solid fa-money-bill" FontSize="30"></i:Icon>
-			</dotfy:IconButton.Icon>
-		</dotfy:IconButton>
-		<dotfy:IconButton
+			</dotfy:IconRadioButton.Icon>
+		</dotfy:IconRadioButton>
+		<dotfy:IconRadioButton
 			Content="À prazo">
-			<dotfy:IconButton.Icon>
+			<dotfy:IconRadioButton.Icon>
 				<i:Icon Value="fa-solid fa-credit-card" FontSize="30"></i:Icon>
-			</dotfy:IconButton.Icon>
-		</dotfy:IconButton>
-		<dotfy:IconButton
+			</dotfy:IconRadioButton.Icon>
+		</dotfy:IconRadioButton>
+		<dotfy:IconRadioButton
 			Content="Convênio">
-			<dotfy:IconButton.Icon>
+			<dotfy:IconRadioButton.Icon>
 				<i:Icon Value="fa-solid fa-hand-holding-medical" FontSize="30"></i:Icon>
-			</dotfy:IconButton.Icon>
-		</dotfy:IconButton>
+			</dotfy:IconRadioButton.Icon>
+		</dotfy:IconRadioButton>
 		<dotfy:Divider Margin="5,0" Orientation="Vertical" Height="35"/>
-		<dotfy:IconButton
+		<dotfy:IconToggleButton
             Content="Entrega">
-			<dotfy:IconButton.Icon>
+			<dotfy:IconToggleButton.Icon>
 				<i:Icon Value="fa-solid fa-motorcycle" FontSize="40"></i:Icon>
-			</dotfy:IconButton.Icon>
-		</dotfy:IconButton>
-        <dotfy:IconButton
+			</dotfy:IconToggleButton.Icon>
+		</dotfy:IconToggleButton>
+		<dotfy:IconToggleButton
             Content="Encomenda">
-            <dotfy:IconButton.Icon>
-                <i:Icon Value="fa-solid fa-cube" FontSize="30"></i:Icon>
-            </dotfy:IconButton.Icon>
-        </dotfy:IconButton>
+			<dotfy:IconToggleButton.Icon>
+				<i:Icon Value="fa-solid fa-cube" FontSize="30"></i:Icon>
+			</dotfy:IconToggleButton.Icon>
+		</dotfy:IconToggleButton>
         <dotfy:Divider Margin="5,0" Orientation="Vertical" Height="35" />
 		<dotfy:IconButton
             Content="Pedidos">
