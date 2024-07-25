@@ -1,0 +1,83 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dotfy="https://github.com/Alvarez-T/Dotfy"
+             xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
+             xmlns:design="clr-namespace:DotPharma.Avalonia.PDV.FakeData"
+             xmlns:tiles="clr-namespace:DotPharma.Avalonia.PDV.Tiles"
+             xmlns:vm="clr-namespace:DotPharma.Presentation.ViewModels.PDV;assembly=DotPharma.Presentation"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="vm:PointOfSaleViewModel"
+             x:Class="DotPharma.Avalonia.PDV.Views.MainView">
+    <DockPanel>
+		<actipro:ShadowChrome DockPanel.Dock="Top" Background="#c8e1e2" Elevation="5"  ShadowColor="Black" ShadowOpacity="0,1">
+			<tiles:PDVMenu DataContext="{Binding PdvMenu}"/>
+		</actipro:ShadowChrome>
+		<Grid Margin="20,10, 20, 20"
+			  ColumnDefinitions="1.6*, 1*"
+			  RowDefinitions="1.5*, *">
+			<Border
+					CornerRadius="10"
+					Grid.ColumnSpan="2"
+					Background="#f2f5f7"
+					Margin="0,0,0,5">
+				<TabControl>
+					<TabItem Header="Produtos">
+						<DataGrid DataContext="{x:Static design:DesignTime.ProductsProvider}"
+								  AutoGenerateColumns="False"
+								  d:ItemsSource="{Binding Products}">
+							<DataGrid.Columns>
+								<DataGridTextColumn Header="Código" d:Binding="{Binding Codigo}" />
+								<DataGridTextColumn Header="Produto" Width="*" d:Binding="{Binding Produto}"  />
+								<DataGridTextColumn Header="Preço B" d:Binding="{Binding PrecoB}"  />
+								<DataGridTextColumn Header="Preço L" d:Binding="{Binding PrecoL}"  />
+								<DataGridTextColumn Header="Desconto" d:Binding="{Binding Desconto}"  />
+								<DataGridTextColumn Header="Quantidade" d:Binding="{Binding Quantidade}"  />
+								<DataGridTextColumn Header="Total" d:Binding="{Binding Total} "/>
+							</DataGrid.Columns>
+						</DataGrid>
+					</TabItem>
+					<TabItem Header="Cliente">
+						<Grid>
+							<dotfy:Form LabelPosition="Left"
+										Width="600"
+										LabelWidth="*">
+								<dotfy:FormGroup Header="Informe os dados do cliente" >
+									<TextBox dotfy:FormItem.IsRequired="True"
+											 dotfy:FormItem.Label="Nome"/>
+									<dotfy:FormItem IsRequired="True"
+													Label="Convênio"
+													>
+										<TextBox />
+									</dotfy:FormItem>
+
+
+
+									<TextBox dotfy:FormItem.Label="CPF "/>
+									<TextBox dotfy:FormItem.Label="Telefone"/>
+									<TextBox dotfy:FormItem.Label="Endereço"/>
+								</dotfy:FormGroup>
+							</dotfy:Form>
+						</Grid>
+					</TabItem>
+
+				</TabControl>
+
+
+			</Border>
+			<Border Grid.Column="0"
+					Grid.Row="1"
+					Margin="0,10,15,0"
+					CornerRadius="10"
+					Background="#f2f5f7">
+			</Border>
+			<Border Grid.Column="1" Grid.Row="1"
+					Margin="0,10,0,0"
+					CornerRadius="10"
+					Background="#f2f5f7">
+			</Border>
+		</Grid>
+
+	</DockPanel>
+</UserControl>

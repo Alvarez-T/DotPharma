@@ -5,14 +5,17 @@
              mc:Ignorable="d" d:DesignWidth="800"
              xmlns:dotfy="https://github.com/Alvarez-T/Dotfy"
              xmlns:i="https://github.com/projektanker/icons.avalonia"
-             x:Class="DotPharma.Avalonia.PDV.Controls.PDVMenu">
-	<UserControl.Styles>
+             xmlns:vm="clr-namespace:DotPharma.Presentation.ViewModels.PDV;assembly=DotPharma.Presentation"
+             xmlns:m="clr-namespace:DotPharma.Presentation.Models;assembly=DotPharma.Presentation"
+             x:DataType="vm:PDVMenuTileModel"
+             x:Class="DotPharma.Avalonia.PDV.Tiles.PDVMenu">
+    <UserControl.Styles>
         <Style Selector="dotfy|IconButton">
             <Setter Property="Margin" Value="2,5" />
             <Setter Property="Background" Value="#ecf5f5"/>
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="Width" Value="72" />
+            <Setter Property="Width" Value="73" />
             <Setter Property="Height" Value="58" />
             <Setter Property="Padding" Value="2" />
             <Setter Property="CornerRadius" Value="5"/>
@@ -23,7 +26,7 @@
             <Setter Property="Background" Value="#ecf5f5"/>
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="Width" Value="72" />
+            <Setter Property="Width" Value="73" />
             <Setter Property="Height" Value="58" />
 			<Setter Property="IconPlacement" Value="Top"/>
         </Style>
@@ -32,7 +35,7 @@
             <Setter Property="Background" Value="#ecf5f5"/>
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="Width" Value="72" />
+            <Setter Property="Width" Value="73" />
             <Setter Property="Height" Value="58" />
             <Setter Property="IconPlacement" Value="Top"/>
         </Style>
@@ -66,6 +69,7 @@
 			</dotfy:IconRadioButton.Icon>
 		</dotfy:IconRadioButton>
 		<dotfy:IconRadioButton
+            Name="convenio"
 			Content="Convênio">
 			<dotfy:IconRadioButton.Icon>
 				<i:Icon Value="fa-solid fa-hand-holding-medical" FontSize="30"></i:Icon>
@@ -91,5 +95,28 @@
 				<i:Icon Value="fa-solid fa-bell-concierge" FontSize="30"></i:Icon>
 			</dotfy:IconButton.Icon>
 		</dotfy:IconButton>
+		<dotfy:EnumRadioButtonGroup EnumValue="{Binding SalesType}">
+			<dotfy:IconRadioButton
+                dotfy:EnumRadioButtonGroup.EnumMemberValue="{x:Static m:SalesType.Cash}"
+                Content="À vista">
+                <dotfy:IconRadioButton.Icon>
+                    <i:Icon Value="fa-solid fa-money-bill" FontSize="30"></i:Icon>
+                </dotfy:IconRadioButton.Icon>
+            </dotfy:IconRadioButton>
+            <dotfy:IconRadioButton
+                dotfy:EnumRadioButtonGroup.EnumMemberValue="{x:Static m:SalesType.Installment}"
+                Content="À prazo">
+                <dotfy:IconRadioButton.Icon>
+                    <i:Icon Value="fa-solid fa-credit-card" FontSize="30"></i:Icon>
+                </dotfy:IconRadioButton.Icon>
+            </dotfy:IconRadioButton>
+			<dotfy:IconRadioButton
+                dotfy:EnumRadioButtonGroup.EnumMemberValue="{x:Static m:SalesType.Agreement}"
+                Content="Convênio">
+                <dotfy:IconRadioButton.Icon>
+                    <i:Icon Value="fa-solid fa-hand-holding-medical" FontSize="30"></i:Icon>
+                </dotfy:IconRadioButton.Icon>
+            </dotfy:IconRadioButton>
+		</dotfy:EnumRadioButtonGroup>
 	</StackPanel>
 </UserControl>

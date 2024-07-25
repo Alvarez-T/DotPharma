@@ -3,11 +3,14 @@
              x:Class="DotPharma.Avalonia.PDV.App"
              xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
              xmlns:dotPharma="https://github.com/Alvarez-T/DotPharma"
+             xmlns:navigatr="https://github.com/Alvarez-T/NavigatR"
              xmlns:generation="using:ActiproSoftware.UI.Avalonia.Themes.Generation"
              RequestedThemeVariant="Light">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
-
-    <Application.Styles>
+    <Application.DataTemplates>
+        <navigatr:ViewLocator />
+    </Application.DataTemplates>
+	<Application.Styles>
 		<actipro:ModernTheme>
             <actipro:ModernTheme.Definition>
                 <generation:ThemeDefinition BaseFontSize="16"  />

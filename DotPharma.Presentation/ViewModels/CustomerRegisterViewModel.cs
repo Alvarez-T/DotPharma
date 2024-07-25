@@ -1,7 +1,7 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿//using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace DotPharma.Presentation.ViewModels;
+//namespace DotPharma.Presentation.ViewModels;
 
-public class CustomerRegisterViewModel : ObservableValidator, INavigableViewModel
-{
-}
+//public class CustomerRegisterViewModel : ObservableValidator, INavigableViewModel
+//{
+//}

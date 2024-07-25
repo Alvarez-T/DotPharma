@@ -1,6 +1,6 @@
 ﻿namespace DotPharma.Presentation.ViewModels;
 
-public partial class ShellViewModel : IViewModel
+public partial class ShellViewModel 
 {
 
 }
