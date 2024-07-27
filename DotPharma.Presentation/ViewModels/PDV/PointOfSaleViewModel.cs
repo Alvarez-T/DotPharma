@@ -18,7 +18,7 @@ public partial class PointOfSaleViewModel : ObservableObject, INavigableViewMode
         _navigator = navigator;
 
         PdvMenu = viewModelProvider.GetViewModel<PDVMenuTileModel>();
-        PaymentViewModel = viewModelProvider.GetViewModel<PaymentViewModel>();
+       // PaymentViewModel = viewModelProvider.GetViewModel<PaymentViewModel>();
     }
 
     [RelayCommand]

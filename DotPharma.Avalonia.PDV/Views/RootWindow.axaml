@@ -6,13 +6,14 @@
         xmlns:i="https://github.com/projektanker/icons.avalonia"
         xmlns:design="clr-namespace:DotPharma.Avalonia.PDV.FakeData"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        xmlns:vm="clr-namespace:DotPharma.Presentation.ViewModels.PDV;assembly=DotPharma.Presentation"
         xmlns:views="clr-namespace:DotPharma.Avalonia.PDV.Views"
+        xmlns:vm="clr-namespace:DotPharma.Presentation.ViewModels;assembly=DotPharma.Presentation"
         x:Class="DotPharma.Avalonia.PDV.Views.RootWindow"
         Title="DotPharma.Avalonia.PDV"
         MinWidth="1024" MinHeight="768"
         WindowStartupLocation="CenterScreen"
-        Background="#d4dee5">
+        Background="#d4dee5"
+        x:DataType="vm:RootViewModel">
     <Design.DataContext>
         <design:DesignTimeProductsProvider />
     </Design.DataContext>
@@ -62,7 +63,7 @@
 				</StackPanel>
 			</actipro:ChromedTitleBar.RightContent>
         </actipro:ChromedTitleBar>
-		<views:MainView />    
+		<views:MainView ViewModel="{Binding PointOfSale}"/>    
         
 		<!--
 		<SplitView

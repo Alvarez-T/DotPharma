@@ -1,9 +1,12 @@
+using System;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using DotPharma.Avalonia.PDV.Views;
+using DotPharma.Presentation.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
+using NavigatR.Providers;
 
 namespace DotPharma.Avalonia.PDV;
 
@@ -21,12 +24,11 @@ public partial class App : Application
         IServiceCollection services = new ServiceCollection();
         services.RegisterViewModels();
 
-        services.BuildServiceProvider();
+        IServiceProvider provider = services.BuildServiceProvider();
+        provider.ConfigureLocators();
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-
-
             desktop.MainWindow = new RootWindow();
         }
          

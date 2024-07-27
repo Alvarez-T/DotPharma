@@ -40,7 +40,7 @@
             <Setter Property="IconPlacement" Value="Top"/>
         </Style>
 	</UserControl.Styles>
-	<StackPanel Height="70" Margin="20,0" Orientation="Horizontal">
+	<StackPanel Name="Panel" Height="70" Margin="20,0" Orientation="Horizontal">
         <Button Width="200" HorizontalContentAlignment="Stretch" Margin="0,0,5,0">
 			<StackPanel Orientation="Horizontal" >
                 <StackPanel Margin="0,10" >
@@ -56,25 +56,29 @@
                 </StackPanel>
             </StackPanel>
         </Button>
-        <dotfy:IconRadioButton
-			Content="À vista">
-			<dotfy:IconRadioButton.Icon>
-				<i:Icon Value="fa-solid fa-money-bill" FontSize="30"></i:Icon>
-			</dotfy:IconRadioButton.Icon>
-		</dotfy:IconRadioButton>
-		<dotfy:IconRadioButton
-			Content="À prazo">
-			<dotfy:IconRadioButton.Icon>
-				<i:Icon Value="fa-solid fa-credit-card" FontSize="30"></i:Icon>
-			</dotfy:IconRadioButton.Icon>
-		</dotfy:IconRadioButton>
-		<dotfy:IconRadioButton
-            Name="convenio"
-			Content="Convênio">
-			<dotfy:IconRadioButton.Icon>
-				<i:Icon Value="fa-solid fa-hand-holding-medical" FontSize="30"></i:Icon>
-			</dotfy:IconRadioButton.Icon>
-		</dotfy:IconRadioButton>
+        <dotfy:EnumRadioButtonGroup EnumValue="{Binding SalesType}" ItemsPanel="{Binding ElementName=Panel}">
+            <dotfy:IconRadioButton
+                dotfy:EnumRadioButtonGroup.EnumMemberValue="{x:Static m:SalesType.Cash}"
+                Content="À vista">
+                <dotfy:IconRadioButton.Icon>
+                    <i:Icon Value="fa-solid fa-money-bill" FontSize="30"></i:Icon>
+                </dotfy:IconRadioButton.Icon>
+            </dotfy:IconRadioButton>
+            <dotfy:IconRadioButton
+                dotfy:EnumRadioButtonGroup.EnumMemberValue="{x:Static m:SalesType.Installment}"
+                Content="À prazo">
+                <dotfy:IconRadioButton.Icon>
+                    <i:Icon Value="fa-solid fa-credit-card" FontSize="30"></i:Icon>
+                </dotfy:IconRadioButton.Icon>
+            </dotfy:IconRadioButton>
+            <dotfy:IconRadioButton
+                dotfy:EnumRadioButtonGroup.EnumMemberValue="{x:Static m:SalesType.Agreement}"
+                Content="Convênio">
+                <dotfy:IconRadioButton.Icon>
+                    <i:Icon Value="fa-solid fa-hand-holding-medical" FontSize="30"></i:Icon>
+                </dotfy:IconRadioButton.Icon>
+            </dotfy:IconRadioButton>
+        </dotfy:EnumRadioButtonGroup>
 		<dotfy:Divider Margin="5,0" Orientation="Vertical" Height="35"/>
 		<dotfy:IconToggleButton
             Content="Entrega">
@@ -95,28 +99,6 @@
 				<i:Icon Value="fa-solid fa-bell-concierge" FontSize="30"></i:Icon>
 			</dotfy:IconButton.Icon>
 		</dotfy:IconButton>
-		<dotfy:EnumRadioButtonGroup EnumValue="{Binding SalesType}">
-			<dotfy:IconRadioButton
-                dotfy:EnumRadioButtonGroup.EnumMemberValue="{x:Static m:SalesType.Cash}"
-                Content="À vista">
-                <dotfy:IconRadioButton.Icon>
-                    <i:Icon Value="fa-solid fa-money-bill" FontSize="30"></i:Icon>
-                </dotfy:IconRadioButton.Icon>
-            </dotfy:IconRadioButton>
-            <dotfy:IconRadioButton
-                dotfy:EnumRadioButtonGroup.EnumMemberValue="{x:Static m:SalesType.Installment}"
-                Content="À prazo">
-                <dotfy:IconRadioButton.Icon>
-                    <i:Icon Value="fa-solid fa-credit-card" FontSize="30"></i:Icon>
-                </dotfy:IconRadioButton.Icon>
-            </dotfy:IconRadioButton>
-			<dotfy:IconRadioButton
-                dotfy:EnumRadioButtonGroup.EnumMemberValue="{x:Static m:SalesType.Agreement}"
-                Content="Convênio">
-                <dotfy:IconRadioButton.Icon>
-                    <i:Icon Value="fa-solid fa-hand-holding-medical" FontSize="30"></i:Icon>
-                </dotfy:IconRadioButton.Icon>
-            </dotfy:IconRadioButton>
-		</dotfy:EnumRadioButtonGroup>
+
 	</StackPanel>
 </UserControl>
