@@ -5,14 +5,14 @@ using NavigatR;
 
 namespace DotPharma.Presentation.ViewModels.PDV;
 
-public partial class PDVMenuTileModel : ObservableObject, IViewModel
+public partial class PDVMenuTileModel : ObservableRecipient, IViewModel
 {
     [ObservableProperty] private SalesType _salesType;
     [ObservableProperty] private bool _isDelivery;
     [ObservableProperty] private bool _isShipment;
 
-    protected override void OnPropertyChanged(PropertyChangedEventArgs e)
+    public PDVMenuTileModel()
     {
-        base.OnPropertyChanged(e);
+        
     }
 }

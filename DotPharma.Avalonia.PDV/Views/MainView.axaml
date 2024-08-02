@@ -4,15 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:dotfy="https://github.com/Alvarez-T/Dotfy"
              xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
+
              xmlns:design="clr-namespace:DotPharma.Avalonia.PDV.FakeData"
              xmlns:tiles="clr-namespace:DotPharma.Avalonia.PDV.Tiles"
              xmlns:vm="clr-namespace:DotPharma.Presentation.ViewModels.PDV;assembly=DotPharma.Presentation"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:DataType="vm:PointOfSaleViewModel"
              x:Class="DotPharma.Avalonia.PDV.Views.MainView">
+    <Design.DataContext>
+        <design:DesignTimeProductsProvider />
+    </Design.DataContext>
     <DockPanel>
-		<actipro:ShadowChrome DockPanel.Dock="Top" Background="#c8e1e2" Elevation="5"  ShadowColor="Black" ShadowOpacity="0,1">
-			<tiles:PDVMenu DataContext="{Binding PdvMenu}"/>
+
+        <actipro:ShadowChrome DockPanel.Dock="Top" Background="#c8e1e2" Elevation="5"  ShadowColor="Black" ShadowOpacity="0,1">
+			<tiles:PDVMenu ViewModel="{Binding PdvMenu}"/>
 		</actipro:ShadowChrome>
 		<Grid Margin="20,10, 20, 20"
 			  ColumnDefinitions="1.6*, 1*"
@@ -57,6 +62,7 @@
 									<TextBox dotfy:FormItem.Label="CPF "/>
 									<TextBox dotfy:FormItem.Label="Telefone"/>
 									<TextBox dotfy:FormItem.Label="Endereço"/>
+
 								</dotfy:FormGroup>
 							</dotfy:Form>
 						</Grid>

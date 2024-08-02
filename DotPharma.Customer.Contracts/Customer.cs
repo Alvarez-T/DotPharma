@@ -1,13 +1,16 @@
-﻿using DotPharma.Abstract;
+﻿using Dotfy.Location.Contracts;
+using DotPharma.Abstract;
 
 namespace DotPharma.Customer.Contracts;
 
-public class Customer
+public record Customer
 {
-    public string Name { get; set; }
-    public CPF CPF { get; set; }
-    public RG RG { get; set; }
-    public DateTime CreationDate { get; set; }
+    public required string Name { get; init; }
+    public CPF? CPF { get; init; }
+    public RG? RG { get; init; }
+    public string? Cellphone { get; init; }
+    public string? Email { get; init; }
+    public Address? Address { get; init; }
 }
 
 

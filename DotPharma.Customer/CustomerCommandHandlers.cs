@@ -11,7 +11,6 @@ public static class RegisterCustomerHandler
             Name = command.Name,
             CPF = command.CPF,
             RG = command.RG,
-            CreationDate = DateTime.Now
         };
 
         customerDbContext.Customers.Add(customer);

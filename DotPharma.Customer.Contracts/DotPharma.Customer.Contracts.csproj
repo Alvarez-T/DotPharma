@@ -1,12 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Dotfy\Dotfy.Location.Contracts\Dotfy.Location.Contracts.csproj" />
     <ProjectReference Include="..\DotPharma.Abstract\DotPharma.Abstract.csproj" />
   </ItemGroup>
 

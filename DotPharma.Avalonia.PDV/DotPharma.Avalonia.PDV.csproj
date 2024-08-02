@@ -7,6 +7,9 @@
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     </PropertyGroup>
+    <PropertyGroup Label="Avalonia">
+      <AvaloniaXamlReportImportance>High</AvaloniaXamlReportImportance>
+    </PropertyGroup>
     <ItemGroup>
       <None Remove="Assets\logo.png" />
     </ItemGroup>
@@ -16,13 +19,13 @@
 
     <ItemGroup>
         <PackageReference Include="ActiproSoftware.Controls.Avalonia" Version="24.1.0" />
-        <PackageReference Include="Avalonia" Version="11.1.0" />
-        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.1.0" />
-        <PackageReference Include="Avalonia.Desktop" Version="11.1.0" />
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.0" />
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.0" />
+        <PackageReference Include="Avalonia" Version="11.1.1" />
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.1.1" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.1.1" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.1" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.1" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.0" />
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.1" />
         <PackageReference Include="Projektanker.Icons.Avalonia" Version="9.4.0" />
         <PackageReference Include="Projektanker.Icons.Avalonia.FontAwesome" Version="9.4.0" />
         <PackageReference Include="System.Text.Json" Version="8.0.4" />

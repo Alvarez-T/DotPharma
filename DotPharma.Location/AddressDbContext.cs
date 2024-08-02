@@ -4,5 +4,5 @@ namespace DotPharma.Location;
 
 internal class AddressDbContext : DbContext
 {
-    public DbSet<Address> Address { get; set; }
+    public DbSet<AddressEntity> Address { get; set; }
 }

@@ -19,13 +19,31 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+        
         RemoveAvaloniaDataValidation();
 
         IServiceCollection services = new ServiceCollection();
         services.RegisterViewModels();
 
-        IServiceProvider provider = services.BuildServiceProvider();
+#if DEBUG
+        var serviceProviderOptions = new ServiceProviderOptions
+        {
+            ValidateScopes = true,
+            ValidateOnBuild = true
+        };
+#else
+        var serviceProviderOptions = new ServiceProviderOptions
+        {
+            ValidateScopes = false,
+            ValidateOnBuild = false
+        };
+#endif
+
+        ServiceProvider provider = services.BuildServiceProvider(serviceProviderOptions);
+        
+
         provider.ConfigureLocators();
+        
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {

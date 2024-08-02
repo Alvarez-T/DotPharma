@@ -10,19 +10,3 @@ internal class ProductEntity
     public required GroupId GroupId { get; set; } 
     public SubGroupId? SubGroup { get; set; }
 }
-
-internal class ProductGroupEntity
-{
-    public GroupId Id { get; set; }
-    public required string Description { get; set; }
-    public string? SkuTag { get; set; }
-}
-
-internal class ProductSubGroupEntity
-{
-    public SubGroupId Id { get; set; }
-    public required string Description { get; set; }
-    public string? SkuTag { get; set; }
-    public required GroupId GroupOwnerId { get; set; }
-}
-

@@ -14,9 +14,7 @@
         WindowStartupLocation="CenterScreen"
         Background="#d4dee5"
         x:DataType="vm:RootViewModel">
-    <Design.DataContext>
-        <design:DesignTimeProductsProvider />
-    </Design.DataContext>
+
     <DockPanel>
         <actipro:ChromedTitleBar DockPanel.Dock="Top" Background="#ecf7ff">
             <actipro:ChromedTitleBar.Styles>
