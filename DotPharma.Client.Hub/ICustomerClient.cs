@@ -60,8 +60,8 @@ public static class test
 {
     public static void testes()
     {
-        new HubClientBuilder<ICustomerClient>()
-            .AssignHandler<CustomerPersonalInfoUpdated>(p => p.)
+        //new HubClientBuilder<ICustomerClient>()
+        //    .AssignHandler<CustomerPersonalInfoUpdated>(p => p.)
     }
 
 }

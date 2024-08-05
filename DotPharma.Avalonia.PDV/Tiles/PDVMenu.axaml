@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800"
-             xmlns:dotfy="https://github.com/Alvarez-T/Dotfy"
+             xmlns:dotfy="https://github.com/Alvarez-T/Act.Avalonia"
              xmlns:i="https://github.com/projektanker/icons.avalonia"
              xmlns:vm="clr-namespace:DotPharma.Presentation.ViewModels.PDV;assembly=DotPharma.Presentation"
              xmlns:m="clr-namespace:DotPharma.Presentation.Models;assembly=DotPharma.Presentation"

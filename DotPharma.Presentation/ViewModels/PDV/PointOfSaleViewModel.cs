@@ -50,6 +50,4 @@ public partial class PointOfSaleViewModel : ObservableRecipient, INavigableViewM
     {
         _navigator.NavigateTo(_paymentViewModel);
     }
-
-    private static void OnSalesTypeChanged(CompactCustomerViewModel viewModel)
 }

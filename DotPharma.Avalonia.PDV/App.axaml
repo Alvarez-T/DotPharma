@@ -17,7 +17,7 @@
             </actipro:ModernTheme.Definition>
         </actipro:ModernTheme>
         <FluentTheme />
-        <StyleInclude Source="avares://Dotfy.Avalonia.UI/Themes/Index.axaml" />
+        <StyleInclude Source="avares://Act.Avalonia.UI/Themes/Index.axaml" />
         <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
     </Application.Styles>
 </Application>

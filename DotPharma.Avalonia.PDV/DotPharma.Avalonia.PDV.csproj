@@ -32,7 +32,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Dotfy.Avalonia\Dotfy.Avalonia.UI\Dotfy.Avalonia.UI.csproj" />
+      <ProjectReference Include="..\..\Act.Avalonia\Act.Avalonia.UI\Act.Avalonia.UI.csproj" />
       <ProjectReference Include="..\DotPharma.Presentation\DotPharma.Presentation.csproj" />
     </ItemGroup>
 

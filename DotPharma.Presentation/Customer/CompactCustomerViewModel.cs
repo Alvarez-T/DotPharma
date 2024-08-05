@@ -29,11 +29,11 @@ public sealed partial class CompactCustomerViewModel : ObservableObject, IViewMo
 
 public class CustomerClient : ICustomerClient
 {
-    public CustomerClient(Hub)
+    public CustomerClient()
     {
-        var t = new HubConnectionBuilder()
-            .WithUrl().Build();
-        t.On()
+        //var t = new HubConnectionBuilder()
+        //    .WithUrl().Build();
+        //t.On()
 
 
     }

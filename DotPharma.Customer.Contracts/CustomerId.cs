@@ -1,4 +1,4 @@
-﻿using Dotfy.Location.Contracts;
+﻿using Act.Location.Contracts;
 
 namespace DotPharma.Customer.Contracts;
 
