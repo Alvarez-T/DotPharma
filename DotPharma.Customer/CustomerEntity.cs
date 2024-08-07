@@ -1,5 +1,5 @@
-﻿using Act.Location.Contracts;
-using DotPharma.Abstract;
+﻿using Act.Common.Types;
+using Act.Location.Contracts;
 using DotPharma.Customer.Contracts;
 
 namespace DotPharma.Customer;

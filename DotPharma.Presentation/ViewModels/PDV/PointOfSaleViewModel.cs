@@ -1,8 +1,13 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Runtime.CompilerServices;
+using Act.SignalR.Client;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using CommunityToolkit.Mvvm.Messaging.Messages;
+using DotPharma.Client.Hub;
+using DotPharma.Customer.Contracts;
 using DotPharma.Presentation.Customer;
+using DotPharma.Presentation.Customer.Models;
 using DotPharma.Presentation.Models;
 using DotPharma.Presentation.ViewModels.PDV;
 using NavigatR;
@@ -15,7 +20,7 @@ public partial class PointOfSaleViewModel : ObservableRecipient, INavigableViewM
 {
     private readonly INavigator _navigator;
     [ObservableProperty] private PDVMenuTileModel _pdvMenu;
-    [ObservableProperty] private CompactCustomerViewModel _customerViewModel;
+    [ObservableProperty] private BasicCustomerViewModel _customerViewModel;
     [ObservableProperty] private PaymentViewModel _paymentViewModel;
 
     public PointOfSaleViewModel(INavigator navigator, IViewModelProvider viewModelProvider)
@@ -23,27 +28,26 @@ public partial class PointOfSaleViewModel : ObservableRecipient, INavigableViewM
         _navigator = navigator;
 
         PdvMenu = viewModelProvider.GetViewModel<PDVMenuTileModel>();
-        CustomerViewModel = viewModelProvider.GetViewModel<CompactCustomerViewModel>();
+        CustomerViewModel = viewModelProvider.GetViewModel<BasicCustomerViewModel>();
     }
 
     private void RegisterViewModelMessages()
     {
-        BroadcastMessage.To(CustomerViewModel).On<ValueChanged<SalesType>>((viewModel, salesType) =>
-        {
-            if (salesType == SalesType.Agreement)
-                viewModel.ShowAgreement = true;
-        });
-
-        WeakReferenceMessenger.Default.Register<CompactCustomerViewModel, ValueChanged<SalesType>>(_customerViewModel, (viewModel, message) =>
-        {
-            
-        });
+        BroadcastHubMessage.To(CustomerViewModel, customerClient)
+            .ViewMessage<ValueChanged<SalesType>>(OnSalesTypeChanged)
+            .HubMessage<CustomerPersonalInfoUpdated>(OnCustomerPersonalInfoUpdated)
+            .HubMessage<CustomerAddressUpdated>
     }
 
-    private void RegisterHubMessages()
+    private static void OnSalesTypeChanged(BasicCustomerViewModel customerViewModel, ValueChanged<SalesType> salesType)
     {
-
+        if (salesType == SalesType.Agreement)
+            customerViewModel.ShowAgreement = true;
     }
+
+
+
+   
 
     [RelayCommand]
     private void GoToPayment()

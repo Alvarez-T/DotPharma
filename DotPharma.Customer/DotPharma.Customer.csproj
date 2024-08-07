@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Act\Act.Common.Types\Act.Common.Types.csproj" />
     <ProjectReference Include="..\DotPharma.Abstract\DotPharma.Abstract.csproj" />
     <ProjectReference Include="..\DotPharma.Customer.Contracts\DotPharma.Customer.Contracts.csproj" />
   </ItemGroup>
