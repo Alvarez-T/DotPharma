@@ -7,6 +7,6 @@ namespace DotPharma.Client.Hub;
 
 public interface ICustomerClient : IHubClient
 {
-    Task OnPersonalInfoUpdated(CustomerPersonalInfoUpdated @event);
-    Task OnAddressUpdated(CustomerAddressUpdated @event);
+    void OnPersonalInfoUpdated(CustomerPersonalInfoUpdated @event);
+    void OnAddressUpdated(CustomerAddressUpdated @event);
 }

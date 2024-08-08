@@ -1,18 +1,19 @@
 ﻿using Act.SignalR.Client;
 using DotPharma.Customer.Contracts;
+using Microsoft.AspNetCore.SignalR.Client;
 
 namespace DotPharma.Client.Hub;
 
 internal sealed class CustomerClient : HubClient, ICustomerClient
 {
-
-    public Task OnPersonalInfoUpdated(CustomerPersonalInfoUpdated @event)
+    public CustomerClient()
     {
-        throw new NotImplementedException();
+        
     }
 
-    public Task OnAddressUpdated(CustomerAddressUpdated @event)
-    {
-        throw new NotImplementedException();
-    }
+    public void OnPersonalInfoUpdated(CustomerPersonalInfoUpdated @event)
+        => Send(@event);
+
+    public void OnAddressUpdated(CustomerAddressUpdated @event)
+        => Send(@event);
 }

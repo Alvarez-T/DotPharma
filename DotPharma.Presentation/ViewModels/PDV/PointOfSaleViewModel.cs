@@ -33,10 +33,8 @@ public partial class PointOfSaleViewModel : ObservableRecipient, INavigableViewM
 
     private void RegisterViewModelMessages()
     {
-        BroadcastHubMessage.To(CustomerViewModel, customerClient)
-            .ViewMessage<ValueChanged<SalesType>>(OnSalesTypeChanged)
-            .HubMessage<CustomerPersonalInfoUpdated>(OnCustomerPersonalInfoUpdated)
-            .HubMessage<CustomerAddressUpdated>
+        BroadcastMessage.To(CustomerViewModel)
+            .OnViewMessage<ValueChanged<SalesType>>(OnSalesTypeChanged);
     }
 
     private static void OnSalesTypeChanged(BasicCustomerViewModel customerViewModel, ValueChanged<SalesType> salesType)
@@ -44,10 +42,6 @@ public partial class PointOfSaleViewModel : ObservableRecipient, INavigableViewM
         if (salesType == SalesType.Agreement)
             customerViewModel.ShowAgreement = true;
     }
-
-
-
-   
 
     [RelayCommand]
     private void GoToPayment()
