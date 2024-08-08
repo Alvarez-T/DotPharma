@@ -16,36 +16,26 @@ using NavigatR.Providers;
 
 namespace DotPharma.Presentation.ViewModels.PDV;
 
-public partial class PointOfSaleViewModel : ObservableRecipient, INavigableViewModel
+internal sealed partial class PointOfSaleViewModel : NavigableViewModel
 {
-    private readonly INavigator _navigator;
-    [ObservableProperty] private PDVMenuTileModel _pdvMenu;
-    [ObservableProperty] private BasicCustomerViewModel _customerViewModel;
-    [ObservableProperty] private PaymentViewModel _paymentViewModel;
-
-    public PointOfSaleViewModel(INavigator navigator, IViewModelProvider viewModelProvider)
+    public PointOfSaleViewModel()
     {
-        _navigator = navigator;
-
-        PdvMenu = viewModelProvider.GetViewModel<PDVMenuTileModel>();
-        CustomerViewModel = viewModelProvider.GetViewModel<BasicCustomerViewModel>();
+        PdvMenu = ViewModelProvider.GetViewModel<PDVMenuTileModel>();
+        CustomerSaleViewModel = ViewModelProvider.GetViewModel<CustomerSaleViewModel>();
     }
+    
+    [ObservableProperty] private PDVMenuTileModel _pdvMenu;
+    [ObservableProperty] private CustomerSaleViewModel _customerSaleViewModel;
+    [ObservableProperty] private PaymentViewModel _paymentViewModel;
 
     private void RegisterViewModelMessages()
     {
-        BroadcastMessage.To(CustomerViewModel)
-            .OnViewMessage<ValueChanged<SalesType>>(OnSalesTypeChanged);
-    }
 
-    private static void OnSalesTypeChanged(BasicCustomerViewModel customerViewModel, ValueChanged<SalesType> salesType)
-    {
-        if (salesType == SalesType.Agreement)
-            customerViewModel.ShowAgreement = true;
     }
 
     [RelayCommand]
     private void GoToPayment()
     {
-        _navigator.NavigateTo(_paymentViewModel);
+        Navigator.NavigateTo(_paymentViewModel);
     }
 }

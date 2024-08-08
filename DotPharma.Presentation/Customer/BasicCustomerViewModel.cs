@@ -10,13 +10,14 @@ using NavigatR.CommunityToolkit;
 
 namespace DotPharma.Presentation.Customer;
 
+
 public sealed partial class BasicCustomerViewModel : ObservableObject, IViewModel
 {
     [ObservableProperty] private bool _showAgreement;
     [ObservableProperty] private bool _isNewCustomer;
     [ObservableProperty] private bool _canRegisterNewCustomer;
     [ObservableProperty] private bool _canSearch;
-    [ObservableProperty] private BasicCustomerModel _customerModel = new();
+    [ObservableProperty] private CustomerDetailsModel _customerDetailsModel = new();
 
     public BasicCustomerViewModel(ICustomerClient customerClient)
     {
@@ -25,16 +26,18 @@ public sealed partial class BasicCustomerViewModel : ObservableObject, IViewMode
             .OnHubMessage<CustomerPersonalInfoUpdated>(OnCustomerPersonalInfoUpdated)
             .OnHubMessage<CustomerAddressUpdated>(OnCustomerAddressUpdated);
 
+        ObservableRecipient
+
     }
 
     private static void OnCustomerPersonalInfoUpdated(BasicCustomerViewModel customerViewModel, CustomerPersonalInfoUpdated message)
     {
-        BasicCustomerModel customer = customerViewModel.CustomerModel;
+        CustomerDetailsModel customerDetails = customerViewModel.CustomerDetailsModel;
 
-        if (customerViewModel.CustomerModel.HasSameCPF(message.CPF))
+        if (customerViewModel.CustomerDetailsModel.HasSameCPF(message.CPF))
         {
             //TODO: Aparecer um alerta que os dados do cliente foram atualizados.
-            customer.Apply(message);
+            customerDetails.Apply(message);
         }
     }
 
