@@ -25,9 +25,6 @@ public sealed partial class BasicCustomerViewModel : ObservableObject, IViewMode
             .RegisterHub(customerClient)
             .OnHubMessage<CustomerPersonalInfoUpdated>(OnCustomerPersonalInfoUpdated)
             .OnHubMessage<CustomerAddressUpdated>(OnCustomerAddressUpdated);
-
-        ObservableRecipient
-
     }
 
     private static void OnCustomerPersonalInfoUpdated(BasicCustomerViewModel customerViewModel, CustomerPersonalInfoUpdated message)

@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\NavigatR\NavigatR.CommunityToolkit\NavigatR.CommunityToolkit.csproj" />
     <ProjectReference Include="..\..\NavigatR\NavigatR\NavigatR.csproj" />
+    <ProjectReference Include="..\DotPharma.Catalog.Contracts\DotPharma.Catalog.Contracts.csproj" />
     <ProjectReference Include="..\DotPharma.Client.Hub\DotPharma.Client.Hub.csproj" />
   </ItemGroup>
 

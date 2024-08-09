@@ -1,5 +1,4 @@
-﻿using DotPharma.Abstract;
-using DotPharma.User.Contracts;
+﻿using DotPharma.User.Contracts;
 
 namespace DotPharma.Pricing;
 

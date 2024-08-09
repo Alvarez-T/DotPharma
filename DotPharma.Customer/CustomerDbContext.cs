@@ -28,8 +28,5 @@ internal sealed class CustomerDbContext : DbContext
             .Property(c => c.RG.Value)
             .HasColumnName("RG")
             .HasMaxLength(9);
-
-        customerConfiguration
-            .Property(c => c.CreationDate);
     }
 }

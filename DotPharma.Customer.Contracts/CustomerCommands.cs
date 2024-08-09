@@ -1,4 +1,5 @@
-﻿using DotPharma.Abstract;
+﻿using Act.Common.Types;
+using DotPharma.Abstract;
 
 namespace DotPharma.Customer.Contracts
 {

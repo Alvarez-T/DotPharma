@@ -2,7 +2,7 @@
 
 namespace DotPharma.Customer;
 
-public static class RegisterCustomerHandler
+internal static class RegisterCustomerHandler
 {
     public static void Handle(RegisterCustomer command, CustomerDbContext customerDbContext)
     {

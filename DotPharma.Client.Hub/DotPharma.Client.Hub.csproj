@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Act\Act.SignalR.Client\Act.SignalR.Client.csproj" />
     <ProjectReference Include="..\DotPharma.Customer.Contracts\DotPharma.Customer.Contracts.csproj" />
+    <ProjectReference Include="..\DotPharma.Pricing.Contracts\DotPharma.Pricing.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
