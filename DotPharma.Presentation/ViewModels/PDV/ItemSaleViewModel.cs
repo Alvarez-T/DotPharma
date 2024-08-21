@@ -17,14 +17,19 @@ public sealed partial class ItemSaleViewModel : ObservableViewModel
             .OnHubMessage<PriceChanged>(OnPriceChangedMessage);
     }
 
+    [ObservableProperty] private ObservableCollection<ItemModel> _items;
+
     private static void OnPriceChangedMessage(ItemSaleViewModel viewModel, PriceChanged message)
     {
-        SaleItemModel? item = viewModel.Items.FirstOrDefault(i => i.Sku == message.Sku);
+        ItemModel? item = viewModel.Items.FirstOrDefault(i => i.Sku == message.Sku);
 
         if (item is null)
             return;
+
+        item.GrossPrice = message.NewGrossPrice;
+        item.Price = message.NewNetPrice;
     }
 
-    [ObservableProperty] private ObservableCollection<SaleItemModel> _items;
+    
     
 }

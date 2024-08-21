@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <Folder Include="Customer\Tiles\" />
+    <Folder Include="Validations\" />
   </ItemGroup>
 
 </Project>
